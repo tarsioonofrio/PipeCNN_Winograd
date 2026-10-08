@@ -76,6 +76,10 @@ Foram produzidos `pocl_mlir_command_buffer.v`,
 escreve quatro inteiros. A síntese confirmou uma porta AXI e um loop; não
 executamos o kernel nem comparamos os valores em runtime.
 
+Os quatro Verilog e o log original foram copiados para o repositório em
+[`smoke/generated-rtl/`](smoke/generated-rtl/README.md). O arquivo
+`SHA256SUMS` registra hashes conferidos contra a saída que permanece na Paxos.
+
 Esse resultado valida a geração RTL do smoke, mas o processo PoCL não termina
 limpo em todas as execuções: os passes Affine do clone apresentaram falhas de
 memória. Na execução que gerou os arquivos acima, o HLS terminou e o PoCL

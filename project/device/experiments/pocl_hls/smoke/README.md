@@ -18,3 +18,7 @@ trigger compilation and does not enqueue it, so functional output values have
 not been checked. The integrated HLS run produced four Verilog files, but the
 PoCL process later aborted in emulator code generation; this fixture is not a
 runtime correctness test.
+
+The generated Verilog and its original integrated-run log are archived in
+[`generated-rtl/`](generated-rtl/README.md), with SHA-256 checksums. The files
+were copied from the Paxos HLS cache after their hashes were checked.

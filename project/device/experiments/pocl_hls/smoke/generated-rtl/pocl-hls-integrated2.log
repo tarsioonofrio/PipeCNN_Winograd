@@ -1,0 +1,222 @@
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+[New Thread 0x7fffe27f4700 (LWP 3860736)]
+[2026-10-08 16:20:20.739475085] PoCL: in fn pocl_install_sigfpe_handler at line 255:  *** INFO ***  |   GENERAL |  Installing SIGFPE handler...
+[2026-10-08 16:20:20.741864229] PoCL: in fn pocl_dynlib_open at line 55:  *** ERROR ***  |     ERROR |  dlopen() error: /sim/tarsio/pocl_hls_rtl/pocl-build/lib/CL/devices/pthread/libpocl-devices-pthread.so: cannot open shared object file: No such file or directory
+[2026-10-08 16:20:20.741888602] PoCL: in fn pocl_init_devices at line 706:  *** WARNING ***  |   WARNING |  Loading /sim/tarsio/pocl_hls_rtl/pocl-build/lib/CL/devices/pthread/libpocl-devices-pthread.so failed.
+[2026-10-08 16:20:20.741912714] PoCL: in fn pocl_dynlib_open at line 55:  *** ERROR ***  |     ERROR |  dlopen() error: pocl/libpocl-devices-pthread.so: cannot open shared object file: No such file or directory
+[2026-10-08 16:20:20.741926861] PoCL: in fn pocl_init_devices at line 715:  *** WARNING ***  |   WARNING |  Loading pocl/libpocl-devices-pthread.so failed
+[2026-10-08 16:20:20.745985914] PoCL: in fn pocl_almaif_init at line 337:  *** INFO ***  |    ALMAIF |  Parameters were not given. Creating emulation device with built-in kernels 0,1,2,4,9.
+[2026-10-08 16:20:20.746013877] PoCL: in fn EmulationDevice at line 47:  *** INFO ***  |    ALMAIF |  Allocated emulation region from: 0x7fffd1bc7010
+[2026-10-08 16:20:20.746151797] PoCL: in fn emulate_almaif at line 139:  *** INFO ***  |    ALMAIF | [New Thread 0x7fffd1bc6700 (LWP 3860737)]
+ almaif emulate: Emulator initialized 
+[2026-10-08 16:20:20.746214522] PoCL: in fn EmulationDevice at line 55:  *** INFO ***  |    ALMAIF |  almaif: started emulating
+[2026-10-08 16:20:20.746231649] PoCL: in fn Read32 at line 89:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7fffd1bc7010 with offset 0x30c
+[2026-10-08 16:20:20.746246038] PoCL: in fn Read32 at line 89:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7fffd1bc7010 with offset 0x308
+[2026-10-08 16:20:20.746264347] PoCL: in fn Read32 at line 89:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7fffd1bc7010 with offset 0x308
+[2026-10-08 16:20:20.746277539] PoCL: in fn Read64 at line 118:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7fffd1bc7010 with offset 0x340
+[2026-10-08 16:20:20.746290604] PoCL: in fn Read32 at line 89:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7fffd1bc7010 with offset 0x348
+[2026-10-08 16:20:20.746306632] PoCL: in fn Read32 at line 89:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7fffd1bc7010 with offset 0x314
+[2026-10-08 16:20:20.746319733] PoCL: in fn Read32 at line 89:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7fffd1bc7010 with offset 0x320
+[2026-10-08 16:20:20.746332668] PoCL: in fn Read32 at line 89:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7fffd1bc7010 with offset 0x330
+[2026-10-08 16:20:20.746348423] PoCL: in fn Read64 at line 118:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7fffd1bc7010 with offset 0x318
+[2026-10-08 16:20:20.746361513] PoCL: in fn Read64 at line 118:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7fffd1bc7010 with offset 0x328
+[2026-10-08 16:20:20.746374833] PoCL: in fn Read64 at line 118:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7fffd1bc7010 with offset 0x338
+[2026-10-08 16:20:20.746390958] PoCL: in fn discoverDeviceParameters at line 120:  *** INFO ***  |    ALMAIF |  CQStart=0x7fffd1bc7410 ImemStart=0x7fffd1bc7410 DmemStart=0x7fffd1bc7510
+[2026-10-08 16:20:20.746404865] PoCL: in fn discoverDeviceParameters at line 122:  *** INFO ***  |    ALMAIF |  CQSize=256 ImemSize=0 DmemSize=201326592
+[2026-10-08 16:20:20.746418041] PoCL: in fn discoverDeviceParameters at line 124:  *** INFO ***  |    ALMAIF |  ControlMemory->PhysAddress=140736712175632
+[2026-10-08 16:20:20.746469375] PoCL: in fn discoverDeviceParameters at line 131:  *** INFO ***  |    ALMAIF |  Reserved 4096 bytes at the start of global memory for constant data
+[2026-10-08 16:20:20.746486538] PoCL: in fn Write32 at line 100:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Writing to physical address 0x7fffd1bc7010 with offset 0x200
+[2026-10-08 16:20:20.746501350] PoCL: in fn pocl_almaif_init at line 436:  *** INFO ***  |    ALMAIF |  Allocated printf buffer of size 4096 from 140736712181056
+[2026-10-08 16:20:20.746540072] PoCL: in fn pocl_almaif_init at line 504:  *** INFO ***  |    ALMAIF |  almaif: accelerator at 0xe with 5 builtin kernels (pocl.copy.i8;pocl.add.i32;pocl.mul.i32;pocl.countred;pocl.abs.f32)
+[2026-10-08 16:20:20.746559338] PoCL: in fn pocl_almaif_compile_init at line 97:  *** INFO ***  |    ALMAIF |  Starting device specific initializion
+[2026-10-08 16:20:20.746597152] PoCL: in fn pocl_almaif_mlir_initialize at line 78:  *** INFO ***  |    ALMAIF |  Initializing Emulation device for compilation
+[2026-10-08 16:20:20.746615150] PoCL: in fn pocl_almaif_compile_init at line 100:  *** INFO ***  |    ALMAIF |  Device specific initializion done
+[2026-10-08 16:20:20.746632741] PoCL: in fn pocl_almaif_init at line 522:  *** INFO ***  |    ALMAIF |  almaif: mmap done
+[2026-10-08 16:20:20.820997893] PoCL: in fn pocl_almaif_init at line 538:  *** INFO ***  |    ALMAIF |  Initializing AQL Packet cqmemory size=256
+[2026-10-08 16:20:20.821012227] PoCL: in fn Write16 at line 109:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Writing to physical address 0x7fffd1bc7410 with offset 0x40
+[2026-10-08 16:20:20.821029035] PoCL: in fn Write16 at line 109:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Writing to physical address 0x7fffd1bc7410 with offset 0x80
+[2026-10-08 16:20:20.821042201] PoCL: in fn Write16 at line 109:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Writing to physical address 0x7fffd1bc7410 with offset 0xc0
+[2026-10-08 16:20:20.821055223] PoCL: in fn Write32 at line 100:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Writing to physical address 0x7fffd1bc7410 with offset 0x28
+[2026-10-08 16:20:20.821071570] PoCL: in fn Write32 at line 100:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Writing to physical address 0x7fffd1bc7410 with offset 0x30
+[2026-10-08 16:20:20.821084641] PoCL: in fn Write32 at line 100:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Writing to physical address 0x7fffd1bc7010 with offset 0x200
+[2026-10-08 16:20:20.821274329] PoCL: in fn pocl_almaif_init at line 574:  *** INFO ***  |    ALMAIF |  Custom emulation device 0 initialized 
+[New Thread 0x7fffd13c5700 (LWP 3860738)]
+[2026-10-08 16:20:20.821309978] PoCL: in fn POclGetDeviceInfo at line 68:  *** INFO ***  |   GENERAL |  clGetDeviceInfo query of param 102b for ALMAIF MLIR
+[2026-10-08 16:20:20.821326250] PoCL: in fn POclGetDeviceInfo at line 68:  *** INFO ***  |   GENERAL |  clGetDeviceInfo query of param 1000 for ALMAIF MLIR
+[2026-10-08 16:20:20.821739565] PoCL: in fn POclCreateCommandQueue at line 114:  *** INFO ***  |   GENERAL |  Created Command Queue 3 (0x684c50) on device 0
+[2026-10-08 16:20:20.822514829] PoCL: in fn pocl_llvm_create_context at line 723:  *** INFO ***  |      LLVM |  Created context 2 (0x684a90)
+[2026-10-08 16:20:20.822550308] PoCL: in fn POclCreateContext at line 249:  *** INFO ***  |   GENERAL |  Created Context 2 (0x684a90)
+[2026-10-08 16:20:20.822570949] PoCL: in fn POclRetainContext at line 33:  *** INFO ***  | REFCOUNTS |  Retain Context 2 (0x684a90), Refcount: 2
+[2026-10-08 16:20:20.822585224] PoCL: in fn POclCreateCommandQueue at line 114:  *** INFO ***  |   GENERAL |  Created Command Queue 4 (0x6abf40) on device 0
+[2026-10-08 16:20:20.822616946] PoCL: in fn POclRetainContext at line 33:  *** INFO ***  | REFCOUNTS |  Retain Context 2 (0x684a90), Refcount: 3
+[2026-10-08 16:20:20.822659700] PoCL: in fn compile_and_link_program at line 733:  *** INFO ***  |      LLVM |  building program with options 
+[2026-10-08 16:20:20.822674338] PoCL: in fn compile_and_link_program at line 770:  *** INFO ***  |      LLVM |  building program for 1 devs with options 
+[2026-10-08 16:20:20.822687911] PoCL: in fn compile_and_link_program at line 774:  *** INFO ***  |      LLVM |     BUILDING for device: ALMAIF MLIR
+[2026-10-08 16:20:20.822706097] PoCL: in fn pocl_almaif_mlir_build_source at line 737:  *** INFO ***  |      LLVM |  building from sources for device 0
+[2026-10-08 16:20:20.849707943] PoCL: in fn pocl_run_command at line 113:  *** INFO ***  |   GENERAL |  Launching: /sim/tarsio/pocl_hls_rtl/llvm-build/bin/clang-22
+[Detaching after fork from child process 3860739]
+[2026-10-08 16:20:21.043996794] PoCL: in fn pocl_run_command at line 113:  *** INFO ***  |   GENERAL |  Launching: /sim/tarsio/pocl_hls_rtl/llvm-build/bin/cir-opt
+[Detaching after fork from child process 3860742]
+[New Thread 0x7fffd0bc4700 (LWP 3860745)]
+[New Thread 0x7fffd03c3700 (LWP 3860746)]
+[2026-10-08 16:20:21.068305926] PoCL: in fn getMLIRKernelLibrary at line 78:  *** INFO ***  |      LLVM |  Using /sim/tarsio/pocl_hls_rtl/pocl-build/lib/kernel/mlir/kernel-mlirbc.mlir as the built-in lib.
+[New Thread 0x7fffcfbc2700 (LWP 3860747)]
+[New Thread 0x7fffcf3c1700 (LWP 3860748)]
+[New Thread 0x7fffcebc0700 (LWP 3860749)]
+[New Thread 0x7fffce3bf700 (LWP 3860750)]
+[New Thread 0x7fffcdbbe700 (LWP 3860751)]
+[New Thread 0x7fffcd3bd700 (LWP 3860752)]
+[New Thread 0x7fffccbbc700 (LWP 3860753)]
+[2026-10-08 16:20:21.071096299] PoCL: in fn writeOutput at line 38:  *** INFO ***  |   GENERAL |  Writing mlir module to /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/BO/DIBEOPHMKIBPBPDFGAMHPLEHPEPHLJKBHDPHE/program.mlir
+[2026-10-08 16:20:21.072033656] PoCL: in fn poclMlirGetKernelCount at line 161:  *** INFO ***  |      LLVM |  Program has 1 kernels
+[2026-10-08 16:20:21.072073477] PoCL: in fn pocl_almaif_mlir_setup_metadata at line 754:  *** INFO ***  |    ALMAIF |  Setting metadata for 1 kernels
+[2026-10-08 16:20:21.072417441] PoCL: in fn POclCreateKernel at line 138:  *** INFO ***  |   GENERAL |  Created Kernel pocl_hls_smoke (0x731830)
+[2026-10-08 16:20:21.072455701] PoCL: in fn POclRetainContext at line 33:  *** INFO ***  | REFCOUNTS |  Retain Context 2 (0x684a90), Refcount: 4
+[2026-10-08 16:20:21.072477147] PoCL: in fn POclCreateBuffer at line 348:  *** INFO ***  |    MEMORY |  Created Buffer 7 (0x73ae50), MEM_HOST_PTR: (nil), device_ptrs[0]: (nil), SIZE 16, FLAGS 2 
+[2026-10-08 16:20:21.072507235] PoCL: in fn POclSetKernelArg at line 345:  *** INFO ***  |   GENERAL |  Kernel  pocl_hls_smoke || SetArg idx   0 || memref<?xi32, #gpu.address_space<global>> || Local 0 || Size      8 || Value 0x7fffffffd600 || Pointer (nil) || *(uint32*)Value:        0 || *(uint64*)Value:  7581264 ||
+Hex Value:  50AE7300 00000000
+[2026-10-08 16:20:21.072558036] PoCL: in fn POclRetainCommandQueue at line 37:  *** INFO ***  | REFCOUNTS |  Retain Command Queue 4 (0x6abf40), Refcount: 2
+[2026-10-08 16:20:21.072593848] PoCL: in fn pocl_kernel_calc_wg_size at line 226:  *** INFO ***  |   GENERAL |  Preparing kernel pocl_hls_smoke with local size 1 x 1 x 1 group sizes 4 x 1 x 1...
+[2026-10-08 16:20:21.072623618] PoCL: in fn allocateBuffer at line 344:  *** INFO ***  |    MEMORY |  almaif: allocated 16 bytes from 0x7fffd1bc9580
+[2026-10-08 16:20:21.072655703] PoCL: in fn POclRetainMemObject at line 34:  *** INFO ***  | REFCOUNTS |  Retain Memory Object 7 (0x73ae50), Refcount: 2
+[2026-10-08 16:20:21.072671662] PoCL: in fn POclRetainKernel at line 34:  *** INFO ***  | REFCOUNTS |  Retain Kernel pocl_hls_smoke (0x731830), Refcount: 2
+[2026-10-08 16:20:21.072997706] PoCL: in fn poclMlirGenerateStandardWorkgroupFunction at line 276:  *** INFO ***  |   GENERAL |  Calling generate standard function for kernel pocl_hls_smoke
+[2026-10-08 16:20:21.077153850] PoCL: in fn runPoclPasses at line 228:  *** INFO ***  |    TIMING |       >>>         4.114  ms    API: mlir_workgroup_ir_func_gen
+[2026-10-08 16:20:21.077413745] PoCL: in fn writeOutput at line 38:  *** INFO ***  |   GENERAL |  Writing mlir module to /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/BO/DIBEOPHMKIBPBPDFGAMHPLEHPEPHLJKBHDPHE/pocl_hls_smoke/1-1-1-goffs0/parallel.mlir
+[2026-10-08 16:20:21.080348010] PoCL: in fn writeOutput at line 38:  *** INFO ***  |   GENERAL |  Writing mlir module to /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/parallel.mlir
+[2026-10-08 16:20:21.080534267] PoCL: in fn pocl_almaif_mlir_create_finalized_command_buffer at line 799:  *** INFO ***  |    ALMAIF |  Generated cmd buffer function, compiling it now
+[2026-10-08 16:20:21.080552070] PoCL: in fn pocl_almaif_compile_kernel at line 175:  *** INFO ***  |    ALMAIF |  Current kernel (nil), new kernel 0x8530f0
+[2026-10-08 16:20:21.080573674] PoCL: in fn pocl_almaif_compile_kernel at line 253:  *** INFO ***  |    ALMAIF |  Compiling specialized kernel command_buffer to poclbinary
+[2026-10-08 16:20:21.080588370] PoCL: in fn pocl_almaif_mlir_compile_kernels at line 491:  *** INFO ***  |    ALMAIF |  Starting to compile parallel.mlir's
+[2026-10-08 16:20:21.080778940] PoCL: in fn pocl_mlir_generate_hls_function at line 482:  *** INFO ***  |   GENERAL |  Calling generate_hls_function for kernel command_buffer
+[2026-10-08 16:20:21.085252459] PoCL: in fn writeOutput at line 38:  *** INFO ***  |   GENERAL |  Writing mlir module to /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/parallel_hls.mlir
+[2026-10-08 16:20:21.085592631] PoCL: in fn pocl_almaif_mlir_compile_kernels at line 599:  *** INFO ***  |    ALMAIF |  Generated /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/parallel_hls.mlir
+[2026-10-08 16:20:21.085631866] PoCL: in fn pocl_almaif_mlir_generate_hlscpp_from_hlsmlir at line 108:  *** INFO ***  |    ALMAIF |  MLIR-Translate cmd: /sim/tarsio/pocl_hls_rtl/scalehls-install/bin/scalehls-translate -o /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/parallel_hls.cpp --scalehls-emit-hlscpp  --emit-vitis-directives /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/parallel_hls.mlir
+[Detaching after vfork from child process 3860754]
+[2026-10-08 16:20:21.106754041] PoCL: in fn pocl_almaif_mlir_generate_vitis_rtl at line 135:  *** INFO ***  |    ALMAIF |  Vitis cmd: SAVEDIR=$PWD; cd /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid; POCL_HLS_KERNEL=pocl_mlir_command_buffer POCL_HLS_INPUT=.//parallel_hls.cpp POCL_HLS_OUTPUT=kernel_command_buffer_vitis.zip POCL_HLS_PROJECT=vitis_project_command_buffer POCL_HLS_RTL_ONLY=1 vitis_hls -f /sim/tarsio/pocl_hls_rtl/pocl-hls/lib/CL/devices/almaif/mlir/generate_hls_core.tcl; cd $SAVEDIR
+[Detaching after vfork from child process 3860755]
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2 (64-bit)
+  **** SW Build 5238294 on Nov  8 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Thu Oct  8 13:20:22 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /soft64/xilinx/ferramentas/Vitis/2024.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'tarsio.onofrio' on host 'paxos.inf.pucrs.br' (Linux_x86_64 version 4.18.0-553.155.1.el8_10.x86_64) on Thu Oct 08 13:20:24 -03 2026
+INFO: [HLS 200-10] On os "Rocky Linux release 8.10 (Green Obsidian)"
+INFO: [HLS 200-10] In directory '/sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script '/sim/tarsio/pocl_hls_rtl/pocl-hls/lib/CL/devices/almaif/mlir/generate_hls_core.tcl'
+INFO: [HLS 200-1510] Running: open_project vitis_project_command_buffer 
+INFO: [HLS 200-10] Creating and opening project '/sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer'.
+INFO: [HLS 200-1510] Running: add_files .//parallel_hls.cpp 
+INFO: [HLS 200-10] Adding design file './/parallel_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: set_top pocl_mlir_command_buffer 
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1'.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 4 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-1510] Running: set_directive_top -name pocl_mlir_command_buffer pocl_mlir_command_buffer 
+WARNING: [HLS 200-484] The 'set_directive_top -name' command is deprecated and will be removed in a future release.
+WARNING: [HLS 200-484] The 'set_directive_top -location' command is deprecated and will be removed in a future release.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 640.988 MB.
+INFO: [HLS 200-10] Analyzing design file 'parallel_hls.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 17.48 seconds. CPU system time: 1.25 seconds. Elapsed time: 18.81 seconds; current allocated memory: 647.207 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 391 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 15 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 14 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 14 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 15 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 15 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 15 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 15 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 17 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 19 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 24 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_28_1> at parallel_hls.cpp:28:19 
+INFO: [HLS 214-115] Multiple burst writes of length 4 and bit width 32 in loop 'VITIS_LOOP_28_1'(parallel_hls.cpp:28:19) has been inferred on bundle 'axi_0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (parallel_hls.cpp:28:19)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.14 seconds. CPU system time: 0.5 seconds. Elapsed time: 7.23 seconds; current allocated memory: 656.148 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 656.148 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 656.148 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 656.148 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 677.172 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 677.172 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pocl_mlir_command_buffer' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pocl_mlir_command_buffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation 1 bit ('icmp_ln28', parallel_hls.cpp:28)) in the first pipeline iteration (II = 1 cycles).
+Resolution: For help on HLS 200-878 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-878.html
+WARNING: [HLS 200-880] The II Violation in module 'pocl_mlir_command_buffer' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation 0 bit ('v31_write_ln28', parallel_hls.cpp:28) of variable 'v2', parallel_hls.cpp:28 on local variable 'v31' and 'add' operation 2 bit ('v2', parallel_hls.cpp:28).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 9, loop 'VITIS_LOOP_28_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 677.172 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 677.172 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pocl_mlir_command_buffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pocl_mlir_command_buffer/axi_0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pocl_mlir_command_buffer/v0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'pocl_mlir_command_buffer' to 's_axilite & ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'pocl_mlir_command_buffer' pipeline 'VITIS_LOOP_28_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Bundling port 'v0' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pocl_mlir_command_buffer'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 677.172 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.17 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.19 seconds; current allocated memory: 677.172 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.33 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.35 seconds; current allocated memory: 677.172 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for pocl_mlir_command_buffer.
+INFO: [VLOG 209-307] Generating Verilog RTL for pocl_mlir_command_buffer.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 342.47 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:26; Allocated memory: 36.184 MB.
+INFO: [HLS 200-112] Total CPU user time: 24.19 seconds. Total CPU system time: 2.41 seconds. Total elapsed time: 31.08 seconds; peak allocated memory: 677.172 MB.
+[2026-10-08 16:20:53.691110541] PoCL: in fn pocl_almaif_mlir_compile_kernels at line 638:  *** INFO ***  |    ALMAIF |  RTL-only mode: generated Verilog under /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/vitis_project_command_buffer/solution1/syn/verilog
+[2026-10-08 16:20:53.691175035] PoCL: in fn pocl_almaif_compile_kernel at line 263:  *** INFO ***  |    ALMAIF |  Loading program to device
+[2026-10-08 16:20:53.691519250] PoCL: in fn poclMlirGenerateLlvmFunction at line 574:  *** INFO ***  |   GENERAL |  Calling generate_llvm_function for kernel command_buffer
+[2026-10-08 16:20:53.748930787] PoCL: in fn writeOutput at line 38:  *** INFO ***  |   GENERAL |  Writing mlir module to /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/parallel_llvm.mlir
+[2026-10-08 16:20:53.750923654] PoCL: in fn poclMlirGenerateLlvmFunction at line 595:  *** INFO ***  |      LLVM |  MLIR-Translate cmd: /sim/tarsio/pocl_hls_rtl/llvm-build/bin/mlir-translate -o /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/parallel.bc --mlir-to-llvmir /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/parallel_llvm.mlir
+[Detaching after vfork from child process 3861085]
+[2026-10-08 16:20:53.814798390] PoCL: in fn poclMlirGenerateWorkgroupFunctionNowrite at line 318:  *** INFO ***  |      LLVM |  Generated /sim/tarsio/pocl_hls_rtl/pocl-cache-integrated2/KG/CPAADGNKGBHBBODMBJKJGLDBLJOFAJNGAMGDI/command_buffer/1-1-1-goffs0-smallgrid/parallel.bc
+[2026-10-08 16:20:53.861656163] PoCL: in fn pocl_llvm_codegen2 at line 1244:  *** INFO ***  |      LLVM |  Generating an object file directly.
+free(): invalid next size (normal)
+
+Thread 1 "run_rtl_smoke" received signal SIGABRT, Aborted.
+0x00007ffff720e5af in raise () from /lib64/libc.so.6
+#0  0x00007ffff720e5af in raise () from /lib64/libc.so.6
+#1  0x00007ffff71e1ee5 in abort () from /lib64/libc.so.6
+#2  0x00007ffff724f757 in __libc_message () from /lib64/libc.so.6
+#3  0x00007ffff7256a5c in malloc_printerr () from /lib64/libc.so.6
+#4  0x00007ffff725893c in _int_free () from /lib64/libc.so.6
+#5  0x00007fffe71e3b29 in llvm::X86LegalizerInfo::~X86LegalizerInfo() () from /sim/tarsio/pocl_hls_rtl/llvm-build/lib/libLLVM.so.22.0git
+#6  0x00007fffe718c8f1 in llvm::X86Subtarget::~X86Subtarget() () from /sim/tarsio/pocl_hls_rtl/llvm-build/lib/libLLVM.so.22.0git
+#7  0x00007fffe718f008 in llvm::X86TargetMachine::~X86TargetMachine() () from /sim/tarsio/pocl_hls_rtl/llvm-build/lib/libLLVM.so.22.0git
+#8  0x00007fffe718f069 in llvm::X86TargetMachine::~X86TargetMachine() () from /sim/tarsio/pocl_hls_rtl/llvm-build/lib/libLLVM.so.22.0git
+#9  0x00007ffff7732eeb in pocl_llvm_codegen2 () from /sim/tarsio/pocl_hls_rtl/pocl-build/lib/CL/libOpenCL.so.2
