@@ -1,0 +1,167 @@
+[2026-10-08 17:26:09.266331930] PoCL: in fn pocl_install_sigfpe_handler at line 255:  *** INFO ***  |   GENERAL |  Installing SIGFPE handler...
+[2026-10-08 17:26:09.266480384] PoCL: in fn pocl_dynlib_open at line 55:  *** ERROR ***  |     ERROR |  dlopen() error: /sim/tarsio/pocl_hls_rtl/pocl-build/lib/CL/devices/pthread/libpocl-devices-pthread.so: cannot open shared object file: No such file or directory
+[2026-10-08 17:26:09.266496787] PoCL: in fn pocl_init_devices at line 706:  *** WARNING ***  |   WARNING |  Loading /sim/tarsio/pocl_hls_rtl/pocl-build/lib/CL/devices/pthread/libpocl-devices-pthread.so failed.
+[2026-10-08 17:26:09.266536512] PoCL: in fn pocl_dynlib_open at line 55:  *** ERROR ***  |     ERROR |  dlopen() error: pocl/libpocl-devices-pthread.so: cannot open shared object file: No such file or directory
+[2026-10-08 17:26:09.266550509] PoCL: in fn pocl_init_devices at line 715:  *** WARNING ***  |   WARNING |  Loading pocl/libpocl-devices-pthread.so failed
+[2026-10-08 17:26:09.266646593] PoCL: in fn pocl_almaif_init at line 337:  *** INFO ***  |    ALMAIF |  Parameters were not given. Creating emulation device with built-in kernels 0,1,2,4,9.
+[2026-10-08 17:26:09.266676354] PoCL: in fn EmulationDevice at line 47:  *** INFO ***  |    ALMAIF |  Allocated emulation region from: 0x7f6b8d436010
+[2026-10-08 17:26:09.266789937] PoCL: in fn EmulationDevice at line 55:  *** INFO ***  |    ALMAIF |  almaif: started emulating
+[2026-10-08 17:26:09.266815355] PoCL: in fn Read32 at line 89:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7f6b8d436010 with offset 0x30c
+[2026-10-08 17:26:09.266834249] PoCL: in fn Read32 at line 89:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7f6b8d436010 with offset 0x308
+[2026-10-08 17:26:09.266848508] PoCL: in fn Read32 at line 89:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7f6b8d436010 with offset 0x308
+[2026-10-08 17:26:09.266862724] PoCL: in fn Read64 at line 118:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7f6b8d436010 with offset 0x340
+[2026-10-08 17:26:09.266879817] PoCL: in fn Read32 at line 89:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7f6b8d436010 with offset 0x348
+[2026-10-08 17:26:09.266894179] PoCL: in fn Read32 at line 89:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7f6b8d436010 with offset 0x314
+[2026-10-08 17:26:09.266908395] PoCL: in fn Read32 at line 89:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7f6b8d436010 with offset 0x320
+[2026-10-08 17:26:09.266925374] PoCL: in fn Read32 at line 89:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7f6b8d436010 with offset 0x330
+[2026-10-08 17:26:09.266939749] PoCL: in fn Read64 at line 118:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7f6b8d436010 with offset 0x318
+[2026-10-08 17:26:09.266953955] PoCL: in fn Read64 at line 118:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7f6b8d436010 with offset 0x328
+[2026-10-08 17:26:09.266971957] PoCL: in fn Read64 at line 118:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Reading from physical address 0x7f6b8d436010 with offset 0x338
+[2026-10-08 17:26:09.266986385] PoCL: in fn discoverDeviceParameters at line 120:  *** INFO ***  |    ALMAIF |  CQStart=0x7f6b8d436410 ImemStart=0x7f6b8d436410 DmemStart=0x7f6b8d436510
+[2026-10-08 17:26:09.267001126] PoCL: in fn discoverDeviceParameters at line 122:  *** INFO ***  |    ALMAIF |  CQSize=256 ImemSize=0 DmemSize=201326592
+[2026-10-08 17:26:09.267018511] PoCL: in fn discoverDeviceParameters at line 124:  *** INFO ***  |    ALMAIF |  ControlMemory->PhysAddress=140099908231184
+[2026-10-08 17:26:09.267035663] PoCL: in fn emulate_almaif at line 139:  *** INFO ***  |    ALMAIF |  almaif emulate: Emulator initialized 
+[2026-10-08 17:26:09.267090663] PoCL: in fn discoverDeviceParameters at line 131:  *** INFO ***  |    ALMAIF |  Reserved 4096 bytes at the start of global memory for constant data
+[2026-10-08 17:26:09.267107383] PoCL: in fn Write32 at line 100:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Writing to physical address 0x7f6b8d436010 with offset 0x200
+[2026-10-08 17:26:09.267126133] PoCL: in fn pocl_almaif_init at line 436:  *** INFO ***  |    ALMAIF |  Allocated printf buffer of size 4096 from 140099908236608
+[2026-10-08 17:26:09.267150235] PoCL: in fn pocl_almaif_init at line 504:  *** INFO ***  |    ALMAIF |  almaif: accelerator at 0xe with 5 builtin kernels (pocl.copy.i8;pocl.add.i32;pocl.mul.i32;pocl.countred;pocl.abs.f32)
+[2026-10-08 17:26:09.267171922] PoCL: in fn pocl_almaif_compile_init at line 97:  *** INFO ***  |    ALMAIF |  Starting device specific initializion
+[2026-10-08 17:26:09.267199798] PoCL: in fn pocl_almaif_mlir_initialize at line 78:  *** INFO ***  |    ALMAIF |  Initializing Emulation device for compilation
+[2026-10-08 17:26:09.267213459] PoCL: in fn pocl_almaif_compile_init at line 100:  *** INFO ***  |    ALMAIF |  Device specific initializion done
+[2026-10-08 17:26:09.267227803] PoCL: in fn pocl_almaif_init at line 522:  *** INFO ***  |    ALMAIF |  almaif: mmap done
+[2026-10-08 17:26:09.329839628] PoCL: in fn pocl_almaif_init at line 538:  *** INFO ***  |    ALMAIF |  Initializing AQL Packet cqmemory size=256
+[2026-10-08 17:26:09.329871324] PoCL: in fn Write16 at line 109:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Writing to physical address 0x7f6b8d436410 with offset 0x40
+[2026-10-08 17:26:09.329884982] PoCL: in fn Write16 at line 109:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Writing to physical address 0x7f6b8d436410 with offset 0x80
+[2026-10-08 17:26:09.329904309] PoCL: in fn Write16 at line 109:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Writing to physical address 0x7f6b8d436410 with offset 0xc0
+[2026-10-08 17:26:09.329917305] PoCL: in fn Write32 at line 100:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Writing to physical address 0x7f6b8d436410 with offset 0x28
+[2026-10-08 17:26:09.329930045] PoCL: in fn Write32 at line 100:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Writing to physical address 0x7f6b8d436410 with offset 0x30
+[2026-10-08 17:26:09.329946365] PoCL: in fn Write32 at line 100:  *** INFO ***  | ALMAIF_MMAP |  MMAP: Writing to physical address 0x7f6b8d436010 with offset 0x200
+[2026-10-08 17:26:09.329990205] PoCL: in fn pocl_almaif_init at line 574:  *** INFO ***  |    ALMAIF |  Custom emulation device 0 initialized 
+[2026-10-08 17:26:09.330014747] PoCL: in fn POclGetDeviceInfo at line 68:  *** INFO ***  |   GENERAL |  clGetDeviceInfo query of param 102b for ALMAIF MLIR
+[2026-10-08 17:26:09.330029046] PoCL: in fn POclGetDeviceInfo at line 68:  *** INFO ***  |   GENERAL |  clGetDeviceInfo query of param 1000 for ALMAIF MLIR
+[2026-10-08 17:26:09.330373406] PoCL: in fn POclCreateCommandQueue at line 114:  *** INFO ***  |   GENERAL |  Created Command Queue 3 (0xc313d0) on device 0
+[2026-10-08 17:26:09.331046076] PoCL: in fn pocl_llvm_create_context at line 723:  *** INFO ***  |      LLVM |  Created context 2 (0xc31210)
+[2026-10-08 17:26:09.331066427] PoCL: in fn POclCreateContext at line 249:  *** INFO ***  |   GENERAL |  Created Context 2 (0xc31210)
+[2026-10-08 17:26:09.331087601] PoCL: in fn POclRetainContext at line 33:  *** INFO ***  | REFCOUNTS |  Retain Context 2 (0xc31210), Refcount: 2
+[2026-10-08 17:26:09.331101402] PoCL: in fn POclCreateCommandQueue at line 114:  *** INFO ***  |   GENERAL |  Created Command Queue 4 (0xc58b40) on device 0
+[2026-10-08 17:26:09.331150140] PoCL: in fn POclRetainContext at line 33:  *** INFO ***  | REFCOUNTS |  Retain Context 2 (0xc31210), Refcount: 3
+[2026-10-08 17:26:09.331168053] PoCL: in fn compile_and_link_program at line 733:  *** INFO ***  |      LLVM |  building program with options -cl-kernel-arg-info -I /sim/tarsio/PipeCNN_Winograd/project/device -I /sim/tarsio/PipeCNN_Winograd/project/device/RTL
+[2026-10-08 17:26:09.331185279] PoCL: in fn compile_and_link_program at line 770:  *** INFO ***  |      LLVM |  building program for 1 devs with options -cl-kernel-arg-info -I /sim/tarsio/PipeCNN_Winograd/project/device -I /sim/tarsio/PipeCNN_Winograd/project/device/RTL
+[2026-10-08 17:26:09.331198301] PoCL: in fn compile_and_link_program at line 774:  *** INFO ***  |      LLVM |     BUILDING for device: ALMAIF MLIR
+[2026-10-08 17:26:09.331215135] PoCL: in fn pocl_almaif_mlir_build_source at line 742:  *** INFO ***  |      LLVM |  building from sources for device 0
+[2026-10-08 17:26:09.388320840] PoCL: in fn pocl_run_command at line 113:  *** INFO ***  |   GENERAL |  Launching: /sim/tarsio/pocl_hls_rtl/llvm-build/bin/clang-22
+In file included from /sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:72:
+/sim/tarsio/PipeCNN_Winograd/project/device/type_def.cl:17:26: warning: OpenCL extension 'cl_intel_channels' unknown or does not require pragma - ignoring [-Wignored-pragmas]
+   17 | #pragma OPENCL EXTENSION cl_intel_channels : enable
+      |                          ^
+/sim/tarsio/PipeCNN_Winograd/project/device/type_def.cl:146:1: error: unknown type name 'channel'
+  146 | channel data_wng         data_ch    __attribute__((depth(0)));
+      | ^
+/sim/tarsio/PipeCNN_Winograd/project/device/type_def.cl:146:17: error: expected ';' after top level declarator
+  146 | channel data_wng         data_ch    __attribute__((depth(0)));
+      |                 ^
+      |                 ;
+/sim/tarsio/PipeCNN_Winograd/project/device/type_def.cl:148:1: error: unknown type name 'channel'
+  148 | channel ddr_weight_wng           weight_ch[LANE_NUM]  __attribute__((depth(0)));
+      | ^
+/sim/tarsio/PipeCNN_Winograd/project/device/type_def.cl:148:23: error: expected ';' after top level declarator
+  148 | channel ddr_weight_wng           weight_ch[LANE_NUM]  __attribute__((depth(0)));
+      |                       ^
+      |                       ;
+/sim/tarsio/PipeCNN_Winograd/project/device/type_def.cl:149:1: error: unknown type name 'channel'
+  149 | channel channel_scal            bias_ch    __attribute__((depth(8)));
+      | ^
+/sim/tarsio/PipeCNN_Winograd/project/device/type_def.cl:149:21: error: expected ';' after top level declarator
+  149 | channel channel_scal            bias_ch    __attribute__((depth(8)));
+      |                     ^
+      |                     ;
+/sim/tarsio/PipeCNN_Winograd/project/device/type_def.cl:150:1: error: unknown type name 'channel'
+  150 | channel channel_wvec_wng        conv_ch    __attribute__((depth(CHN_DEPTH)));
+      | ^
+/sim/tarsio/PipeCNN_Winograd/project/device/type_def.cl:150:25: error: expected ';' after top level declarator
+  150 | channel channel_wvec_wng        conv_ch    __attribute__((depth(CHN_DEPTH)));
+      |                         ^
+      |                         ;
+/sim/tarsio/PipeCNN_Winograd/project/device/type_def.cl:151:1: error: unknown type name 'channel'
+  151 | channel channel_wvec_wng        pool_ch    __attribute__((depth(CHN_DEPTH)));
+      | ^
+/sim/tarsio/PipeCNN_Winograd/project/device/type_def.cl:151:25: error: expected ';' after top level declarator
+  151 | channel channel_wvec_wng        pool_ch    __attribute__((depth(CHN_DEPTH)));
+      |                         ^
+      |                         ;
+/sim/tarsio/PipeCNN_Winograd/project/device/type_def.cl:152:1: error: unknown type name 'channel'
+  152 | channel channel_wvec_wng        bypass_ch  __attribute__((depth(CHN_DEPTH)));
+      | ^
+/sim/tarsio/PipeCNN_Winograd/project/device/type_def.cl:152:25: error: expected ';' after top level declarator
+  152 | channel channel_wvec_wng        bypass_ch  __attribute__((depth(CHN_DEPTH)));
+      |                         ^
+      |                         ;
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:104:16: warning: unknown attribute 'max_global_work_dim' ignored [-Wunknown-attributes]
+  104 | __attribute__((max_global_work_dim(0)))
+      |                ^~~~~~~~~~~~~~~~~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:164:35: warning: unknown attribute 'register' ignored [-Wunknown-attributes]
+  164 |         data_wng_ddr      __attribute__((register))  data_vec_rd1_tmp,data_vec_rd2_tmp;
+      |                                          ^~~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:164:35: warning: unknown attribute 'register' ignored [-Wunknown-attributes]
+  164 |         data_wng_ddr      __attribute__((register))  data_vec_rd1_tmp,data_vec_rd2_tmp;
+      |                                          ^~~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:165:29: warning: unknown attribute 'register' ignored [-Wunknown-attributes]
+  165 |         intvec      __attribute__((register))  data_vec_wr1,data_vec_wr2;
+      |                                    ^~~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:165:29: warning: unknown attribute 'register' ignored [-Wunknown-attributes]
+  165 |         intvec      __attribute__((register))  data_vec_wr1,data_vec_wr2;
+      |                                    ^~~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:166:29: warning: unknown attribute 'register' ignored [-Wunknown-attributes]
+  166 |         intvec      __attribute__((register))  data_vec_rd1,data_vec_rd2;
+      |                                    ^~~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:166:29: warning: unknown attribute 'register' ignored [-Wunknown-attributes]
+  166 |         intvec      __attribute__((register))  data_vec_rd1,data_vec_rd2;
+      |                                    ^~~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:208:67: warning: unknown attribute 'numbanks' ignored [-Wunknown-attributes]
+  208 |             __local intvec    win_buffer[WIN_BUF_SIZE][3] __attribute__((numbanks(4),bankwidth(64))); // working sequence 0->1->0->1 ...
+      |                                                                          ^~~~~~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:208:79: warning: unknown attribute 'bankwidth' ignored [-Wunknown-attributes]
+  208 |             __local intvec    win_buffer[WIN_BUF_SIZE][3] __attribute__((numbanks(4),bankwidth(64))); // working sequence 0->1->0->1 ...
+      |                                                                                      ^~~~~~~~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:217:43: warning: unknown attribute 'numbanks' ignored [-Wunknown-attributes]
+  217 |         __local channel_vec_wng   __attribute__((numbanks(1)))  weight_buffer[WEIGHT_BUF_SIZE]; 
+      |                                                  ^~~~~~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:253:30: warning: unknown attribute 'numbanks' ignored [-Wunknown-attributes]
+  253 |         pool_vec_wng __attribute__((numbanks(1))) line_buf_0[POOL_LBUF_DEPTH];
+      |                                     ^~~~~~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:948:12: error: use of undeclared identifier 'write_channel_intel'
+  948 |                                 write_channel_intel(bypass_ch, conv_ch_in);
+      |                                 ^~~~~~~~~~~~~~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:948:32: error: use of undeclared identifier 'bypass_ch'
+  948 |                                 write_channel_intel(bypass_ch, conv_ch_in);
+      |                                                     ^~~~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:984:16: error: use of undeclared identifier 'write_channel_intel'
+  984 |                                         write_channel_intel(pool_ch, pool_final);
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:984:36: error: use of undeclared identifier 'pool_ch'
+  984 |                                         write_channel_intel(pool_ch, pool_final);
+      |                                                             ^~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:1105:37: warning: unknown attribute 'register' ignored [-Wunknown-attributes]
+ 1105 |     channel_wvec_wng __attribute__((register)) ch_data;
+      |                                     ^~~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:1148:18: error: use of undeclared identifier 'read_channel_intel'
+ 1148 |                         ch_data = read_channel_intel(bypass_ch);
+      |                                   ^~~~~~~~~~~~~~~~~~
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:1148:37: error: use of undeclared identifier 'bypass_ch'; did you mean 'bypass'?
+ 1148 |                         ch_data = read_channel_intel(bypass_ch);
+      |                                                      ^~~~~~~~~
+      |                                                      bypass
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:1090:16: note: 'bypass' declared here
+ 1090 |                             uchar   bypass,
+      |                                     ^
+/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/cache-final/tempfile_EIT5T2.cl:1150:18: error: use of undeclared identifier 'read_channel_intel'
+ 1150 |                         ch_data = read_channel_intel(pool_ch);
+      |                                   ^~~~~~~~~~~~~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+13 warnings and 20 errors generated.
+[2026-10-08 17:26:09.614733146] PoCL: in fn poclMlirBuildProgram at line 239:  *** ERROR ***  |     ERROR |  Failed running ClangIR
+[2026-10-08 17:26:09.614809855] PoCL: in fn compile_and_link_program at line 890:  *** ERROR ***  |     ERROR | CL_BUILD_PROGRAM_FAILURE Device ALMAIF MLIR failed to build the program
+clBuildProgram failed with OpenCL error -11
+Device ALMAIF MLIR failed to build the program
+
+OpenCL device: ALMAIF MLIR (type 0x8)

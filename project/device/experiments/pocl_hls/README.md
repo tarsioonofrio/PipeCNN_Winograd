@@ -96,20 +96,27 @@ falha de memória nos passes. Esse retorno antecipado ainda não foi validado
 num smoke completo; o fluxo precisa estabilizar antes de uma campanha
 reproduzível.
 
-Não foi feita tentativa de compilar `conv_pipe.cl`. O kernel usa
-`cl_intel_channels`, `read_channel_intel`/`write_channel_intel` e atributos
-`numbanks`/`bankwidth`; suporte direto continua sem verificação. Não remova
-esses elementos para contornar o frontend sem registrar isso como outra
-variante arquitetural.
+Foi feita uma tentativa de compilar o `conv_pipe.cl` original no frontend
+PoCL-HLS. Ela parou durante o build OpenCL: o ClangIR não reconhece o tipo
+Intel `channel` nem as funções `read_channel_intel` e `write_channel_intel`.
+Os atributos `numbanks` e `bankwidth` são aceitos apenas como atributos
+desconhecidos e ignorados. Nenhum `parallel_hls.mlir`, C++ HLS ou RTL do
+PipeCNN foi gerado. O log, harness e parada temporária antes do Vitis estão
+arquivados em [`conv_pipe-compat/attempt-20261008/`](conv_pipe-compat/attempt-20261008/README.md).
+
+Essa é uma incompatibilidade observada no frontend usado, não prova que toda
+versão ou configuração de PoCL-HLS falhará da mesma forma. Para avançar seria
+necessário implementar suporte aos canais Intel nesse frontend ou transformar
+o fluxo de comunicação do kernel; a segunda opção altera a arquitetura e deve
+ser tratada como variante, não como conversão direta do PipeCNN.
 
 ## Próxima etapa
 
-Reproduzir o smoke do zero com o patch em
-[`patches/rtl-only-vitis-2024.2.patch`](patches/rtl-only-vitis-2024.2.patch),
-entender e remover a corrupção de memória nos passes PoCL/MLIR e obter uma
-execução integrada com status zero. Depois, inspecionar os artefatos da RTL e
-testar a compilação do `conv_pipe.cl` separadamente, sem apagar os caches e
-logs atuais.
+Decidir se vale implementar a extensão de canais Intel no frontend PoCL-HLS.
+Sem isso, uma tradução dos canais para outra construção OpenCL deve ser
+identificada e medida como variante arquitetural separada. O smoke padrão
+continua útil para avaliar o fluxo PoCL-HLS, mas não remove o bloqueio de
+compatibilidade encontrado no `conv_pipe.cl`.
 
 ## Fontes
 

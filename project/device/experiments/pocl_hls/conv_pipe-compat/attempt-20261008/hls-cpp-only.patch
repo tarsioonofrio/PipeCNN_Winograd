@@ -1,0 +1,14 @@
+--- a/lib/CL/devices/almaif/mlir/AlmaifCompileMLIR.cc
++++ b/lib/CL/devices/almaif/mlir/AlmaifCompileMLIR.cc
+@@ -625,6 +625,11 @@
+       kernel_iprepo_path += "/ip_repo_" + std::string(kernel->name);
+ 
+       pocl_rm_rf(kernel_vitis_folder_path.c_str());
++      if (rtlOnly && pocl_get_bool_option("POCL_ALMAIF_MLIR_HLS_CPP_ONLY", false)) {
++        POCL_MSG_PRINT_ALMAIF("HLS-C++-only mode: generated %s\n", kernel_parallel_hlscpp_path.c_str());
++        POCL_UNLOCK(bd->mlir_compile_lock);
++        return 0;
++      }
+       pocl_almaif_mlir_generate_vitis_rtl(cachedir, kernel->name, rtlOnly);
+         if (rtlOnly) {
+           std::string rtl_dir = kernel_vitis_folder_path;
