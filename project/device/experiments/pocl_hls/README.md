@@ -105,18 +105,27 @@ PipeCNN foi gerado. O log, harness e parada temporária antes do Vitis estão
 arquivados em [`conv_pipe-compat/attempt-20261008/`](conv_pipe-compat/attempt-20261008/README.md).
 
 Essa é uma incompatibilidade observada no frontend usado, não prova que toda
-versão ou configuração de PoCL-HLS falhará da mesma forma. Para avançar seria
-necessário implementar suporte aos canais Intel nesse frontend ou transformar
-o fluxo de comunicação do kernel; a segunda opção altera a arquitetura e deve
-ser tratada como variante, não como conversão direta do PipeCNN.
+versão ou configuração de PoCL-HLS falhará da mesma forma. Testei também pipes
+OpenCL padrão como possível adaptação: o Clang reconhece a sintaxe, mas o
+ClangIR aborta ao converter `PipeType` (`CIRGenTypes.cpp`, conversão ainda não
+implementada). O Hida tem operações internas de stream e as emite como
+`.read()`/`.write()` em C++, mas não encontrei uma ponte dos canais Intel
+globais do PipeCNN para elas. O PipeCNN conecta `memRead` e `memWrite` por
+esses canais; preservá-lo requer resolver a representação e o fluxo entre
+kernels, não apenas trocar nomes de funções. O Hida oferece partição de arrays
+e diretivas de armazenamento HLS, mas não encontrei mapeamento dos atributos
+Intel `numbanks`/`bankwidth`; uma partição manual teria de ser definida e
+comparada. Evidências adicionais estão no
+diretório [`conv_pipe-compat/attempt-20261008/`](conv_pipe-compat/attempt-20261008/README.md).
 
 ## Próxima etapa
 
-Decidir se vale implementar a extensão de canais Intel no frontend PoCL-HLS.
-Sem isso, uma tradução dos canais para outra construção OpenCL deve ser
-identificada e medida como variante arquitetural separada. O smoke padrão
-continua útil para avaliar o fluxo PoCL-HLS, mas não remove o bloqueio de
-compatibilidade encontrado no `conv_pipe.cl`.
+Avaliar o esforço para adicionar no ClangIR/PoCL-HLS a representação de
+`PipeType` e sua conversão para os streams HLS do Hida, incluindo a ligação
+entre `memRead` e `memWrite`, e mapear explicitamente o banking do AOCL para as
+diretivas HLS. Até existir esse caminho, o smoke padrão continua validando
+apenas a infraestrutura; ele não estabelece uma conversão do `conv_pipe.cl`
+original.
 
 ## Fontes
 

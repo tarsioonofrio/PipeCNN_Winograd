@@ -5,3 +5,5 @@ fb6086dd1aee4ea13061a30685689b717fa85b99222e139c93120c0c699d2884  project/device
 38c39933de2d735d3dea8ad514998717ea085a5ddf8a8f363d1ce8b4c0110f97  project/device/experiments/pocl_hls/conv_pipe-compat/attempt-20261008/pocl-build.log
 5a17288ccdcc2f04ed5d6af8c0bedc3d88c714a1f4028be1fba02df1580d8523  project/device/experiments/pocl_hls/conv_pipe-compat/attempt-20261008/run_conv_probe.c
 86e34a24d529a046e13e49ab9f82dbd1b2d74f66cacb924aedd34e7ae15c3d1c  project/device/experiments/pocl_hls/conv_pipe-compat/attempt-20261008/hls-cpp-only.patch
+8a34243005b17d4dfcc223516f82292d55ad3dbc3de155565a0ab129948077ca  project/device/experiments/pocl_hls/conv_pipe-compat/attempt-20261008/opencl-pipe.c
+c8d3297933b294d657de13d375688ab87d719d01b165f62018d715695605ead5  project/device/experiments/pocl_hls/conv_pipe-compat/attempt-20261008/opencl-pipe-cir.log

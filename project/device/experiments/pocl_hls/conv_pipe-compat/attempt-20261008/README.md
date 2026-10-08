@@ -13,6 +13,29 @@ RTL de `conv_pipe.cl`, e não chamou Vitis HLS. Ela confirma incompatibilidade
 do frontend e configuração usados nesta tentativa; não é uma afirmação sobre
 todas as versões ou variantes possíveis de PoCL-HLS.
 
+Também testei se uma adaptação para pipes OpenCL padrão seria uma ponte
+disponível nesse toolchain. O Clang reconheceu a sintaxe `pipe`/`read_pipe`/
+`write_pipe` em OpenCL 2.0, mas o ClangIR abortou ao converter o tipo `PipeType`
+em `CIRGenTypes.cpp` (`assert(0 && "not implemented")`). O log dessa
+reprodução mínima está em [`opencl-pipe-cir.log`](opencl-pipe-cir.log), com a
+fonte em [`opencl-pipe.c`](opencl-pipe.c). Portanto, pipes padrão também não
+são uma solução direta com o ClangIR compilado na Paxos.
+
+O Hida contém operações MLIR `hls.dataflow.stream`, `stream_read` e
+`stream_write`, e o emissor as traduz para métodos `.read()`/`.write()` em
+C++. Isso prova que o backend tem uma representação de streams HLS, mas não
+há no código consultado uma ponte dos canais OpenCL globais do PipeCNN para
+essas operações. Além disso, os canais conectam os kernels `memRead` e
+`memWrite`, então uma implementação teria de preservar a comunicação entre
+eles, e não só converter chamadas individuais.
+
+Para memória, o Hida oferece `scalehls-array-partition` e emite pragmas HLS
+`array_partition` e `bind_storage`. Não encontrei tradução dos atributos
+Intel `numbanks`/`bankwidth` para essas diretivas. Uma partição escolhida
+manualmente pode ser expressável no Hida, mas ainda precisa de mapeamento
+explícito e comparação da estrutura resultante; hoje o ClangIR descarta os
+atributos originais.
+
 ## Configuração usada
 
 - Fonte original: `project/device/conv_pipe.cl`, sem alterações.
@@ -40,6 +63,9 @@ Os hashes dos demais includes (`hw_param.cl`, `type_def.cl` e `RTL/rtl_lib.h`)
 e dos artefatos desta tentativa estão em [`SHA256SUMS`](SHA256SUMS).
 
 - [`pocl-build.log`](pocl-build.log): saída completa do frontend.
+- [`opencl-pipe-cir.log`](opencl-pipe-cir.log): reprodução de um pipe padrão
+  chegando ao `assert` de `PipeType` no ClangIR.
+- [`opencl-pipe.c`](opencl-pipe.c): dois kernels mínimos que usam pipe padrão.
 - [`run_conv_probe.c`](run_conv_probe.c): harness usado para construir o
   programa e selecionar `memWrite`; não enfileira execução do kernel.
 - [`hls-cpp-only.patch`](hls-cpp-only.patch): parada temporária antes do Vitis.

@@ -1,0 +1,56 @@
+clang-22: warning: argument unused during compilation: '-c' [-Wunused-command-line-argument]
+clang-22: /sim/tarsio/pocl_hls_rtl/llvm-project/clang/lib/CIR/CodeGen/CIRGenTypes.cpp:762: mlir::Type clang::CIRGen::CIRGenTypes::convertType(QualType): Assertion `0 && "not implemented"' failed.
+PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace, preprocessed source, and associated run script.
+Stack dump:
+0.	Program arguments: /sim/tarsio/pocl_hls_rtl/llvm-build/bin/clang-22 -x cl -cl-std=CL2.0 -fclangir -emit-cir -c /sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/opencl-pipe.c -o /sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/opencl-pipe.cir
+1.	/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/opencl-pipe.c:2:1: current parser token '__kernel'
+2.	/sim/tarsio/pocl_hls_rtl/conv_pipe-hlscpp-probe/opencl-pipe.c:1:15: LLVM IR generation of declaration 'writer'
+ #0 0x00007f8c67ec6fe8 llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libLLVM.so.22.0git+0x866fe8)
+ #1 0x00007f8c67ec45e5 llvm::sys::RunSignalHandlers() (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libLLVM.so.22.0git+0x8645e5)
+ #2 0x00007f8c67ec63b1 llvm::sys::CleanupOnSignal(unsigned long) (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libLLVM.so.22.0git+0x8663b1)
+ #3 0x00007f8c67ddf036 CrashRecoverySignalHandler(int) CrashRecoveryContext.cpp:0:0
+ #4 0x00007f8c73a39990 __restore_rt (/lib64/libpthread.so.0+0x12990)
+ #5 0x00007f8c669a95af raise (/lib64/libc.so.6+0x4e5af)
+ #6 0x00007f8c6697cee5 abort (/lib64/libc.so.6+0x21ee5)
+ #7 0x00007f8c6697cdb9 _nl_load_domain.cold.0 (/lib64/libc.so.6+0x21db9)
+ #8 0x00007f8c669a1f06 (/lib64/libc.so.6+0x46f06)
+ #9 0x00007f8c70b0bad1 clang::CIRGen::CIRGenTypes::convertType(clang::QualType) (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libclang-cpp.so.22.0git+0x3fe7ad1)
+#10 0x00007f8c70a4d8cd clang::CIRGen::CIRGenTypes::GetFunctionType(clang::CIRGen::CIRGenFunctionInfo const&) (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libclang-cpp.so.22.0git+0x3f298cd)
+#11 0x00007f8c70aecb50 clang::CIRGen::CIRGenModule::emitGlobalFunctionDefinition(clang::GlobalDecl, mlir::Operation*) (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libclang-cpp.so.22.0git+0x3fc8b50)
+#12 0x00007f8c70aeadef clang::CIRGen::CIRGenModule::emitGlobal(clang::GlobalDecl) (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libclang-cpp.so.22.0git+0x3fc6def)
+#13 0x00007f8c70af57d3 clang::CIRGen::CIRGenModule::emitTopLevelDecl(clang::Decl*) (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libclang-cpp.so.22.0git+0x3fd17d3)
+#14 0x00007f8c70b1503f cir::CIRGenerator::HandleTopLevelDecl(clang::DeclGroupRef) (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libclang-cpp.so.22.0git+0x3ff103f)
+#15 0x00007f8c70b208e4 cir::CIRGenConsumer::HandleTopLevelDecl(clang::DeclGroupRef) (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libclang-cpp.so.22.0git+0x3ffc8e4)
+#16 0x00007f8c6ddeaa4a clang::ParseAST(clang::Sema&, bool, bool) (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libclang-cpp.so.22.0git+0x12c6a4a)
+#17 0x00007f8c6ff171e6 clang::FrontendAction::Execute() (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libclang-cpp.so.22.0git+0x33f31e6)
+#18 0x00007f8c6fe8165d clang::CompilerInstance::ExecuteAction(clang::FrontendAction&) (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libclang-cpp.so.22.0git+0x335d65d)
+#19 0x00007f8c6ffb3f0b clang::ExecuteCompilerInvocation(clang::CompilerInstance*) (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libclang-cpp.so.22.0git+0x348ff0b)
+#20 0x00000000004112b9 cc1_main(llvm::ArrayRef<char const*>, char const*, void*) (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/clang-22+0x4112b9)
+#21 0x000000000040d255 ExecuteCC1Tool(llvm::SmallVectorImpl<char const*>&, llvm::ToolContext const&, llvm::IntrusiveRefCntPtr<llvm::vfs::FileSystem>) driver.cpp:0:0
+#22 0x000000000040f67d int llvm::function_ref<int (llvm::SmallVectorImpl<char const*>&)>::callback_fn<clang_main(int, char**, llvm::ToolContext const&)::$_0>(long, llvm::SmallVectorImpl<char const*>&) driver.cpp:0:0
+#23 0x00007f8c6fae2d79 void llvm::function_ref<void ()>::callback_fn<clang::driver::CC1Command::Execute(llvm::ArrayRef<std::optional<llvm::StringRef>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>*, bool*) const::$_0>(long) Job.cpp:0:0
+#24 0x00007f8c67ddecde llvm::CrashRecoveryContext::RunSafely(llvm::function_ref<void ()>) (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libLLVM.so.22.0git+0x77ecde)
+#25 0x00007f8c6fae25e3 clang::driver::CC1Command::Execute(llvm::ArrayRef<std::optional<llvm::StringRef>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>*, bool*) const (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libclang-cpp.so.22.0git+0x2fbe5e3)
+#26 0x00007f8c6faa4bec clang::driver::Compilation::ExecuteCommand(clang::driver::Command const&, clang::driver::Command const*&, bool) const (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libclang-cpp.so.22.0git+0x2f80bec)
+#27 0x00007f8c6faa4e07 clang::driver::Compilation::ExecuteJobs(clang::driver::JobList const&, llvm::SmallVectorImpl<std::pair<int, clang::driver::Command const*>>&, bool) const (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libclang-cpp.so.22.0git+0x2f80e07)
+#28 0x00007f8c6fac00d8 clang::driver::Driver::ExecuteCompilation(clang::driver::Compilation&, llvm::SmallVectorImpl<std::pair<int, clang::driver::Command const*>>&) (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/../lib/libclang-cpp.so.22.0git+0x2f9c0d8)
+#29 0x000000000040cb1a clang_main(int, char**, llvm::ToolContext const&) (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/clang-22+0x40cb1a)
+#30 0x000000000041c517 main (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/clang-22+0x41c517)
+#31 0x00007f8c66995865 __libc_start_main (/lib64/libc.so.6+0x3a865)
+#32 0x000000000040acfe _start (/sim/tarsio/pocl_hls_rtl/llvm-build/bin/clang-22+0x40acfe)
+clang-22: error: clang frontend command failed with exit code 134 (use -v to see invocation)
+clang version 22.0.0git (https://github.com/llvm/clangir.git d4ebb05f347d8d9d62968676d5b2bbc1338de499)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /sim/tarsio/pocl_hls_rtl/llvm-build/bin
+Build config: +assertions
+clang-22: note: diagnostic msg: 
+********************
+
+PLEASE ATTACH THE FOLLOWING FILES TO THE BUG REPORT:
+Preprocessed source(s) and associated run script(s) are located at:
+clang-22: note: diagnostic msg: /tmp/opencl-pipe-967b15.cl
+clang-22: note: diagnostic msg: /tmp/opencl-pipe-967b15.sh
+clang-22: note: diagnostic msg: 
+
+********************
