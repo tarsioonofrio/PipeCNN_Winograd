@@ -115,17 +115,22 @@ esses canais; preservá-lo requer resolver a representação e o fluxo entre
 kernels, não apenas trocar nomes de funções. O Hida oferece partição de arrays
 e diretivas de armazenamento HLS, mas não encontrei mapeamento dos atributos
 Intel `numbanks`/`bankwidth`; uma partição manual teria de ser definida e
-comparada. Evidências adicionais estão no
+comparada. A integração AlmaIF também não compõe os dois kernels num único
+top com FIFO: a especialização padrão exige `num_kernels == 1`, e o caminho
+por programa cria um projeto Vitis por kernel. Portanto, o gate de
+produtor/consumidor integrado exigiria mudar essa integração antes de testar
+streams. Evidências adicionais estão no
 diretório [`conv_pipe-compat/attempt-20261008/`](conv_pipe-compat/attempt-20261008/README.md).
 
 ## Próxima etapa
 
 Avaliar o esforço para adicionar no ClangIR/PoCL-HLS a representação de
 `PipeType` e sua conversão para os streams HLS do Hida, incluindo a ligação
-entre `memRead` e `memWrite`, e mapear explicitamente o banking do AOCL para as
-diretivas HLS. Até existir esse caminho, o smoke padrão continua validando
-apenas a infraestrutura; ele não estabelece uma conversão do `conv_pipe.cl`
-original.
+entre `memRead` e `memWrite`, alterar a integração para um top conjunto e
+mapear explicitamente o banking do AOCL para as diretivas HLS. É uma extensão
+multicamadas, não um teste de compatibilidade simples. O smoke padrão continua
+validando apenas a infraestrutura; ele não estabelece uma conversão do
+`conv_pipe.cl` original.
 
 ## Fontes
 

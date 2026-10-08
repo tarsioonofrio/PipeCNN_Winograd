@@ -36,6 +36,15 @@ manualmente pode ser expressável no Hida, mas ainda precisa de mapeamento
 explícito e comparação da estrutura resultante; hoje o ClangIR descarta os
 atributos originais.
 
+Também conferi a composição dos kernels na integração AlmaIF. No caminho de
+especialização padrão, `AlmaifCompileMLIR.cc` exige `num_kernels == 1`. No
+caminho por programa, o laço gera HLS C++ e um projeto Vitis
+`vitis_project_<kernel>` por kernel, em vez de um único top HLS com os canais
+globais entre kernels. Assim, o teste produtor/consumidor integrado sugerido
+como gate não pode ser executado por esse caminho sem antes mudar a integração.
+Essa conclusão vem da inspeção do código; não foi uma simulação de dois
+kernels. O teste do frontend já para antes dessa composição.
+
 ## Configuração usada
 
 - Fonte original: `project/device/conv_pipe.cl`, sem alterações.
