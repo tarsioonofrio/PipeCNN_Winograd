@@ -1,0 +1,274 @@
+diff --git a/lib/CL/CMakeLists.txt b/lib/CL/CMakeLists.txt
+index c6fd803..051e8ec 100644
+--- a/lib/CL/CMakeLists.txt
++++ b/lib/CL/CMakeLists.txt
+@@ -398,7 +398,7 @@ if(ENABLE_LLVM)
+       get_property(POCL_MLIR_LINK_LIBS GLOBAL PROPERTY MLIR_ALL_LIBS)
+       list(APPEND POCL_MLIR_LINK_LIBS MLIRCIR)
+     endif()
+-    list(APPEND POCL_PRIVATE_LINK_LIST ${POCL_MLIR_LINK_LIBS} isl)
++    list(APPEND POCL_PRIVATE_LINK_LIST ${POCL_MLIR_LINK_LIBS} /sim/tarsio/pocl_hls_rtl/llvm-build/lib/libPollyISL.a)
+     if(ENABLE_SCALEHLS)
+       list(APPEND POCL_PRIVATE_LINK_LIST
+         "${SCALEHLS_LIB_DIR}/libMLIRScaleHLSTransforms.a"
+diff --git a/lib/CL/devices/almaif/AlmaifCompile.cc b/lib/CL/devices/almaif/AlmaifCompile.cc
+index 86a58f1..57dc23d 100644
+--- a/lib/CL/devices/almaif/AlmaifCompile.cc
++++ b/lib/CL/devices/almaif/AlmaifCompile.cc
+@@ -254,6 +254,10 @@ int pocl_almaif_compile_kernel(_cl_command_node *cmd, cl_kernel kernel,
+     d->compilationData->compile_kernel(cmd, kernel, device, specialize);
+   }
+ 
++  if (pocl_get_bool_option("POCL_ALMAIF_MLIR_RTL_ONLY", false)) {
++    return CL_SUCCESS;
++  }
++
+   if (pocl_offline_compile) {
+     return CL_SUCCESS;
+   }
+diff --git a/lib/CL/devices/almaif/CMakeLists.txt b/lib/CL/devices/almaif/CMakeLists.txt
+index 85826ed..61750e9 100644
+--- a/lib/CL/devices/almaif/CMakeLists.txt
++++ b/lib/CL/devices/almaif/CMakeLists.txt
+@@ -131,5 +131,7 @@ add_custom_command(
+   COMMAND LD_LIBRARY_PATH=${OPENASIP_LLVM_DIR}/lib generatebits -x rtl_tta_core -e tta_core ${ADF}
+   DEPENDS ${ADF})
+ 
+-add_custom_target(rtl_tta_core ALL
+-  DEPENDS rtl_tta_core/platform/tta_core_toplevel.vhdl)
++if(NOT POCL_ALMAIF_MLIR_RTL_ONLY)
++  add_custom_target(rtl_tta_core ALL
++    DEPENDS rtl_tta_core/platform/tta_core_toplevel.vhdl)
++endif()
+diff --git a/lib/CL/devices/almaif/almaif.cc b/lib/CL/devices/almaif/almaif.cc
+index 7674e1b..48f7c33 100644
+--- a/lib/CL/devices/almaif/almaif.cc
++++ b/lib/CL/devices/almaif/almaif.cc
+@@ -352,7 +352,9 @@ cl_int pocl_almaif_init(unsigned j, cl_device_id dev, const char *parameters) {
+                           device_init_file.c_str());
+   }
+ 
+-  bool enable_compilation = false;
++  bool enable_compilation =
++      D->BaseAddress == POCL_ALMAIFDEVICE_EMULATION &&
++      pocl_get_bool_option("POCL_ALMAIF_MLIR_RTL_ONLY", false);
+ 
+   // almaif devices are little endian by default, but the emulation device is
+   // host dependant
+diff --git a/lib/CL/devices/almaif/mlir/AlmaifCompileMLIR.cc b/lib/CL/devices/almaif/mlir/AlmaifCompileMLIR.cc
+index 4f8bfcd..2ab260a 100644
+--- a/lib/CL/devices/almaif/mlir/AlmaifCompileMLIR.cc
++++ b/lib/CL/devices/almaif/mlir/AlmaifCompileMLIR.cc
+@@ -112,27 +112,24 @@ void pocl_almaif_mlir_generate_hlscpp_from_hlsmlir(
+   }
+ }
+ 
+-void pocl_almaif_mlir_generate_vitis_zip_from_hlscpp(
+-    const std::string &cachedir, const char *kernel_name) {
+-  // Changing into the cachedir is necessary because vitis HLS can only create
+-  // projects to the current working directory
++void pocl_almaif_mlir_generate_vitis_rtl(
++    const std::string &cachedir, const char *kernel_name, bool rtlOnly) {
++  // Run Vitis HLS in the PoCL cache directory; RTL-only mode stops at
++  // csynth_design and skips IP packaging and all later AlmaIF steps.
++  const std::string kernel = kernel_name;
++  const std::string hlsCpp = std::string("./") + POCL_PARALLEL_HLSCPP_FILENAME;
++  const std::string output = "kernel_" + kernel + "_vitis.zip";
++  const std::string project = "vitis_project_" + kernel;
++
+   std::string invokeVitis = "SAVEDIR=$PWD; cd " + cachedir;
+-  invokeVitis += "; vitis_hls -f ";
++  invokeVitis += "; POCL_HLS_KERNEL=pocl_mlir_" + kernel;
++  invokeVitis += " POCL_HLS_INPUT=" + hlsCpp;
++  invokeVitis += " POCL_HLS_OUTPUT=" + output;
++  invokeVitis += " POCL_HLS_PROJECT=" + project;
++  invokeVitis += std::string(" POCL_HLS_RTL_ONLY=") + (rtlOnly ? "1" : "0");
++  invokeVitis += " vitis_hls -f ";
+   invokeVitis += SRCDIR;
+   invokeVitis += "/lib/CL/devices/almaif/mlir/generate_hls_core.tcl";
+-
+-  invokeVitis += " -tclargs pocl_mlir_";
+-  invokeVitis += kernel_name;
+-
+-  invokeVitis += " -tclargs .";
+-  invokeVitis += POCL_PARALLEL_HLSCPP_FILENAME;
+-
+-  invokeVitis += " -tclargs ";
+-  invokeVitis += "kernel_" + std::string(kernel_name) + "_vitis.zip";
+-
+-  // Only relative path needed here as we have cd:d to the cachedir
+-  invokeVitis += " -tclargs vitis_project_" + std::string(kernel_name);
+-
+   invokeVitis += "; cd $SAVEDIR";
+ 
+   POCL_MSG_PRINT_ALMAIF("Vitis cmd: %s\n", invokeVitis.c_str());
+@@ -493,6 +490,8 @@ int pocl_almaif_mlir_compile_kernels(int num_kernels, _cl_command_node **cmds,
+ 
+   POCL_MSG_PRINT_ALMAIF("Starting to compile parallel.mlir's\n");
+   POCL_LOCK(bd->mlir_compile_lock);
++  const bool rtlOnly =
++      pocl_get_bool_option("POCL_ALMAIF_MLIR_RTL_ONLY", false);
+ 
+   std::vector<std::string> kernelNames;
+   std::vector<std::string> kernelVitisZipPaths;
+@@ -564,7 +563,7 @@ int pocl_almaif_mlir_compile_kernels(int num_kernels, _cl_command_node **cmds,
+           }
+         }
+ 
+-        if (!pocl_offline_compile && d->Dev->isEmulationDevice()) {
++        if (!pocl_offline_compile && d->Dev->isEmulationDevice() && !rtlOnly) {
+           std::string kernel_parallel_llvm_path = cachedir;
+           kernel_parallel_llvm_path += POCL_PARALLEL_BC_FILENAME;
+           if (!pocl_exists(kernel_parallel_llvm_path.c_str())) {
+@@ -626,7 +625,20 @@ int pocl_almaif_mlir_compile_kernels(int num_kernels, _cl_command_node **cmds,
+       kernel_iprepo_path += "/ip_repo_" + std::string(kernel->name);
+ 
+       pocl_rm_rf(kernel_vitis_folder_path.c_str());
+-      pocl_almaif_mlir_generate_vitis_zip_from_hlscpp(cachedir, kernel->name);
++      pocl_almaif_mlir_generate_vitis_rtl(cachedir, kernel->name, rtlOnly);
++        if (rtlOnly) {
++          std::string rtl_dir = kernel_vitis_folder_path;
++          rtl_dir += "/solution1/syn/verilog";
++          if (!pocl_exists(rtl_dir.c_str())) {
++            POCL_ABORT("Vitis HLS did not generate RTL under %s\n",
++                       rtl_dir.c_str());
++          }
++          POCL_MSG_PRINT_ALMAIF(
++              "RTL-only mode: generated Verilog under %s\n",
++              rtl_dir.c_str());
++          POCL_UNLOCK(bd->mlir_compile_lock);
++          return 0;
++        }
+       if (!pocl_exists(kernel_vitis_zip_path.c_str())) {
+         POCL_ABORT("Failed generating %s\n", kernel_vitis_zip_path.c_str());
+       }
+diff --git a/lib/CL/devices/almaif/mlir/generate_hls_core.tcl b/lib/CL/devices/almaif/mlir/generate_hls_core.tcl
+index a5618b5..ee321af 100644
+--- a/lib/CL/devices/almaif/mlir/generate_hls_core.tcl
++++ b/lib/CL/devices/almaif/mlir/generate_hls_core.tcl
+@@ -21,24 +21,26 @@
+ #   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ #   IN THE SOFTWARE.
+ 
+-set kernel_name [lindex $argv 2]
+-set input_file [lindex $argv 3]
+-set output_file [lindex $argv 4]
+-set vitis_folder_path [lindex $argv 5]
++set kernel_name $::env(POCL_HLS_KERNEL)
++set input_file $::env(POCL_HLS_INPUT)
++set output_file $::env(POCL_HLS_OUTPUT)
++set vitis_folder_path $::env(POCL_HLS_PROJECT)
+ 
+ open_project ${vitis_folder_path}
+ add_files ${input_file}
+ set_top ${kernel_name}
+-open_solution "solution1" -flow_target vitis
+-set_part {xcu280-fsvh2892-2L-e}
++open_solution "solution1" -flow_target vivado
++set_part {xc7z020clg400-1}
+ 
+ create_clock -period 4 -name default
+-config_export -format ip_catalog -output hls_${kernel_name} -rtl verilog
+-config_export -ipname ${kernel_name}
+-
+ set_directive_top -name ${kernel_name} "${kernel_name}"
+-csynth_design
+-
+-export_design -rtl verilog -format ip_catalog -output ${output_file}
++if {$::env(POCL_HLS_RTL_ONLY) eq "1"} {
++  csynth_design
++} else {
++  config_export -format ip_catalog -output hls_${kernel_name} -rtl verilog
++  config_export -ipname ${kernel_name}
++  csynth_design
++  export_design -rtl verilog -format ip_catalog -output ${output_file}
++}
+ 
+ exit
+diff --git a/lib/CL/devices/spirv_parser.cc b/lib/CL/devices/spirv_parser.cc
+index 1bab2a0..f9d8cec 100644
+--- a/lib/CL/devices/spirv_parser.cc
++++ b/lib/CL/devices/spirv_parser.cc
+@@ -229,7 +229,7 @@ class SPIRVConstant {
+   std::vector<int32_t> ConstantWords_;
+ 
+ public:
+-  SPIRVConstant([[maybe_unused]] SPIRVtype *Type, size_t NumConstWords,
++  SPIRVConstant(SPIRVtype *Type, size_t NumConstWords,
+                 const int32_t *ConstWords) {
+     ConstantWords_.insert(ConstantWords_.end(), ConstWords,
+                           ConstWords + NumConstWords);
+diff --git a/lib/CL/pocl_mlir_wg.cc b/lib/CL/pocl_mlir_wg.cc
+index 500eac8..3773b37 100644
+--- a/lib/CL/pocl_mlir_wg.cc
++++ b/lib/CL/pocl_mlir_wg.cc
+@@ -483,9 +483,11 @@ int pocl_mlir_generate_hls_function(unsigned DeviceI, cl_device_id Device,
+ 
+   // Take a backup of the module in case we want to roll back optimizations
+   mlir::OwningOpRef<mlir::ModuleOp> outputModule = InputModule->clone();
++  const bool raiseToAffine =
++      pocl_get_bool_option("POCL_HLS_RAISE_TO_AFFINE", 0);
+   if (pocl_mlir_generate_hls_function_nowrite(
+-          DeviceI, Device, Kernel, Command, Specialize, Specialize, Specialize,
+-          outputModule, MLIRContext)) {
++          DeviceI, Device, Kernel, Command, Specialize, raiseToAffine,
++          Specialize, outputModule, MLIRContext)) {
+     POCL_MSG_PRINT_GENERAL(
+         "First HLS try failed, trying again without raising to affine\n");
+     outputModule.release();
+@@ -538,7 +540,10 @@ int pocl_mlir_generate_hls_function(unsigned DeviceI, cl_device_id Device,
+   } else
+ #endif
+   {
+-    return pocl::mlir::writeOutput(outputModule, FinalBinaryPath.c_str());
++    Error = pocl::mlir::writeOutput(outputModule, FinalBinaryPath.c_str());
++    if (pocl_get_bool_option("POCL_ALMAIF_MLIR_RTL_ONLY", false))
++      outputModule.release();
++    return Error;
+   }
+ }
+ 
+diff --git a/lib/mliropencl/lib/Transforms/AffineCFG.cpp b/lib/mliropencl/lib/Transforms/AffineCFG.cpp
+index c774d06..f0557cf 100644
+--- a/lib/mliropencl/lib/Transforms/AffineCFG.cpp
++++ b/lib/mliropencl/lib/Transforms/AffineCFG.cpp
+@@ -1658,6 +1658,8 @@ struct MoveLoadToAffine : public OpRewritePattern<memref::LoadOp> {
+   LogicalResult matchAndRewrite(memref::LoadOp load,
+                                 PatternRewriter &rewriter) const override {
+     auto scope = getLocalAffineScope(load);
++    if (!scope)
++      return failure();
+     for (auto idx : load.getIndices()) {
+       if (!isValidIndex(idx, scope)) {
+         return failure();
+@@ -1705,6 +1707,8 @@ struct MoveStoreToAffine : public OpRewritePattern<memref::StoreOp> {
+   LogicalResult matchAndRewrite(memref::StoreOp store,
+                                 PatternRewriter &rewriter) const override {
+     auto scope = getLocalAffineScope(store);
++    if (!scope)
++      return failure();
+     for (auto idx : store.getIndices()) {
+       if (!isValidIndex(idx, scope))
+         return failure();
+@@ -2700,6 +2704,8 @@ struct ParallelOpRaising : public OpRewritePattern<scf::ParallelOp> {
+           loop, "not dependent on a conditional result");
+ 
+     auto scope = getLocalAffineScope(loop);
++    if (!scope)
++      return failure();
+     for (auto idx : loop.getLowerBound()) {
+       if (!isValidIndex(idx, scope))
+         return failure();
+diff --git a/lib/mliropencl/lib/Transforms/DistributeBarriers.cpp b/lib/mliropencl/lib/Transforms/DistributeBarriers.cpp
+index cdb22fe..e00c816 100644
+--- a/lib/mliropencl/lib/Transforms/DistributeBarriers.cpp
++++ b/lib/mliropencl/lib/Transforms/DistributeBarriers.cpp
+@@ -2204,7 +2204,7 @@ struct Reg2MemFor : public OpRewritePattern<T> {
+     }
+     rewriter.setInsertionPoint(IP);
+     for (auto en : llvm::enumerate(oldOps)) {
+-      if (!en.value().getDefiningOp<LLVM::UndefOp>())
++      if (!en.value().template getDefiningOp<LLVM::UndefOp>())
+         memref::StoreOp::create(rewriter, op.getLoc(), en.value(),
+                                 allocated[en.index()], ValueRange());
+     }
