@@ -1,9 +1,9 @@
 # RTL gerado pelo smoke test PoCL-HLS
 
 Este diretório arquiva a saída produzida na Paxos em 2026-10-08 pelo smoke
-test descrito em `../README.md`. Os quatro arquivos Verilog e o log original
-foram copiados do cache da execução; `SHA256SUMS` registra os hashes dos
-Verilog.
+test descrito em `../README.md`. Os quatro arquivos Verilog, o C++ HLS, o MLIR
+e o log original foram copiados do cache da execução; `SHA256SUMS` registra
+os hashes dos RTL e dos intermediários C++/MLIR.
 
 ## Origem
 

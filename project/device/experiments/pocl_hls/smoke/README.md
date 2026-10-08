@@ -22,3 +22,9 @@ runtime correctness test.
 The generated Verilog and its original integrated-run log are archived in
 [`generated-rtl/`](generated-rtl/README.md), with SHA-256 checksums. The files
 were copied from the Paxos HLS cache after their hashes were checked.
+
+To check the HLS C++ and Verilog behavior, run `vitis_hls -f
+<path-to-this-directory>/vitis_cosim.tcl` from a new, empty working directory
+after sourcing the Vitis HLS 2024.2 settings. The script runs C simulation,
+re-synthesizes the archived HLS C++, and runs Verilog co-simulation with
+`pocl_hls_smoke_tb.cpp`; it refuses to overwrite an existing project.
