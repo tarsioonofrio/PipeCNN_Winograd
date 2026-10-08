@@ -51,3 +51,39 @@ do BSP não são resultados compilados do kernel smoke.
 
 O BSP `s5_ref` é usado apenas para diagnóstico de AOCL Standard. Ele não é o
 alvo Arria 10 do projeto e não fundamenta comparação de PPA.
+
+## Repetição do fluxo Standard com `-c`
+
+Em 2026-10-08, repetimos o smoke em uma pasta temporária na Paxos usando
+`aoc -c -report -v -board=s5_ref aocl_channel_smoke.cl` (sem `-rtl`). O AOCL
+18.1.0 Standard terminou com status 0 em 3,33 s. Gerou o objeto
+`aocl_channel_smoke.aoco` (140.240 bytes), `aocl_channel_smoke_system.v`
+(94.555 bytes), os arquivos `top.qsf` e `base.qsf`, e um `top.v` de 9.814
+bytes. `aocl_channel_smoke.v` foi criado vazio. O relatório de recursos foi
+impresso no log.
+
+Isso confirma que `-c` completa para o kernel mínimo e deixa o objeto AOCL e
+arquivos do projeto Quartus. Não gera `.aocr` nem comprova que o conjunto de
+arquivos seja RTL completo e independente para ASIC. O scratch usado foi
+`/sim/tarsio/aocl-standard-channel-smoke.BdsX9t/`.
+
+## Kernel completo `conv_pipe.cl`
+
+Também foi tentado, no mesmo dia e em outro scratch remoto, o fluxo Standard
+com a biblioteca RTL do projeto:
+
+```bash
+aoc -c -report -v -board=s5_ref \
+    -I device/RTL \
+    -L device/RTL \
+    -l rtl_lib.aoclib \
+    device/conv_pipe.cl
+```
+
+O parser terminou, mas a otimização estática (`aocl-opt`) não concluiu dentro
+do limite de 180 s; o comando foi encerrado pelo timeout, status 124. O processo
+de otimização chegou a aproximadamente 1,1 GiB de RSS e manteve uso de CPU
+próximo de 100%. Foram criados `conv_pipe.aoco.tmp` e arquivos do projeto
+Quartus, mas não houve `.aoco` final nem `.aocr`. O scratch está em
+`/sim/tarsio/aocl-standard-c-smoke.GDxq8r/`. Assim, o smoke mínimo passou, mas a
+etapa `-c` do kernel completo ainda não foi concluída.
