@@ -6,7 +6,9 @@ __pycache__/
 /project/device/RTL/synthesis/**/logical/.pbs_*/
 /project/device/RTL/synthesis/**/logical/.rs_*
 /project/device/RTL/synthesis/**/logical/genus.log
+/project/device/RTL/synthesis/**/logical/genus.log*
 /project/device/RTL/synthesis/**/logical/genus.cmd
+/project/device/RTL/synthesis/**/logical/genus.cmd*
 /project/device/RTL/synthesis/**/logical/results/
 /project/device/RTL/synthesis/**/logical/fv/
 /project/device/RTL/synthesis/**/logical/gate_level/
@@ -25,3 +27,4 @@ __pycache__/
 /project/device/experiments/opencl_memwrite/
 /project/device/experiments/opencl_pool/
 /project/device/experiments/opencl_win_buffer/
+/project/device/RTL/synthesis/opencl-memread-f43-original-i8-l032/sim/tb_memread_conv_slice.sv
