@@ -1,0 +1,777 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[18:24:18.503745] Configured Lic search path (20.02-s004): 5280@paxos.inf.pucrs.br
+
+Version: 21.12-s068_1, built Fri Mar 04 09:12:46 PST 2022
+Options: -files logical_synthesis.tcl 
+Date:    Wed Oct 07 18:24:18 2026
+Host:    paxos.inf.pucrs.br (x86_64 w/Linux 4.18.0-553.155.1.el8_10.x86_64) (14cores*28cpus*1physical cpu*Intel(R) Core(TM) i9-7940X CPU @ 3.10GHz 19712KB) (131170900KB)
+PID:     3507722
+OS:      Rocky Linux release 8.10 (Green Obsidian)
+
+
+[18:24:18.312651] Periodic Lic check successful
+[18:24:18.312657] Feature usage summary:
+[18:24:18.312657] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (8 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source logical_synthesis.tcl
+#@ Begin verbose source ./logical_synthesis.tcl
+@file(logical_synthesis.tcl) 1: set STAGE_ROOT [file normalize [file dirname [info script]]]
+@file(logical_synthesis.tcl) 2: set CONFIG_ROOT [file normalize [file join $STAGE_ROOT ..]]
+@file(logical_synthesis.tcl) 3: set RUN_ID $::env(RUN_ID)
+@file(logical_synthesis.tcl) 4: set RUN_ROOT [file normalize [file join $CONFIG_ROOT runs $RUN_ID]]
+@file(logical_synthesis.tcl) 5: set OUT_FILES [file join $RUN_ROOT logical]
+@file(logical_synthesis.tcl) 6: set GIT_ROOT [exec git -C $CONFIG_ROOT rev-parse --show-toplevel]
+@file(logical_synthesis.tcl) 7: set TOP_FILE [open [file join $CONFIG_ROOT top-module.txt] r]
+@file(logical_synthesis.tcl) 8: set TOP_MODULE [string trim [read $TOP_FILE]]
+@file(logical_synthesis.tcl) 9: close $TOP_FILE
+@file(logical_synthesis.tcl) 11: source [file join $CONFIG_ROOT scripts mmmc.tcl]
+Sourcing '/sim/tarsio/PipeCNN_Winograd/project/device/RTL/synthesis/opencl-system-f43-i8-l032/scripts/mmmc.tcl' (Wed Oct 07 18:24:26 -03 2026)...
+#@ Begin verbose source /sim/tarsio/PipeCNN_Winograd/project/device/RTL/synthesis/opencl-system-f43-i8-l032/scripts/mmmc.tcl
+@file(mmmc.tcl) 1: if {[info exists ::env(TSMC28_HOME)] && $::env(TSMC28_HOME) ne ""} {
+    set PDK_HOME [file normalize $::env(TSMC28_HOME)]
+} else {
+    set PDK_HOME /pdk/tsmc/PDK28/PDK_TSMC28_bv/tcbn28hpcplusbwp30p140_190a/TSMCHOME
+}
+@file(mmmc.tcl) 6: set FE_PATH [file join $PDK_HOME digital Front_End]
+@file(mmmc.tcl) 7: set BE_PATH [file join $PDK_HOME digital Back_End]
+@file(mmmc.tcl) 8: set LIB_DIR [file join $FE_PATH timing_power_noise NLDM tcbn28hpcplusbwp30p140_180a]
+@file(mmmc.tcl) 9: set QRC_TYP [file join $BE_PATH qrc RC_QRC_crn28hpc+_1p09m+ut-alrdl_5x1y1z1u_typical qrcTechFile]
+@file(mmmc.tcl) 11: create_library_set -name libset_0p90v_25c \
+    -timing [file join $LIB_DIR tcbn28hpcplusbwp30p140tt0p9v25c.lib]
+@file(mmmc.tcl) 13: create_opcond -name opcond_0p90v_25c -voltage 0.90 -temperature 25.0
+@file(mmmc.tcl) 14: create_timing_condition -name timing_cond_0p90v_25c \
+    -opcond opcond_0p90v_25c -library_sets {libset_0p90v_25c}
+@file(mmmc.tcl) 16: create_rc_corner -name rc_corner_25c_captyp \
+    -temperature 25.0 -qrc_tech $QRC_TYP
+@file(mmmc.tcl) 18: create_delay_corner -name delay_corner_0p90v_25c_captyp \
+    -timing_condition timing_cond_0p90v_25c \
+    -rc_corner rc_corner_25c_captyp
+@file(mmmc.tcl) 21: create_constraint_mode -name constraints_default \
+    -sdc_files [file join $CONFIG_ROOT scripts constraints.sdc]
+@file(mmmc.tcl) 23: create_analysis_view -name analysis_view_0p90v_25c_captyp_nominal \
+    -constraint_mode constraints_default \
+    -delay_corner delay_corner_0p90v_25c_captyp
+@file(mmmc.tcl) 26: set_analysis_view -setup {analysis_view_0p90v_25c_captyp_nominal} \
+                  -hold  {analysis_view_0p90v_25c_captyp_nominal}
+
+Threads Configured:3
+
+  Message Summary for Library tcbn28hpcplusbwp30p140tt0p9v25c.lib:
+  ****************************************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  An unsupported construct was detected in this library. [LBR-40]: 1
+  ****************************************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 25.000000) in library 'tcbn28hpcplusbwp30p140tt0p9v25c.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNABWP30P140' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNABWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'BOUNDARY_LEFTBWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'BOUNDARY_LEFTBWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'BOUNDARY_RIGHTBWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'BOUNDARY_RIGHTBWP30P140' must have an output pin.
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'CKLHQD20BWP30P140'
+        : To make the cell usable, change the value of 'dont_use' attribute to false.
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'CKLHQD24BWP30P140'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'CKLNQD20BWP30P140'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'CKLNQD24BWP30P140'
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP16BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP16BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP32BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP32BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP4BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP4BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP64BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP64BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP8BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP8BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILL16BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILL16BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILL2BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILL2BWP30P140' must have an output pin.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'LBR-9'.
+Info    : Set default library domain. [LBR-109]
+        : The default library domain is 'library_domain:timing_cond_0p90v_25c'.
+  Library has 530 usable logic and 349 usable sequential lib-cells.
+@file(mmmc.tcl) 29: set TECH_LEF [file join $BE_PATH lef tsmcn28_9lm5X1Y1Z1UUTRDL.tlef]
+@file(mmmc.tcl) 30: set CELL_LEF [file join $BE_PATH lef tcbn28hpcplusbwp30p140_110a lef tcbn28hpcplusbwp30p140.lef]
+@file(mmmc.tcl) 31: read_physical -lefs "$TECH_LEF $CELL_LEF"
+
+  According to lef_library, there are total 10 routing layers [ V(5) / H(5) ]
+
+Warning : The variant range of wire parameters is too large. An example of wire parameters are, a WIDTH for layer, PITCH for layer, MINSPACING for layers, etc. [PHYS-12]
+        : The variant range (0.05, 2) of 'WIDTH' for layers 'M6' and 'AP' is too large.
+        : Check the consistency of the parameters, and see if you can ignore this message or you're using different LEF file with wrong parameters.
+Warning : The variant range of wire parameters is too large. An example of wire parameters are, a WIDTH for layer, PITCH for layer, MINSPACING for layers, etc. [PHYS-12]
+        : The variant range (0.1, 4.5) of 'PITCH' for layers 'M4' and 'AP' is too large.
+Warning : The variant range of wire parameters is too large. An example of wire parameters are, a WIDTH for layer, PITCH for layer, MINSPACING for layers, etc. [PHYS-12]
+        : The variant range (0.05, 2) of 'MINSPACING' for layers 'M1' and 'AP' is too large.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell ISOHID1BWP30P140 cannot be found in library.
+        : Ensure that the proper library files are available and have been imported.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell ISOHID2BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell ISOHID4BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell ISOHID8BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell ISOLOD1BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell ISOLOD2BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell ISOLOD4BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell ISOLOD8BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell ISOSRHID2BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell ISOSRHID4BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell ISOSRHID8BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell ISOSRLOD2BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell ISOSRLOD4BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell ISOSRLOD8BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell LVLHLCD1BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell LVLHLCD2BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell LVLHLCD4BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell LVLHLCD8BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell LVLHLCLOD1BWP30P140 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell LVLHLCLOD2BWP30P140 cannot be found in library.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'PHYS-279'.
+@file(mmmc.tcl) 32: set sdc_version 1.5
+@file(mmmc.tcl) 33: set_units -time ns -capacitance fF
+#@ End verbose source /sim/tarsio/PipeCNN_Winograd/project/device/RTL/synthesis/opencl-system-f43-i8-l032/scripts/mmmc.tcl
+@file(logical_synthesis.tcl) 12: set_db lp_default_probability 0.5
+  Setting attribute of root '/': 'lp_default_probability' = 0.50000
+@file(logical_synthesis.tcl) 13: set_db syn_global_effort high
+  Setting attribute of root '/': 'syn_global_effort' = high
+@file(logical_synthesis.tcl) 14: set_db auto_ungroup none
+  Setting attribute of root '/': 'auto_ungroup' = none
+@file(logical_synthesis.tcl) 15: set_db hdl_error_on_latch true
+  Setting attribute of root '/': 'hdl_error_on_latch' = true
+@file(logical_synthesis.tcl) 16: set_db interconnect_mode ple
+  Setting attribute of root '/': 'interconnect_mode' = ple
+@file(logical_synthesis.tcl) 18: set HDL_FILES [list]
+@file(logical_synthesis.tcl) 19: set fp_hdl [open [file join $CONFIG_ROOT list-file.txt] r]
+@file(logical_synthesis.tcl) 20: while {[gets $fp_hdl line] >= 0} {
+    set entry [string trim $line]
+    if {$entry eq "" || [string match "#*" $entry]} { continue }
+    if {[file pathtype $entry] eq "absolute"} {
+        lappend HDL_FILES [file normalize $entry]
+    } else {
+        set candidate [file normalize [file join $GIT_ROOT $entry]]
+        if {![file exists $candidate]} { error "Missing HDL source: $candidate" }
+        lappend HDL_FILES $candidate
+    }
+}
+@file(logical_synthesis.tcl) 31: close $fp_hdl
+@file(logical_synthesis.tcl) 32: if {[llength $HDL_FILES] == 0} { error "list-file.txt contains no HDL sources" }
+@file(logical_synthesis.tcl) 34: read_hdl -sv {*}$HDL_FILES
+    initial begin
+          |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Initial in file '/sim/tarsio/PipeCNN_Winograd/project/device/experiments/opencl_win_buffer/pipecnn_memread_counters.sv' on line 166, column 11.
+        : For example, the following constructs will be ignored:
+    - initial block
+    - final block
+    - program block
+    - property block
+    - sequence block
+    - covergroup
+    - checker block
+    - gate drive strength
+    - system task enable
+    - reg declaration with initial value
+    - specify block.
+    initial begin
+          |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Initial in file '/sim/tarsio/PipeCNN_Winograd/project/device/experiments/opencl_win_buffer/pipecnn_weight_buffer.sv' on line 39, column 11.
+    initial begin
+          |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Initial in file '/sim/tarsio/PipeCNN_Winograd/project/device/experiments/opencl_win_buffer/pipecnn_win_buffer3.sv' on line 107, column 11.
+    initial begin
+          |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Initial in file '/sim/tarsio/PipeCNN_Winograd/project/device/experiments/opencl_pool/pipecnn_pool_2x2.sv' on line 110, column 11.
+    initial begin
+          |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Initial in file '/sim/tarsio/PipeCNN_Winograd/project/device/experiments/opencl_win_buffer/pipecnn_memread_pool_memwrite_system.sv' on line 197, column 11.
+@file(logical_synthesis.tcl) 35: elaborate $TOP_MODULE
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'pipecnn_memread_pool_memwrite_system' from file '/sim/tarsio/PipeCNN_Winograd/project/device/experiments/opencl_win_buffer/pipecnn_memread_pool_memwrite_system.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'pipecnn_memread_pool_memwrite_system' with default parameters value.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'unused_scal_rem_z' in module 'pipecnn_memwrite_output_VEC_SIZE16_W_VEC_SIZE6_LANE_NUM32_DATA_W8_DIM_W16' in file '/sim/tarsio/PipeCNN_Winograd/project/device/experiments/opencl_memwrite/pipecnn_memwrite_output.sv' on line 207.
+        : Genus removes the flip-flop or latch inferred for an unused signal or variable. To preserve the flip-flop or latch, set the hdl_preserve_unused_registers attribute to true or use a pragma in the RTL.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'pipecnn_memread_pool_memwrite_system'.
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+--------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |       584.00 | 
+--------------------------------------------------------
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: pipecnn_memread_pool_memwrite_system, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.731s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: pipecnn_memread_pool_memwrite_system, recur: true)
+Completed clip the non-user hierarchies (accepts: 384, rejects: 0, runtime: 4.452s)
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+@file(logical_synthesis.tcl) 36: init_design
+Started checking and loading power intent for design pipecnn_memread_pool_memwrite_system...
+============================================================================================
+No power intent for design 'pipecnn_memread_pool_memwrite_system'.
+Completed checking and loading power intent for design pipecnn_memread_pool_memwrite_system (runtime:0.00s memory_usage:0.00M peak_memory:0.00M).
+=================================================================================================================================================
+#
+# Reading SDC /sim/tarsio/PipeCNN_Winograd/project/device/RTL/synthesis/opencl-system-f43-i8-l032/scripts/constraints.sdc for view:analysis_view_0p90v_25c_captyp_nominal (constraint_mode:constraints_default)
+#
+Statistics for commands executed by read_sdc:
+ "all_inputs"               - successful      2 , failed      0 (runtime  0.17)
+ "all_outputs"              - successful      2 , failed      0 (runtime  0.15)
+ "create_clock"             - successful      1 , failed      0 (runtime  0.00)
+ "get_ports"                - successful      3 , failed      0 (runtime  0.00)
+ "remove_from_collection"   - successful      2 , failed      0 (runtime  0.01)
+ "set_input_delay"          - successful      1 , failed      0 (runtime  0.12)
+ "set_input_transition"     - successful      1 , failed      0 (runtime  2.84)
+ "set_load"                 - successful      1 , failed      0 (runtime  0.01)
+ "set_output_delay"         - successful      1 , failed      0 (runtime  0.00)
+read_sdc completed in 00:00:04 (hh:mm:ss)
+
+  According to qrc_tech_file, there are total 10 routing layers [ V(5) / H(5) ]
+
+Warning : The variant range of wire parameters is too large. An example of wire parameters are, a WIDTH for layer, PITCH for layer, MINSPACING for layers, etc. [PHYS-12]
+        : The variant range (0.045, 1.8) of 'WIDTH' for layers 'M6' and 'AP' is too large.
+
+  According to qrc_tech_file, there are total 10 routing layers [ V(5) / H(5) ]
+
+Warning : The variant range of wire parameters is too large. An example of wire parameters are, a WIDTH for layer, PITCH for layer, MINSPACING for layers, etc. [PHYS-12]
+        : The variant range (0.045, 1.8) of 'WIDTH' for layers 'M6' and 'AP' is too large.
+  Setting attribute of root '/': 'read_qrc_tech_file_rc_corner' = true
+@file(logical_synthesis.tcl) 37: syn_generic
+##Generic Timing Info for library domain: timing_cond_0p90v_25c typical gate delay: 15.7 ps std_slew: 5.0 ps std_load: 1.6 fF
+Starting mux data reorder optimization [v1.0] (stage: pre_to_gen_setup, startdef: pipecnn_memread_pool_memwrite_system, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 12.839s)
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[16]'.
+        : To prevent this optimization, set the 'optimize_constant_0_flops' root attribute to 'false' or 'optimize_constant_0_seq' instance attribute to 'false'. You can also see the complete list of deleted sequential with command "report sequential -deleted" (on Reason "constant0").
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[17]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[18]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[19]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[20]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[21]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[22]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[23]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[24]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[25]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[26]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[27]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[28]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[29]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[30]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[31]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[32]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[33]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[34]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'pool/pool_data_q_reg[35]'.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'GLO-12'.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 1039 sequential instances.
+        : Optimizations such as constant propagation or redundancy removal could change the connections so a hierarchical instance does not drive any primary outputs anymore. To see the list of deleted hierarchical instances, set the 'information_level' attribute to 2 or above. If the message is truncated set the message attribute 'truncate' to false to see the complete list. To prevent this optimization, set the 'delete_unloaded_insts' root/subdesign attribute to 'false' or 'preserve' instance attribute to 'true'.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 81 hierarchical instances.
+Current PLE settings:
+
+Aspect ratio        : 1.000
+Shrink factor       : 0.900
+Scale of res/length : 1.000
+Scale of cap/length : 1.000
+Net derating factor : 1.000
+Thermal factor      : 1.000
+Via Resistance      : 8.000 ohm (from qrc_tech_file)
+Site size           : 1.040 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       qrc_tech_file
+------------------------------------------------
+M1              V         0.00        0.000235  
+M2              H         1.00        0.000207  
+M3              V         1.00        0.000208  
+M4              H         1.00        0.000207  
+M5              V         1.00        0.000207  
+M6              H         1.00        0.000202  
+M7              V         1.00        0.000218  
+M8              H         1.00        0.000365  
+M9              V         1.00        0.000659  
+AP              H         1.00        0.000352  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       qrc_tech_file
+-------------------------------------------------
+M1              V         0.00        11.193416  
+M2              H         1.00        11.193416  
+M3              V         1.00        11.193416  
+M4              H         1.00        11.193416  
+M5              V         1.00        11.193416  
+M6              H         1.00        11.193416  
+M7              V         1.00         2.170240  
+M8              H         1.00         0.073348  
+M9              V         1.00         0.003104  
+AP              H         1.00         0.006393  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+M1              V         0.00         0.050000  
+M2              H         1.00         0.050000  
+M3              V         1.00         0.050000  
+M4              H         1.00         0.050000  
+M5              V         1.00         0.050000  
+M6              H         1.00         0.050000  
+M7              V         1.00         0.100000  
+M8              H         1.00         0.400000  
+M9              V         1.00         2.000000  
+AP              H         1.00         2.000000  
+
+Info    : Synthesizing. [SYNTH-1]
+        : Synthesizing 'pipecnn_memread_pool_memwrite_system' to generic gates using 'high' effort.
+PBS_Generic-Start - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_Generic-Start' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:17:32(00:17:40) |  00:00:00(00:00:00) |   0.0(  0.0) |   18:42:02 (Oct07) |  16.23 GB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+TNS Restructuring config: no_value at stage: generic applied.
+Info    : Enabling Partition Based Synthesis. [PBS-1]
+        : Starting distributed generic optimization.
+Info    : Attempting to launch a super-threading server. [ST-120]
+        : Attempting to Launch server 1 of 8.
+        : The tool is entering super-threading mode and is launching a CPU server process.  This is enabled by the root attribute 'super_thread_servers' or 'auto_super_thread'.
+Info    : Connection established with super-threading server. [ST-110]
+        : The server 'localhost_1_0' is process '3510872' on this host.
+        : The tool is entering super-threading mode and has established a connection with a CPU server process.  This is enabled by the root attributes 'super_thread_servers' or 'auto_super_thread'.
+     Generating lib_script file: /sim/tarsio/PipeCNN_Winograd/project/device/RTL/synthesis/opencl-system-f43-i8-l032/logical/.pbs_paxos.inf.pucrs.br_3507722/lib_script
+Start partitioning.  Summary: MEM {curr: 17.4G, peak: 20.8G, phys curr: 16.6G, phys peak: 20.1G}
+Start partitioning design pipecnn_memread_pool_memwrite_system for generic optimization.
+Total generic instances for partitioning: 8631016
+	Generic partition 0: size 22121
+	Generic partition 1: size 92819
+	Generic partition 2: size 12444
+	Generic partition 3: size 24874
+	Generic partition 4: size 583
+	Generic partition 5: size 2408823
+	Generic partition 6: size 250700
+	Generic partition 7: size 1539463
+	Generic partition 8: size 107742
+	Generic partition 9: size 108330
+	Generic partition 10: size 108330
+	Generic partition 11: size 108330
+	Generic partition 12: size 107154
+	Generic partition 13: size 107742
+	Generic partition 14: size 108330
+	Generic partition 15: size 107742
+	Generic partition 16: size 108330
+	Generic partition 17: size 108330
+	Generic partition 18: size 107742
+	Generic partition 19: size 107742
+	Generic partition 20: size 108330
+	Generic partition 21: size 61542
+	Generic partition 22: size 99676
+	Generic partition 23: size 108330
+	Generic partition 24: size 108330
+	Generic partition 25: size 88902
+	Generic partition 26: size 103620
+	Generic partition 27: size 8244
+	Generic partition 28: size 107742
+	Generic partition 29: size 98910
+	Generic partition 30: size 98910
+	Generic partition 31: size 103620
+	Generic partition 32: size 108330
+	Generic partition 33: size 108330
+	Generic partition 34: size 107154
+	Generic partition 35: size 108330
+	Generic partition 36: size 108330
+	Generic partition 37: size 108330
+	Generic partition 38: size 103032
+	Generic partition 39: size 108330
+	Generic partition 40: size 84780
+	Generic partition 41: size 108330
+	Generic partition 42: size 109096
+	Generic partition 43: size 107288
+	Generic partition 44: size 99996
+	Generic partition 45: size 27352
+	Generic partition 46: size 490181
+Done partitioning.  Summary: RT {elapsed: 12s, ST: 12s}, MEM {curr: 17.4G, peak: 20.8G, phys curr: 16.8G, phys peak: 20.1G}
+Start creating partition netlists.  Summary: MEM {curr: 17.4G, peak: 20.8G, phys curr: 16.8G, phys peak: 20.1G}
+Done creating partition netlists.  Summary: RT {elapsed: 147s, ST: 143s}, MEM {curr: 24.8G, peak: 24.8G, phys curr: 23.6G, phys peak: 23.6G}
+Start budgeting timing for partitions.  Summary: MEM {curr: 24.8G, peak: 24.8G, phys curr: 23.6G, phys peak: 23.6G}
+Done budgeting timing for partitions.  Summary: RT {elapsed: 760s, ST: 869s}, MEM {curr: 49.3G, peak: 49.3G, phys curr: 48.7G, phys peak: 48.7G}
+Start deriving partition netlists.  Summary: MEM {curr: 49.3G, peak: 49.3G, phys curr: 48.7G, phys peak: 48.7G}
+The inst 'pbs_genopt_0' is selected as pbs candidate. The instance cnt is: '22121'.
+The inst 'pbs_genopt_1' is selected as pbs candidate. The instance cnt is: '92819'.
+The inst 'pbs_genopt_2' is selected as pbs candidate. The instance cnt is: '12444'.
+The inst 'pbs_genopt_3' is selected as pbs candidate. The instance cnt is: '24874'.
+The inst 'pbs_genopt_4' is selected as pbs candidate. The instance cnt is: '583'.
+The inst 'pbs_genopt_5' is selected as pbs candidate. The instance cnt is: '2408823'.
+The inst 'pbs_genopt_6' is selected as pbs candidate. The instance cnt is: '250700'.
+The inst 'pbs_genopt_7' is selected as pbs candidate. The instance cnt is: '1539463'.
+The inst 'pbs_genopt_8' is selected as pbs candidate. The instance cnt is: '107742'.
+The inst 'pbs_genopt_9' is selected as pbs candidate. The instance cnt is: '108330'.
+The inst 'pbs_genopt_10' is selected as pbs candidate. The instance cnt is: '108330'.
+The inst 'pbs_genopt_11' is selected as pbs candidate. The instance cnt is: '108330'.
+The inst 'pbs_genopt_12' is selected as pbs candidate. The instance cnt is: '107154'.
+The inst 'pbs_genopt_13' is selected as pbs candidate. The instance cnt is: '107742'.
+The inst 'pbs_genopt_14' is selected as pbs candidate. The instance cnt is: '108330'.
+The inst 'pbs_genopt_15' is selected as pbs candidate. The instance cnt is: '107742'.
+The inst 'pbs_genopt_16' is selected as pbs candidate. The instance cnt is: '108330'.
+The inst 'pbs_genopt_17' is selected as pbs candidate. The instance cnt is: '108330'.
+The inst 'pbs_genopt_18' is selected as pbs candidate. The instance cnt is: '107742'.
+The inst 'pbs_genopt_19' is selected as pbs candidate. The instance cnt is: '107742'.
+The inst 'pbs_genopt_20' is selected as pbs candidate. The instance cnt is: '108330'.
+The inst 'pbs_genopt_21' is selected as pbs candidate. The instance cnt is: '61542'.
+The inst 'pbs_genopt_22' is selected as pbs candidate. The instance cnt is: '99676'.
+The inst 'pbs_genopt_23' is selected as pbs candidate. The instance cnt is: '108330'.
+The inst 'pbs_genopt_24' is selected as pbs candidate. The instance cnt is: '108330'.
+The inst 'pbs_genopt_25' is selected as pbs candidate. The instance cnt is: '88902'.
+The inst 'pbs_genopt_26' is selected as pbs candidate. The instance cnt is: '103620'.
+The inst 'pbs_genopt_27' is selected as pbs candidate. The instance cnt is: '8244'.
+The inst 'pbs_genopt_28' is selected as pbs candidate. The instance cnt is: '107742'.
+The inst 'pbs_genopt_29' is selected as pbs candidate. The instance cnt is: '98910'.
+The inst 'pbs_genopt_30' is selected as pbs candidate. The instance cnt is: '98910'.
+The inst 'pbs_genopt_31' is selected as pbs candidate. The instance cnt is: '103620'.
+The inst 'pbs_genopt_32' is selected as pbs candidate. The instance cnt is: '108330'.
+The inst 'pbs_genopt_33' is selected as pbs candidate. The instance cnt is: '108330'.
+The inst 'pbs_genopt_34' is selected as pbs candidate. The instance cnt is: '107154'.
+The inst 'pbs_genopt_35' is selected as pbs candidate. The instance cnt is: '108330'.
+The inst 'pbs_genopt_36' is selected as pbs candidate. The instance cnt is: '108330'.
+The inst 'pbs_genopt_37' is selected as pbs candidate. The instance cnt is: '108330'.
+The inst 'pbs_genopt_38' is selected as pbs candidate. The instance cnt is: '103032'.
+The inst 'pbs_genopt_39' is selected as pbs candidate. The instance cnt is: '108330'.
+The inst 'pbs_genopt_40' is selected as pbs candidate. The instance cnt is: '84780'.
+The inst 'pbs_genopt_41' is selected as pbs candidate. The instance cnt is: '108330'.
+The inst 'pbs_genopt_42' is selected as pbs candidate. The instance cnt is: '109096'.
+The inst 'pbs_genopt_43' is selected as pbs candidate. The instance cnt is: '107288'.
+The inst 'pbs_genopt_44' is selected as pbs candidate. The instance cnt is: '99996'.
+The inst 'pbs_genopt_45' is selected as pbs candidate. The instance cnt is: '27352'.
+The inst 'pbs_genopt_46' is selected as pbs candidate. The instance cnt is: '490181'.
+Done deriving partition netlists.  Summary: RT {elapsed: 393s, ST: 393s}, MEM {curr: 49.4G, peak: 49.4G, phys curr: 48.7G, phys peak: 48.7G}
+Wait for super-thread servers to finish loading libraries.
+Start super thread servers forking.  Summary: MEM {curr: 27.2G, peak: 49.4G, phys curr: 48.6G, phys peak: 48.7G}
+                  Library loading done successfully on server 'localhost_1_0'.
+Info    : Connection established with super-threading server. [ST-110]
+        : The server 'localhost_1_1' is forked process '3514855' on this host.
+Info    : Connection established with super-threading server. [ST-110]
+        : The server 'localhost_1_2' is forked process '3514857' on this host.
+Info    : Connection established with super-threading server. [ST-110]
+        : The server 'localhost_1_3' is forked process '3514864' on this host.
+Info    : Connection established with super-threading server. [ST-110]
+        : The server 'localhost_1_4' is forked process '3514866' on this host.
+Info    : Connection established with super-threading server. [ST-110]
+        : The server 'localhost_1_5' is forked process '3514868' on this host.
+Info    : Connection established with super-threading server. [ST-110]
+        : The server 'localhost_1_6' is forked process '3514870' on this host.
+Info    : Connection established with super-threading server. [ST-110]
+        : The server 'localhost_1_7' is forked process '3514872' on this host.
+Done super thread servers forking.  Summary: RT {elapsed: 1s, ST: 0s}, MEM {curr: 27.2G, peak: 49.4G, phys curr: 48.6G, phys peak: 48.7G}
+        Distributing super-thread jobs: {pbs_genopt_5 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_5.etf} {pbs_genopt_7 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_7.etf} {pbs_genopt_46 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_46.etf} {pbs_genopt_6 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_6.etf} {pbs_genopt_42 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_42.etf} {pbs_genopt_23 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_23.etf} {pbs_genopt_41 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_41.etf} {pbs_genopt_39 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_39.etf} {pbs_genopt_37 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_37.etf} {pbs_genopt_9 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_9.etf} {pbs_genopt_10 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_10.etf} {pbs_genopt_11 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_11.etf} {pbs_genopt_36 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_36.etf} {pbs_genopt_35 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_35.etf} {pbs_genopt_14 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_14.etf} {pbs_genopt_33 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_33.etf} {pbs_genopt_16 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_16.etf} {pbs_genopt_17 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_17.etf} {pbs_genopt_32 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_32.etf} {pbs_genopt_24 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_24.etf} {pbs_genopt_20 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_20.etf} {pbs_genopt_15 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_15.etf} {pbs_genopt_8 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_8.etf} {pbs_genopt_13 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_13.etf} {pbs_genopt_18 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_18.etf} {pbs_genopt_19 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_19.etf} {pbs_genopt_28 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_28.etf} {pbs_genopt_43 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_43.etf} {pbs_genopt_34 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_34.etf} {pbs_genopt_12 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_12.etf} {pbs_genopt_31 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_31.etf} {pbs_genopt_26 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_26.etf} {pbs_genopt_38 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_38.etf} {pbs_genopt_44 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_44.etf} {pbs_genopt_22 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_22.etf} {pbs_genopt_29 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_29.etf} {pbs_genopt_30 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_30.etf} {pbs_genopt_1 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_1.etf} {pbs_genopt_25 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_25.etf} {pbs_genopt_40 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_40.etf} {pbs_genopt_21 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_21.etf} {pbs_genopt_45 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_45.etf} {pbs_genopt_3 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_3.etf} {pbs_genopt_0 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_0.etf} {pbs_genopt_2 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_2.etf} {pbs_genopt_27 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_27.etf} {pbs_genopt_4 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_4.etf}
+          Sending 'pbs_genopt_5 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_5.etf' to server 'localhost_1_5'...
+            Sent 'pbs_genopt_5 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_5.etf' to server 'localhost_1_5'.
+          Sending 'pbs_genopt_7 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_7.etf' to server 'localhost_1_2'...
+            Sent 'pbs_genopt_7 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_7.etf' to server 'localhost_1_2'.
+          Sending 'pbs_genopt_46 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_46.etf' to server 'localhost_1_1'...
+            Sent 'pbs_genopt_46 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_46.etf' to server 'localhost_1_1'.
+          Sending 'pbs_genopt_6 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_6.etf' to server 'localhost_1_0'...
+            Sent 'pbs_genopt_6 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_6.etf' to server 'localhost_1_0'.
+          Sending 'pbs_genopt_42 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_42.etf' to server 'localhost_1_6'...
+            Sent 'pbs_genopt_42 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_42.etf' to server 'localhost_1_6'.
+          Sending 'pbs_genopt_23 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_23.etf' to server 'localhost_1_4'...
+            Sent 'pbs_genopt_23 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_23.etf' to server 'localhost_1_4'.
+          Sending 'pbs_genopt_41 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_41.etf' to server 'localhost_1_3'...
+            Sent 'pbs_genopt_41 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_41.etf' to server 'localhost_1_3'.
+          Sending 'pbs_genopt_39 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_39.etf' to server 'localhost_1_7'...
+            Sent 'pbs_genopt_39 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_39.etf' to server 'localhost_1_7'.
+          Received 'pbs_genopt_23 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_23.etf' from server 'localhost_1_4'. (220762 ms elapsed)
+          Sending 'pbs_genopt_37 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_37.etf' to server 'localhost_1_4'...
+            Sent 'pbs_genopt_37 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_37.etf' to server 'localhost_1_4'.
+          Received 'pbs_genopt_39 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_39.etf' from server 'localhost_1_7'. (220880 ms elapsed)
+       Partition:  pbs_genopt_39 - PBS_Generic_Opt-Distributed_Read_DB - Elapsed_Time 2.00, CPU_Time 2.00
+       Partition:  pbs_genopt_39 - PBS_Generic_Opt-Distributed_Generic - Elapsed_Time 208.00, CPU_Time 207.00
+       Partition:  pbs_genopt_39 - PBS_Generic_Opt-Distributed_Prop_Const - Elapsed_Time 1.00, CPU_Time 1.00
+       Partition:  pbs_genopt_39 - PBS_Generic_Opt-Distributed_Gobble - Elapsed_Time 0.00, CPU_Time 0.00
+       Partition:  pbs_genopt_39 - PBS_Generic_Opt-Distributed_Report - Elapsed_Time 0.00, CPU_Time 0.00
+       Start - Partition: pbs_genopt_39 Slack: 14.4 TNS: 0.0 Cell-Count: 108330 Cell-Area: 159496 
+Init-Memory: 1160.88
+       Done  - Partition: pbs_genopt_39 Slack: 14.4 TNS: 0.0 Cell-Count: 85951 Cell-Area: 136651 
+Peak-Memory: 1524.76 Elapsed: 211
+       Partition:  pbs_genopt_39 - PBS_Generic_Opt-Distributed_Write_DB - Elapsed_Time 9.00, CPU_Time 10.00
+       pbs_genopt_39 - PBS_Generic_Opt-Assembly - Elapsed_Time 3, CPU_Time 3.0
+       Partition:  pbs_genopt_39 - Runtime taken by the partition - Elapsed_Time 220.00, CPU_Time 220.00
+          Sending 'pbs_genopt_9 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_9.etf' to server 'localhost_1_7'...
+            Sent 'pbs_genopt_9 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_9.etf' to server 'localhost_1_7'.
+          Received 'pbs_genopt_41 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_41.etf' from server 'localhost_1_3'. (224520 ms elapsed)
+       Partition:  pbs_genopt_41 - PBS_Generic_Opt-Distributed_Read_DB - Elapsed_Time 2.00, CPU_Time 2.00
+       Partition:  pbs_genopt_41 - PBS_Generic_Opt-Distributed_Generic - Elapsed_Time 208.00, CPU_Time 208.00
+       Partition:  pbs_genopt_41 - PBS_Generic_Opt-Distributed_Prop_Const - Elapsed_Time 1.00, CPU_Time 0.00
+       Partition:  pbs_genopt_41 - PBS_Generic_Opt-Distributed_Gobble - Elapsed_Time 0.00, CPU_Time 0.00
+       Partition:  pbs_genopt_41 - PBS_Generic_Opt-Distributed_Report - Elapsed_Time 0.00, CPU_Time 0.00
+       Start - Partition: pbs_genopt_41 Slack: 19.6 TNS: 0.0 Cell-Count: 108330 Cell-Area: 159496 
+Init-Memory: 1160.88
+       Done  - Partition: pbs_genopt_41 Slack: 19.6 TNS: 0.0 Cell-Count: 85951 Cell-Area: 136651 
+Peak-Memory: 1525.51 Elapsed: 211
+       Partition:  pbs_genopt_41 - PBS_Generic_Opt-Distributed_Write_DB - Elapsed_Time 9.00, CPU_Time 10.00
+       pbs_genopt_41 - PBS_Generic_Opt-Assembly - Elapsed_Time 4, CPU_Time 4.0
+       Partition:  pbs_genopt_41 - Runtime taken by the partition - Elapsed_Time 220.00, CPU_Time 220.00
+       Partition:  pbs_genopt_23 - PBS_Generic_Opt-Distributed_Read_DB - Elapsed_Time 2.00, CPU_Time 2.00
+       Partition:  pbs_genopt_23 - PBS_Generic_Opt-Distributed_Generic - Elapsed_Time 208.00, CPU_Time 207.00
+       Partition:  pbs_genopt_23 - PBS_Generic_Opt-Distributed_Prop_Const - Elapsed_Time 0.00, CPU_Time 1.00
+       Partition:  pbs_genopt_23 - PBS_Generic_Opt-Distributed_Gobble - Elapsed_Time 1.00, CPU_Time 0.00
+       Partition:  pbs_genopt_23 - PBS_Generic_Opt-Distributed_Report - Elapsed_Time 0.00, CPU_Time 0.00
+       Start - Partition: pbs_genopt_23 Slack: 19.6 TNS: 0.0 Cell-Count: 108330 Cell-Area: 159496 
+Init-Memory: 1163.79
+       Done  - Partition: pbs_genopt_23 Slack: 19.6 TNS: 0.0 Cell-Count: 85951 Cell-Area: 136651 
+Peak-Memory: 1525.12 Elapsed: 211
+       Partition:  pbs_genopt_23 - PBS_Generic_Opt-Distributed_Write_DB - Elapsed_Time 9.00, CPU_Time 10.00
+       pbs_genopt_23 - PBS_Generic_Opt-Assembly - Elapsed_Time 4, CPU_Time 4.0
+       Partition:  pbs_genopt_23 - Runtime taken by the partition - Elapsed_Time 220.00, CPU_Time 220.00
+          Sending 'pbs_genopt_10 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_10.etf' to server 'localhost_1_3'...
+            Sent 'pbs_genopt_10 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_10.etf' to server 'localhost_1_3'.
+          Received 'pbs_genopt_42 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_42.etf' from server 'localhost_1_6'. (233236 ms elapsed)
+       Partition:  pbs_genopt_42 - PBS_Generic_Opt-Distributed_Read_DB - Elapsed_Time 2.00, CPU_Time 2.00
+       Partition:  pbs_genopt_42 - PBS_Generic_Opt-Distributed_Generic - Elapsed_Time 222.00, CPU_Time 221.00
+       Partition:  pbs_genopt_42 - PBS_Generic_Opt-Distributed_Prop_Const - Elapsed_Time 0.00, CPU_Time 1.00
+       Partition:  pbs_genopt_42 - PBS_Generic_Opt-Distributed_Gobble - Elapsed_Time 1.00, CPU_Time 0.00
+       Partition:  pbs_genopt_42 - PBS_Generic_Opt-Distributed_Report - Elapsed_Time 0.00, CPU_Time 0.00
+       Start - Partition: pbs_genopt_42 Slack: 19.6 TNS: 0.0 Cell-Count: 109096 Cell-Area: 148285 
+Init-Memory: 1168.79
+       Done  - Partition: pbs_genopt_42 Slack: 19.6 TNS: 0.0 Cell-Count: 74033 Cell-Area: 110937 
+Peak-Memory: 1660.44 Elapsed: 225
+       Partition:  pbs_genopt_42 - PBS_Generic_Opt-Distributed_Write_DB - Elapsed_Time 7.00, CPU_Time 8.00
+       pbs_genopt_42 - PBS_Generic_Opt-Assembly - Elapsed_Time 3, CPU_Time 3.0
+       Partition:  pbs_genopt_42 - Runtime taken by the partition - Elapsed_Time 233.00, CPU_Time 232.00
+          Sending 'pbs_genopt_11 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_11.etf' to server 'localhost_1_6'...
+            Sent 'pbs_genopt_11 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_11.etf' to server 'localhost_1_6'.
+          Received 'pbs_genopt_37 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_37.etf' from server 'localhost_1_4'. (214681 ms elapsed)
+          Sending 'pbs_genopt_36 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_36.etf' to server 'localhost_1_4'...
+            Sent 'pbs_genopt_36 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_36.etf' to server 'localhost_1_4'.
+          Received 'pbs_genopt_9 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_9.etf' from server 'localhost_1_7'. (213770 ms elapsed)
+          Sending 'pbs_genopt_35 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_35.etf' to server 'localhost_1_7'...
+            Sent 'pbs_genopt_35 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_35.etf' to server 'localhost_1_7'.
+          Received 'pbs_genopt_10 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_10.etf' from server 'localhost_1_3'. (213309 ms elapsed)
+          Sending 'pbs_genopt_14 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_14.etf' to server 'localhost_1_3'...
+            Sent 'pbs_genopt_14 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_14.etf' to server 'localhost_1_3'.
+          Received 'pbs_genopt_11 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_11.etf' from server 'localhost_1_6'. (213996 ms elapsed)
+          Sending 'pbs_genopt_33 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_33.etf' to server 'localhost_1_6'...
+            Sent 'pbs_genopt_33 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_33.etf' to server 'localhost_1_6'.
+          Received 'pbs_genopt_6 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_6.etf' from server 'localhost_1_0'. (578496 ms elapsed)
+       Partition:  pbs_genopt_6 - PBS_Generic_Opt-Distributed_Read_DB - Elapsed_Time 6.00, CPU_Time 5.00
+       Partition:  pbs_genopt_6 - PBS_Generic_Opt-Distributed_Generic - Elapsed_Time 477.00, CPU_Time 477.00
+       Partition:  pbs_genopt_6 - PBS_Generic_Opt-Distributed_Prop_Const - Elapsed_Time 48.00, CPU_Time 49.00
+       Partition:  pbs_genopt_6 - PBS_Generic_Opt-Distributed_Gobble - Elapsed_Time 1.00, CPU_Time 0.00
+       Partition:  pbs_genopt_6 - PBS_Generic_Opt-Distributed_Report - Elapsed_Time 0.00, CPU_Time 0.00
+       Start - Partition: pbs_genopt_6 Slack: 5.7 TNS: 0.0 Cell-Count: 250700 Cell-Area: 1283808 
+Init-Memory: 2445.35
+       Done  - Partition: pbs_genopt_6 Slack: 4.7 TNS: 0.0 Cell-Count: 151636 Cell-Area: 1043829 
+Peak-Memory: 3059.89 Elapsed: 532
+       Partition:  pbs_genopt_6 - PBS_Generic_Opt-Distributed_Write_DB - Elapsed_Time 43.00, CPU_Time 44.00
+       pbs_genopt_6 - PBS_Generic_Opt-Assembly - Elapsed_Time 18, CPU_Time 17.0
+       Partition:  pbs_genopt_6 - Runtime taken by the partition - Elapsed_Time 575.00, CPU_Time 575.00
+          Sending 'pbs_genopt_16 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_16.etf' to server 'localhost_1_0'...
+            Sent 'pbs_genopt_16 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_16.etf' to server 'localhost_1_0'.
+          Received 'pbs_genopt_35 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_35.etf' from server 'localhost_1_7'. (217226 ms elapsed)
+          Sending 'pbs_genopt_17 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_17.etf' to server 'localhost_1_7'...
+            Sent 'pbs_genopt_17 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_17.etf' to server 'localhost_1_7'.
+          Received 'pbs_genopt_36 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_36.etf' from server 'localhost_1_4'. (220854 ms elapsed)
+          Sending 'pbs_genopt_32 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_32.etf' to server 'localhost_1_4'...
+            Sent 'pbs_genopt_32 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_32.etf' to server 'localhost_1_4'.
+          Received 'pbs_genopt_14 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_14.etf' from server 'localhost_1_3'. (216166 ms elapsed)
+          Sending 'pbs_genopt_24 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_24.etf' to server 'localhost_1_3'...
+            Sent 'pbs_genopt_24 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_24.etf' to server 'localhost_1_3'.
+          Received 'pbs_genopt_33 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_33.etf' from server 'localhost_1_6'. (215983 ms elapsed)
+          Sending 'pbs_genopt_20 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_20.etf' to server 'localhost_1_6'...
+            Sent 'pbs_genopt_20 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_20.etf' to server 'localhost_1_6'.
+          Received 'pbs_genopt_46 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_46.etf' from server 'localhost_1_1'. (713783 ms elapsed)
+       Partition:  pbs_genopt_46 - PBS_Generic_Opt-Distributed_Read_DB - Elapsed_Time 5.00, CPU_Time 4.00
+       Partition:  pbs_genopt_46 - PBS_Generic_Opt-Distributed_Generic - Elapsed_Time 672.00, CPU_Time 672.00
+       Partition:  pbs_genopt_46 - PBS_Generic_Opt-Distributed_Prop_Const - Elapsed_Time 6.00, CPU_Time 6.00
+       Partition:  pbs_genopt_46 - PBS_Generic_Opt-Distributed_Gobble - Elapsed_Time 1.00, CPU_Time 1.00
+       Partition:  pbs_genopt_46 - PBS_Generic_Opt-Distributed_Report - Elapsed_Time 0.00, CPU_Time 0.00
+       Start - Partition: pbs_genopt_46 Slack: 10.0 TNS: 0.0 Cell-Count: 490181 Cell-Area: 651731 
+Init-Memory: 1851.29
+       Done  - Partition: pbs_genopt_46 Slack: 10.0 TNS: 0.0 Cell-Count: 215038 Cell-Area: 313257 
+Peak-Memory: 3090.57 Elapsed: 684
+       Partition:  pbs_genopt_46 - PBS_Generic_Opt-Distributed_Write_DB - Elapsed_Time 28.00, CPU_Time 28.00
+       pbs_genopt_46 - PBS_Generic_Opt-Assembly - Elapsed_Time 12, CPU_Time 12.0
+       Partition:  pbs_genopt_46 - Runtime taken by the partition - Elapsed_Time 712.00, CPU_Time 711.00
+          Sending 'pbs_genopt_15 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_15.etf' to server 'localhost_1_1'...
+            Sent 'pbs_genopt_15 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_15.etf' to server 'localhost_1_1'.
+          Received 'pbs_genopt_16 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_16.etf' from server 'localhost_1_0'. (218358 ms elapsed)
+          Sending 'pbs_genopt_8 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_8.etf' to server 'localhost_1_0'...
+            Sent 'pbs_genopt_8 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_8.etf' to server 'localhost_1_0'.
+          Received 'pbs_genopt_17 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_17.etf' from server 'localhost_1_7'. (218200 ms elapsed)
+          Sending 'pbs_genopt_13 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_13.etf' to server 'localhost_1_7'...
+            Sent 'pbs_genopt_13 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_13.etf' to server 'localhost_1_7'.
+          Received 'pbs_genopt_32 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_32.etf' from server 'localhost_1_4'. (217667 ms elapsed)
+          Sending 'pbs_genopt_18 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_18.etf' to server 'localhost_1_4'...
+            Sent 'pbs_genopt_18 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_18.etf' to server 'localhost_1_4'.
+          Received 'pbs_genopt_24 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_24.etf' from server 'localhost_1_3'. (217731 ms elapsed)
+          Sending 'pbs_genopt_19 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_19.etf' to server 'localhost_1_3'...
+            Sent 'pbs_genopt_19 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_19.etf' to server 'localhost_1_3'.
+          Received 'pbs_genopt_20 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_20.etf' from server 'localhost_1_6'. (215673 ms elapsed)
+          Sending 'pbs_genopt_28 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_28.etf' to server 'localhost_1_6'...
+            Sent 'pbs_genopt_28 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_28.etf' to server 'localhost_1_6'.
+          Received 'pbs_genopt_15 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_15.etf' from server 'localhost_1_1'. (214980 ms elapsed)
+          Sending 'pbs_genopt_43 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_43.etf' to server 'localhost_1_1'...
+            Sent 'pbs_genopt_43 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_43.etf' to server 'localhost_1_1'.
+          Received 'pbs_genopt_8 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_8.etf' from server 'localhost_1_0'. (219271 ms elapsed)
+          Sending 'pbs_genopt_34 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_34.etf' to server 'localhost_1_0'...
+            Sent 'pbs_genopt_34 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_34.etf' to server 'localhost_1_0'.
+          Received 'pbs_genopt_18 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_18.etf' from server 'localhost_1_4'. (216615 ms elapsed)
+          Sending 'pbs_genopt_12 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_12.etf' to server 'localhost_1_4'...
+            Sent 'pbs_genopt_12 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_12.etf' to server 'localhost_1_4'.
+          Received 'pbs_genopt_13 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_13.etf' from server 'localhost_1_7'. (218410 ms elapsed)
+          Sending 'pbs_genopt_31 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_31.etf' to server 'localhost_1_7'...
+            Sent 'pbs_genopt_31 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_31.etf' to server 'localhost_1_7'.
+          Received 'pbs_genopt_19 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_19.etf' from server 'localhost_1_3'. (217306 ms elapsed)
+          Sending 'pbs_genopt_26 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_26.etf' to server 'localhost_1_3'...
+            Sent 'pbs_genopt_26 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_26.etf' to server 'localhost_1_3'.
+          Received 'pbs_genopt_28 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_28.etf' from server 'localhost_1_6'. (216626 ms elapsed)
+          Sending 'pbs_genopt_38 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_38.etf' to server 'localhost_1_6'...
+            Sent 'pbs_genopt_38 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_38.etf' to server 'localhost_1_6'.
+          Received 'pbs_genopt_43 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_43.etf' from server 'localhost_1_1'. (220613 ms elapsed)
+          Sending 'pbs_genopt_44 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_44.etf' to server 'localhost_1_1'...
+            Sent 'pbs_genopt_44 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_44.etf' to server 'localhost_1_1'.
+          Received 'pbs_genopt_34 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_34.etf' from server 'localhost_1_0'. (220787 ms elapsed)
+          Sending 'pbs_genopt_22 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_22.etf' to server 'localhost_1_0'...
+            Sent 'pbs_genopt_22 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_22.etf' to server 'localhost_1_0'.
+          Received 'pbs_genopt_31 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_31.etf' from server 'localhost_1_7'. (206484 ms elapsed)
+          Sending 'pbs_genopt_29 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_29.etf' to server 'localhost_1_7'...
+            Sent 'pbs_genopt_29 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_29.etf' to server 'localhost_1_7'.
+          Received 'pbs_genopt_26 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_26.etf' from server 'localhost_1_3'. (206262 ms elapsed)
+          Sending 'pbs_genopt_30 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_30.etf' to server 'localhost_1_3'...
+            Sent 'pbs_genopt_30 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_30.etf' to server 'localhost_1_3'.
+          Received 'pbs_genopt_38 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_38.etf' from server 'localhost_1_6'. (207494 ms elapsed)
+          Sending 'pbs_genopt_1 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_1.etf' to server 'localhost_1_6'...
+            Sent 'pbs_genopt_1 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_1.etf' to server 'localhost_1_6'.
+          Received 'pbs_genopt_12 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_12.etf' from server 'localhost_1_4'. (217262 ms elapsed)
+          Sending 'pbs_genopt_25 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_25.etf' to server 'localhost_1_4'...
+            Sent 'pbs_genopt_25 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_25.etf' to server 'localhost_1_4'.
+          Received 'pbs_genopt_44 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_44.etf' from server 'localhost_1_1'. (207321 ms elapsed)
+          Sending 'pbs_genopt_40 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_40.etf' to server 'localhost_1_1'...
+            Sent 'pbs_genopt_40 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_40.etf' to server 'localhost_1_1'.
+          Received 'pbs_genopt_22 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_22.etf' from server 'localhost_1_0'. (210527 ms elapsed)
+          Sending 'pbs_genopt_21 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_21.etf' to server 'localhost_1_0'...
+            Sent 'pbs_genopt_21 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_21.etf' to server 'localhost_1_0'.
+          Received 'pbs_genopt_25 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_25.etf' from server 'localhost_1_4'. (179997 ms elapsed)
+          Sending 'pbs_genopt_45 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_45.etf' to server 'localhost_1_4'...
+            Sent 'pbs_genopt_45 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_45.etf' to server 'localhost_1_4'.
+          Received 'pbs_genopt_29 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_29.etf' from server 'localhost_1_7'. (199629 ms elapsed)
+          Sending 'pbs_genopt_3 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_3.etf' to server 'localhost_1_7'...
+            Sent 'pbs_genopt_3 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_3.etf' to server 'localhost_1_7'.
+          Received 'pbs_genopt_30 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_30.etf' from server 'localhost_1_3'. (197912 ms elapsed)
+          Sending 'pbs_genopt_0 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_0.etf' to server 'localhost_1_3'...
+            Sent 'pbs_genopt_0 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_0.etf' to server 'localhost_1_3'.
+          Received 'pbs_genopt_40 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_40.etf' from server 'localhost_1_1'. (168718 ms elapsed)
+          Sending 'pbs_genopt_2 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_2.etf' to server 'localhost_1_1'...
+            Sent 'pbs_genopt_2 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_2.etf' to server 'localhost_1_1'.
+          Received 'pbs_genopt_3 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_3.etf' from server 'localhost_1_7'. (42445 ms elapsed)
+          Sending 'pbs_genopt_27 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_27.etf' to server 'localhost_1_7'...
+            Sent 'pbs_genopt_27 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_27.etf' to server 'localhost_1_7'.
+          Received 'pbs_genopt_45 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_45.etf' from server 'localhost_1_4'. (59699 ms elapsed)
+          Sending 'pbs_genopt_4 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_4.etf' to server 'localhost_1_4'...
+            Sent 'pbs_genopt_4 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_4.etf' to server 'localhost_1_4'.
+          Received 'pbs_genopt_4 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_4.etf' from server 'localhost_1_4'. (533 ms elapsed)
+          Received 'pbs_genopt_27 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_27.etf' from server 'localhost_1_7'. (19143 ms elapsed)
+          Received 'pbs_genopt_21 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_21.etf' from server 'localhost_1_0'. (131714 ms elapsed)
+          Received 'pbs_genopt_2 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_2.etf' from server 'localhost_1_1'. (111407 ms elapsed)
+          Received 'pbs_genopt_1 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_1.etf' from server 'localhost_1_6'. (516793 ms elapsed)
+          Received 'pbs_genopt_0 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_0.etf' from server 'localhost_1_3'. (374836 ms elapsed)
+          Received 'pbs_genopt_5 ./.pbs_paxos.inf.pucrs.br_3507722/pbs_genopt_5.etf' from server 'localhost_1_5'. (7469579 ms elapsed)

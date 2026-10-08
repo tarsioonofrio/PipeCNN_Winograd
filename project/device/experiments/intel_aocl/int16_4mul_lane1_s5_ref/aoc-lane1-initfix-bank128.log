@@ -1,0 +1,33 @@
+aoc: Environment checks are completed successfully.
+aoc: Cached files in /var/tmp/aocl/ may be used to reduce compilation time
+aoc: Selected target board s5_ref
+aoc: Running OpenCL parser....
+aoc: OpenCL parser completed successfully.
+aoc: Optimizing and doing static analysis of code...
+aoc: Linking with IP library ...
+Checking if memory usage is larger than 100%
+aoc: First stage compilation completed successfully.
+aoc: To compile this project, run "aoc conv_pipe_int16_4mul.aoco"
+	Command being timed: "timeout --signal=TERM --kill-after=10s 180s aoc -v -c -board=s5_ref -I . conv_pipe_int16_4mul.cl"
+	User time (seconds): 30.83
+	System time (seconds): 1.21
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:32.65
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 347716
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1533
+	Minor (reclaiming a frame) page faults: 246025
+	Voluntary context switches: 349
+	Involuntary context switches: 307
+	Swaps: 0
+	File system inputs: 367056
+	File system outputs: 404386
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

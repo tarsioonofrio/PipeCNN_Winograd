@@ -25,3 +25,32 @@ Please kindly cite our work of PipeCNN-Winograd if it helps your research:
 Anrong Yang, Yuanhui Li, Hongqiao Shu, Jianlin Deng, Chuanzhao Ma, Zheng Li and Qigang Wang, "An OpenCL-Based FPGA Accelerator for Compressed YOLOv2", FPT 2019.
 ```
 
+## Reports and experiment results
+
+Project-specific reports and experiment notes are kept in `reports/`. Start
+with [`reports/README.md`](reports/README.md) for the inventory and the scope
+of each result.
+
+The main AOCL full-kernel compilation report is generated at
+`project/conv_pipe/reports/report.html` by `project/run_fpga.sh`. Supporting
+compiler output and intermediates are under `project/conv_pipe/`; the generated
+FPGA image is `project/conv_pipe.aocx`. Preserve a run before rebuilding,
+because `make clean` removes the generated compiler project. Archive compiler
+reports under a new descriptive directory in `reports/`, together with the
+source revision, AOCL version, board/part and exact command used.
+
+An isolated Genus/Xcelium/Joules configuration, if executed, stores its raw
+evidence under
+`project/device/RTL/synthesis/<configuration>/`: synthesis reports and mapped
+netlist under `logical/results/`, simulation logs under `sim/`, and the power
+summary at `power/power_evaluation.txt`. These results characterize only the
+specified RTL slice and testbench; they are not full-kernel PipeCNN power or
+performance results. Likewise, IP-generation reports under
+`project/device/RTL/mult_add_fix8bx16bx4/` do not describe the complete
+accelerator.
+
+Keep compiler estimates, source-level experiment results, IP-generation
+reports, and physical board measurements separate. A generated `.aocx` image
+is a build artifact, not a report; record its checksum with the archived run
+and version the binary only when the project specifically requires it.
+

@@ -1,0 +1,152 @@
+
+aoc -- Intel(R) FPGA SDK for OpenCL(TM) Kernel Compiler
+
+Usage: aoc <options> <file>.[cl|aoco]
+
+Example:
+       # First generate an <file>.aoco file
+       aoc -c mykernels.cl
+       # Now compile the project into a hardware programming file <file>.aocx.
+       aoc mykernels.aoco
+       # Or generate all at once
+       aoc mykernels.cl
+
+Outputs:
+       <file>.aocx and/or <file>.aoco
+
+Help Options:
+-version
+          Print out version infomation and exit
+
+-v        
+          Verbose mode. Report progress of compilation
+
+-q
+          Quiet mode. Progress of compilation is not reported
+
+-report  
+          Print area estimates to screen after intial 
+          compilation. The report is always written to the log file.
+
+-h
+-help    
+          Show this message
+
+Overall Options:
+-c        
+          Stop after generating a <file>.aoco
+
+-o <output> 
+          Use <output> as the name for the output.
+          If running with the '-c' option the output file extension should be '.aoco'.
+          Otherwise the file extension should be '.aocx'.
+          If neither extension is specified, the appropriate extension will be added automatically.
+
+-march=emulator
+          Create kernels that can be executed on x86
+
+-g        
+          Add debug data to kernels. Also, makes it possible to symbolically
+          debug kernels created for the emulator on an x86 machine (Linux only).
+          This behavior is enabled by default. This flag may be used to override the -g0 flag.
+
+-g0        
+          Don't add debug data to kernels.
+
+-profile(=<all|autorun|enqueued>)
+          Enable profile support when generating aocx file:
+          all: profile all kernels.
+          autorun: profile only autorun kernels.
+          enqueued: profile only non-autorun kernels.
+          If there is no argument provided, then the mode defaults to 'all'.
+          Note that this does have a small performance penalty since profile
+          counters will be instantiated and take some FPGA resources.
+    
+-shared
+          Compile OpenCL source file into an object file that can be included into
+          a library. Implies -c. 
+
+-I <directory> 
+          Add directory to header search path.
+          
+-L <directory>
+          Add directory to OpenCL library search path.
+          
+-l <library.aoclib>
+          Specify OpenCL library file.
+
+-D <name> 
+          Define macro, as name=value or just name.
+
+-W        
+          Suppress warning.
+
+-Werror   
+          Make all warnings into errors.
+
+-library-debug 
+          Generate debug output related to libraries.
+
+Modifiers:
+-board=<board name>
+          Compile for the specified board. Default is s5_ref.
+
+-list-boards
+          Print a list of available boards and exit.
+
+-bsp-flow=<flow name>
+          Specify the bsp compilation flow by name. If none given, the board's
+          default flow is used.
+
+Optimization Control:
+
+-no-interleaving=<global memory name>
+          Configure a global memory as separate address spaces for each
+          DIMM/bank.  User should then use the Altera specific cl_mem_flags
+          (E.g.  CL_CHANNEL_2_INTELFPGA) to allocate each buffer in one DIMM or
+          the other. The argument 'default' can be used to configure the default
+          global memory. Consult your board's documentation for the memory types
+          available. See the Best Practices Guide for more details.
+
+-const-cache-bytes=<N>
+          Configure the constant cache size (rounded up to closest 2^n).
+    If none of the kernels use the __constant address space, this 
+    argument has no effect. 
+
+-fp-relaxed
+          Allow the compiler to relax the order of arithmetic operations,
+          possibly affecting the precision
+
+-fpc 
+          Removes intermediary roundings and conversions when possible, 
+          and changes the rounding mode to round towards zero for 
+          multiplies and adds
+
+-fast-compile
+          Compiles the design with reduced effort for a faster compile time but
+          reduced fmax and lower power efficiency. Compiled aocx should only be
+          used for internal development and not for deploying in final product.
+
+-high-effort
+          Increases aocx compile effort to improve ability to fit
+    kernel on the device.
+
+-emulator-channel-depth-model=<default|strict|ignore-depth>
+          Controls the depths of channels used by the emulator:
+          default: Channels with explicitly-specified depths will use the specified depths.
+                   Channels with unspecified depths will use a depth >10000.
+          strict: As default except channels of unspecified depth will use a depth of 1.
+          ignore-depth: All channels will use a depth >10000.
+
+-cl-single-precision-constant
+-cl-denorms-are-zero
+-cl-opt-disable
+-cl-strict-aliasing
+-cl-mad-enable
+-cl-no-signed-zeros
+-cl-unsafe-math-optimizations
+-cl-finite-math-only
+-cl-fast-relaxed-math
+           OpenCL required options. See OpenCL specification for details
+
+

@@ -1,0 +1,169 @@
+xrun(64): 23.03-s003: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.03-s003: Started on Oct 07, 2026 at 18:03:10 -03
+xrun
+	-R
+	-input vcd_probe.tcl
+DEFINE unisim  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/unisim
+|
+xrun: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,1): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/unisim' (cds.lib command ignored).
+DEFINE unimacro  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/unimacro
+|
+xrun: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,2): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/unimacro' (cds.lib command ignored).
+DEFINE unifast  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/unifast
+|
+xrun: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,3): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/unifast' (cds.lib command ignored).
+DEFINE xpm  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xpm
+|
+xrun: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,4): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xpm' (cds.lib command ignored).
+DEFINE xilinx_vip  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xilinx_vip
+|
+xrun: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,5): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xilinx_vip' (cds.lib command ignored).
+DEFINE common_cpp_v1_0  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/common_cpp_v1_0
+|
+xrun: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,6): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/common_cpp_v1_0' (cds.lib command ignored).
+DEFINE xtlm  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xtlm
+|
+xrun: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,7): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xtlm' (cds.lib command ignored).
+DEFINE xscl  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xscl
+|
+xrun: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,8): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xscl' (cds.lib command ignored).
+DEFINE emu_perf_common_v1_0  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/emu_perf_common_v1_0
+|
+xrun: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,9): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/emu_perf_common_v1_0' (cds.lib command ignored).
+DEFINE axi_tlm_ext_v1_0  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/axi_tlm_ext_v1_0
+|
+xrun: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,10): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/axi_tlm_ext_v1_0' (cds.lib command ignored).
+DEFINE axi_tg_sc_v1_0  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/axi_tg_sc_v1_0
+|
+xrun: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,11): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/axi_tg_sc_v1_0' (cds.lib command ignored).
+DEFINE secureip  /sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/secureip
+|
+xrun: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,12): cds.lib Invalid path '/sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/secureip' (cds.lib command ignored).
+DEFINE unisims_ver  /sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unisims_ver
+|
+xrun: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,13): cds.lib Invalid path '/sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unisims_ver' (cds.lib command ignored).
+DEFINE unimacro_ver  /sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unimacro_ver
+|
+xrun: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,14): cds.lib Invalid path '/sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unimacro_ver' (cds.lib command ignored).
+DEFINE unifast_ver  /sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unifast_ver
+|
+xrun: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,15): cds.lib Invalid path '/sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unifast_ver' (cds.lib command ignored).
+DEFINE unisim  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/unisim
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,1): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/unisim' (cds.lib command ignored).
+DEFINE unimacro  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/unimacro
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,2): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/unimacro' (cds.lib command ignored).
+DEFINE unifast  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/unifast
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,3): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/unifast' (cds.lib command ignored).
+DEFINE xpm  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xpm
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,4): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xpm' (cds.lib command ignored).
+DEFINE xilinx_vip  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xilinx_vip
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,5): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xilinx_vip' (cds.lib command ignored).
+DEFINE common_cpp_v1_0  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/common_cpp_v1_0
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,6): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/common_cpp_v1_0' (cds.lib command ignored).
+DEFINE xtlm  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xtlm
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,7): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xtlm' (cds.lib command ignored).
+DEFINE xscl  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xscl
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,8): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xscl' (cds.lib command ignored).
+DEFINE emu_perf_common_v1_0  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/emu_perf_common_v1_0
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,9): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/emu_perf_common_v1_0' (cds.lib command ignored).
+DEFINE axi_tlm_ext_v1_0  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/axi_tlm_ext_v1_0
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,10): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/axi_tlm_ext_v1_0' (cds.lib command ignored).
+DEFINE axi_tg_sc_v1_0  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/axi_tg_sc_v1_0
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,11): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/axi_tg_sc_v1_0' (cds.lib command ignored).
+DEFINE secureip  /sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/secureip
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,12): cds.lib Invalid path '/sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/secureip' (cds.lib command ignored).
+DEFINE unisims_ver  /sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unisims_ver
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,13): cds.lib Invalid path '/sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unisims_ver' (cds.lib command ignored).
+DEFINE unimacro_ver  /sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unimacro_ver
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,14): cds.lib Invalid path '/sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unimacro_ver' (cds.lib command ignored).
+DEFINE unifast_ver  /sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unifast_ver
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,15): cds.lib Invalid path '/sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unifast_ver' (cds.lib command ignored).
+Loading snapshot worklib.tb_memread_conv_slice:sv .................... Done
+xcelium> source /soft64/cadence/ferramentas/XCELIUM2303/tools/xcelium/files/xmsimrc
+xcelium> set probe_packed_limit 24576
+24576
+xcelium> database -open dut_vcd -vcd -into dut.vcd
+Created VCD database dut_vcd
+xcelium> probe -create -database dut_vcd -all -depth to_cells -packed 24576 tb_memread_conv_slice.dut
+Created probe 1
+xcelium> run
+xmsim: *W,DFUSE: $dumpfile dut.vcd is already in use (VCD file).
+            File: /sim/tarsio/PipeCNN_Winograd/project/device/experiments/opencl_memread_compute/tb_memread_conv_slice.sv, line = 36, pos = 16
+           Scope: tb_memread_conv_slice
+            Time: 0 FS + 0
+
+PASS: integrated 32-lane Winograd/FC compute, accumulation and fixed-point output slice
+Simulation complete via $finish(1) at time 150 NS + 0
+/sim/tarsio/PipeCNN_Winograd/project/device/experiments/opencl_memread_compute/tb_memread_conv_slice.sv:170         $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.03-s003: Exiting on Oct 07, 2026 at 18:03:41 -03  (total: 00:00:31)
+82f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xpm
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,4): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xpm' (cds.lib command ignored).
+DEFINE xilinx_vip  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xilinx_vip
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,5): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xilinx_vip' (cds.lib command ignored).
+DEFINE common_cpp_v1_0  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/common_cpp_v1_0
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,6): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/common_cpp_v1_0' (cds.lib command ignored).
+DEFINE xtlm  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xtlm
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,7): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xtlm' (cds.lib command ignored).
+DEFINE xscl  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xscl
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,8): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/xscl' (cds.lib command ignored).
+DEFINE emu_perf_common_v1_0  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/emu_perf_common_v1_0
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,9): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/emu_perf_common_v1_0' (cds.lib command ignored).
+DEFINE axi_tlm_ext_v1_0  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/axi_tlm_ext_v1_0
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,10): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/axi_tlm_ext_v1_0' (cds.lib command ignored).
+DEFINE axi_tg_sc_v1_0  /tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/axi_tg_sc_v1_0
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,11): cds.lib Invalid path '/tmp/fastconv-p3f-d0282f55/rtl/conv2x2/fpga_zcu104/conv-i16-h16-t16-o4-m08-std/reports/p3_funcsim/simlibs_func/axi_tg_sc_v1_0' (cds.lib command ignored).
+DEFINE secureip  /sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/secureip
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,12): cds.lib Invalid path '/sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/secureip' (cds.lib command ignored).
+DEFINE unisims_ver  /sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unisims_ver
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,13): cds.lib Invalid path '/sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unisims_ver' (cds.lib command ignored).
+DEFINE unimacro_ver  /sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unimacro_ver
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,14): cds.lib Invalid path '/sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unimacro_ver' (cds.lib command ignored).
+DEFINE unifast_ver  /sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unifast_ver
+|
+xmsim: *W,DLCPTH (/home/tarsio.onofrio/cds.lib,15): cds.lib Invalid path '/sim/tarsio/reports-conv3x3-ifn9-explore-149bd5be/simlibs_unisim/unifast_ver' (cds.lib command ignored).
+Loading snapshot worklib.tb_memread_conv_slice:sv .................... Done
+xcelium> source /soft64/cadence/ferramentas/XCELIUM2303/tools/xcelium/files/xmsimrc
+xcelium> set probe_packed_limit 24576
+24576
+xcelium> database -open dut_vcd -vcd -into dut.vcd
+Created VCD database dut_vcd
+xcelium> probe -create -database dut_vcd -all -depth to_cells -packed 24576 tb_memread_conv_slice.dut
+Created probe 1
+xcelium> run
+xmsim: *W,DFUSE: $dumpfile dut.vcd is already in use (VCD file).
+            File: /sim/tarsio/PipeCNN_Winograd/project/device/experiments/opencl_memread_compute/tb_memread_conv_slice.sv, line = 36, pos = 16
+           Scope: tb_memread_conv_slice
+            Time: 0 FS + 0
+
+PASS: integrated 32-lane Winograd/FC compute, accumulation and fixed-point output slice
+Simulation complete via $finish(1) at time 150 NS + 0
+/sim/tarsio/PipeCNN_Winograd/project/device/experiments/opencl_memread_compute/tb_memread_conv_slice.sv:170         $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.03-s003: Exiting on Oct 07, 2026 at 18:03:41 -03  (total: 00:00:31)

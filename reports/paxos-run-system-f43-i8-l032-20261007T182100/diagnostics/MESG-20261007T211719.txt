@@ -1,0 +1,1876 @@
+Info   : ACTP-0001 [ACTPInfo] Activity propagation started for stim#0 netlist
+       : pbs_genopt_41
+Info   : ACTP-0001 [ACTPInfo] Activity propagation started for stim#0 netlist
+       : pbs_genopt_23
+Info   : ACTP-0001 [ACTPInfo] Activity propagation started for stim#0 netlist
+       : pbs_genopt_39
+Info   : ACTP-0001 [ACTPInfo] Activity propagation started for stim#0 netlist
+       : pbs_genopt_42
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 [PwrInfo] compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 [PwrInfo] Skipping activity propagation due to -skip_ap
+       : option....
+Warning: PWRA-0302 [PwrWarn] Frequency scaling is not applicable for vectorless
+       : flow. Ignoring frequency scaling.
+Warning: PWRA-0304 [PwrWarn] -stim option is not applicable with vectorless mode
+       : of power analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0001 [PwrInfo] compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 [PwrInfo] Skipping activity propagation due to -skip_ap
+       : option....
+Warning: PWRA-0302 [PwrWarn] Frequency scaling is not applicable for vectorless
+       : flow. Ignoring frequency scaling.
+Warning: PWRA-0304 [PwrWarn] -stim option is not applicable with vectorless mode
+       : of power analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0001 [PwrInfo] compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 [PwrInfo] Skipping activity propagation due to -skip_ap
+       : option....
+Warning: PWRA-0302 [PwrWarn] Frequency scaling is not applicable for vectorless
+       : flow. Ignoring frequency scaling.
+Warning: PWRA-0304 [PwrWarn] -stim option is not applicable with vectorless mode
+       : of power analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0001 [PwrInfo] compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 [PwrInfo] Skipping activity propagation due to -skip_ap
+       : option....
+Warning: PWRA-0302 [PwrWarn] Frequency scaling is not applicable for vectorless
+       : flow. Ignoring frequency scaling.
+Warning: PWRA-0304 [PwrWarn] -stim option is not applicable with vectorless mode
+       : of power analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 [PwrInfo] Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 [PwrInfo] Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 [PwrInfo] Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 [PwrInfo] Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 [ACTPInfo] Activity propagation started for stim#0 netlist
+       : pbs_genopt_46
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : ACTP-0001 [ACTPInfo] Activity propagation started for stim#0 netlist
+       : pbs_genopt_6
+Info   : PWRA-0001 [PwrInfo] compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 [PwrInfo] Skipping activity propagation due to -skip_ap
+       : option....
+Warning: PWRA-0302 [PwrWarn] Frequency scaling is not applicable for vectorless
+       : flow. Ignoring frequency scaling.
+Warning: PWRA-0304 [PwrWarn] -stim option is not applicable with vectorless mode
+       : of power analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 [PwrInfo] compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 [PwrInfo] Skipping activity propagation due to -skip_ap
+       : option....
+Warning: PWRA-0302 [PwrWarn] Frequency scaling is not applicable for vectorless
+       : flow. Ignoring frequency scaling.
+Warning: PWRA-0304 [PwrWarn] -stim option is not applicable with vectorless mode
+       : of power analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 [PwrInfo] Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 [PwrInfo] Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 [ACTPInfo] Activity propagation started for stim#0 netlist
+       : pbs_genopt_7
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 [PwrInfo] compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 [PwrInfo] Skipping activity propagation due to -skip_ap
+       : option....
+Warning: PWRA-0302 [PwrWarn] Frequency scaling is not applicable for vectorless
+       : flow. Ignoring frequency scaling.
+Warning: PWRA-0304 [PwrWarn] -stim option is not applicable with vectorless mode
+       : of power analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 [PwrInfo] Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_23
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_39
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_41
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_37
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_42
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_9
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_10
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_11
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 [ACTPInfo] Activity propagation started for stim#0 netlist
+       : pbs_genopt_5
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_37
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_9
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_10
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_36
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_35
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_11
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_14
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_33
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0001 [PwrInfo] compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 [PwrInfo] Skipping activity propagation due to -skip_ap
+       : option....
+Warning: PWRA-0302 [PwrWarn] Frequency scaling is not applicable for vectorless
+       : flow. Ignoring frequency scaling.
+Warning: PWRA-0304 [PwrWarn] -stim option is not applicable with vectorless mode
+       : of power analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_6
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_16
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 [PwrInfo] Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_35
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_36
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_14
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_33
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_17
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_32
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_24
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_20
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_46
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_15
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_16
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_8
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_17
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_32
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_24
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_20
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_13
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_18
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_19
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_28
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_15
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_43
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_8
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_34
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_18
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_13
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_19
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_28
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_12
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_31
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_26
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_38
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_43
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_44
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_34
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_22
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_31
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_26
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_38
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_12
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_29
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_30
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_25
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_1
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_44
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_40
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_22
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_21
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_25
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_45
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_29
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_30
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_3
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_40
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_3
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_2
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_27
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_45
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_4
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_4
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_27
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_21
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_2
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_1
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_0
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Info   : ACTP-0001 Activity propagation started for stim#0 netlist pbs_genopt_5
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 Skipping activity propagation due to -skip_ap option....
+Warning: PWRA-0302 Frequency scaling is not applicable for vectorless flow.
+       : Ignoring frequency scaling.
+Warning: PWRA-0304 -stim option is not applicable with vectorless mode of power
+       : analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0

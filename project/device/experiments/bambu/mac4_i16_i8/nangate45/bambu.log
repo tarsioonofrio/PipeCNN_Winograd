@@ -1,0 +1,158 @@
+ ==  Bambu executed with: /tmp/.mount_bambu-GclFH4/usr/bin/bambu --top-fname=mac4_i16_i8 --device-name=nangate45 --clock-period=10ns --output-temporary-directory=/sim/tarsio/hls_bambu_mac4_20261007/attempt5/panda-temp mac4.c 
+
+
+********************************************************************************
+                    ____                  _
+                   | __ )  __ _ _ __ ___ | |_   _   _
+                   |  _ \ / _` | '_ ` _ \| '_ \| | | |
+                   | |_) | (_| | | | | | | |_) | |_| |
+                   |____/ \__,_|_| |_| |_|_.__/ \__,_|
+
+********************************************************************************
+                         High-Level Synthesis Tool
+
+                         Politecnico di Milano - DEIB
+                          System Architectures Group
+********************************************************************************
+                Copyright (C) 2004-2024 Politecnico di Milano
+ Version: PandA 2024.10 - Revision c2ba6936ca2ed63137095fea0b630a1c66e20e63-main
+
+  Analyzing function mac4_i16_i8
+    Parameter @428533 a0
+    Interface specification:
+      Parameter : a0
+      Protocol  : default
+      Direction : IN
+      Bundle    : a0
+      Bitwidth  : 16
+      Alignment : 2
+    Parameter @428534 b0
+    Interface specification:
+      Parameter : b0
+      Protocol  : default
+      Direction : IN
+      Bundle    : b0
+      Bitwidth  : 8
+      Alignment : 1
+    Parameter @428535 a1
+    Interface specification:
+      Parameter : a1
+      Protocol  : default
+      Direction : IN
+      Bundle    : a1
+      Bitwidth  : 16
+      Alignment : 2
+    Parameter @428536 b1
+    Interface specification:
+      Parameter : b1
+      Protocol  : default
+      Direction : IN
+      Bundle    : b1
+      Bitwidth  : 8
+      Alignment : 1
+    Parameter @428537 a2
+    Interface specification:
+      Parameter : a2
+      Protocol  : default
+      Direction : IN
+      Bundle    : a2
+      Bitwidth  : 16
+      Alignment : 2
+    Parameter @428538 b2
+    Interface specification:
+      Parameter : b2
+      Protocol  : default
+      Direction : IN
+      Bundle    : b2
+      Bitwidth  : 8
+      Alignment : 1
+    Parameter @428539 a3
+    Interface specification:
+      Parameter : a3
+      Protocol  : default
+      Direction : IN
+      Bundle    : a3
+      Bitwidth  : 16
+      Alignment : 2
+    Parameter @428540 b3
+    Interface specification:
+      Parameter : b3
+      Protocol  : default
+      Direction : IN
+      Bundle    : b3
+      Bitwidth  : 8
+      Alignment : 1
+  Analyzed function mac4_i16_i8
+
+  Functions to be synthesized:
+    mac4_i16_i8
+
+
+  Memory allocation information:
+    BRAM bitsize: 8
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 0
+    ADDRESS bus bitsize: 10
+    SIZE bus bitsize: 4
+    ALL pointers have been resolved
+    Internally allocated memory (no private memories): 0
+    Internally allocated memory: 0
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function mac4_i16_i8:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.02 seconds
+
+
+  Scheduling Information of function mac4_i16_i8:
+    Number of control steps: 3
+    Minimum slack: 5.6747654626629087
+    Estimated max frequency (MHz): 231.20133518023465
+  Time to perform scheduling: 0.00 seconds
+
+
+  State Transition Graph Information of function mac4_i16_i8:
+    Number of states: 1
+    Minimum number of cycles: 1
+    Maximum number of cycles 1
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function mac4_i16_i8:
+    Bound operations:22/26
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function mac4_i16_i8:
+    Number of storage values inserted: 0
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+
+  Register binding information for function mac4_i16_i8:
+    Register allocation algorithm obtains an optimal result: 0 registers
+  Time to perform register binding: 0.00 seconds
+
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function mac4_i16_i8:
+    Number of modules instantiated: 26
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 13399
+    Estimated area of MUX21: 0
+    Total estimated area: 13399
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function mac4_i16_i8:
+    Register allocation algorithm obtains an optimal result: 0 registers
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function mac4_i16_i8: 0

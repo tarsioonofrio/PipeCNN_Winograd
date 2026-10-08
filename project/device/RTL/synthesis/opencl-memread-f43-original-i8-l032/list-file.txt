@@ -1,0 +1,6 @@
+project/device/reconstructions/asic_mac4_i16_i8/mult_add_fix8bx16bx4_asic.sv
+project/device/reconstructions/asic_reconstruction_f43/winograd_f43_input_transform.sv
+project/device/reconstructions/asic_reconstruction_f43/winograd_f43_output_transform.sv
+project/device/reconstructions/opencl_memread_compute/pipecnn_memread_compute.sv
+project/device/reconstructions/opencl_memread_compute/pipecnn_conv_accumulator_postprocess.sv
+project/device/reconstructions/opencl_memread_compute/pipecnn_memread_conv_slice.sv

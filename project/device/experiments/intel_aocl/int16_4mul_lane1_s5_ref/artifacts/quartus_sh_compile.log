@@ -1,0 +1,52 @@
+Warning (292006): Can't contact license server "27010@paxos.inf.pucrs.br" -- this server will be ignored.
+Info: *******************************************************************
+Info: Running Quartus Prime Shell
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details.
+    Info: Processing started: Thu Oct  8 10:52:41 2026
+Info: Command: quartus_sh --flow compile top -c top
+Info: Quartus(args): compile top -c top
+Info: Using INI file /sim/tarsio/aocl-int16-4mul-lane1-20261008-4VZhoo/conv_pipe_int16_4mul/quartus.ini
+Info: Project Name = /sim/tarsio/aocl-int16-4mul-lane1-20261008-4VZhoo/conv_pipe_int16_4mul/top
+Info: Revision Name = top
+Info (125068): Revision "top" was previously opened in Quartus II software version 14.0. Created Quartus Prime Default Settings File /sim/tarsio/aocl-int16-4mul-lane1-20261008-4VZhoo/conv_pipe_int16_4mul/top_assignment_defaults.qdf, which contains the default assignment setting information from Quartus II software version 14.0.
+Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file /soft64/altera/ferramentas/quartus/18.1/quartus/linux64/assignment_defaults.qdf
+Warning (292006): Can't contact license server "27010@paxos.inf.pucrs.br" -- this server will be ignored.
+Info: *******************************************************************
+Info: Running Quartus Prime Shell
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Thu Oct  8 10:52:56 2026
+Info: Command: quartus_sh -t scripts/pre_flow.tcl compile top top
+Info: Quartus(args): compile top top
+Info: Using INI file /sim/tarsio/aocl-int16-4mul-lane1-20261008-4VZhoo/conv_pipe_int16_4mul/quartus.ini
+Info: Deleting incremental_db to ensure imported partition is only used
+Info: Checking for OpenCL SDK installation, environment should have INTELFPGAOCLSDKROOT defined
+Info: INTELFPGAOCLSDKROOT=/soft64/altera/ferramentas/quartus/18.1/hld
+Info: Compiling CvP!
+Info (23030): Evaluation of Tcl script scripts/pre_flow.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 794 megabytes
+    Info: Processing ended: Thu Oct  8 10:52:56 2026
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+Warning (292006): Can't contact license server "27010@paxos.inf.pucrs.br" -- this server will be ignored.
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Thu Oct  8 10:52:58 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Info: Using INI file /sim/tarsio/aocl-int16-4mul-lane1-20261008-4VZhoo/conv_pipe_int16_4mul/quartus.ini
+Terminating backend processes...
+Exiting...

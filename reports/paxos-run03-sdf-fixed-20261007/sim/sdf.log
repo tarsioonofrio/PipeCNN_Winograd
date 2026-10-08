@@ -1,0 +1,13 @@
+======================================================================
+
+Annotating SDF timing data:
+  Compiled SDF file:     pipecnn_memread_conv_slice_nominal.sdf.X
+  Log file:              /sim/tarsio/PipeCNN_Winograd/project/device/RTL/synthesis/opencl-memread-f43-original-i8-l032/runs/memread-f43-i8-l032-20261007T-run03-sdf-fixed/sim/sdf.log
+  Backannotation scope:  tb_memread_conv_slice.dut
+  Configuration file:    
+  MTM control:           TYPICAL
+  Scale factors:         1:1:1
+  Scale type:            FROM_MAXIMUM
+
+Time units: 1ps
+

@@ -1,0 +1,36 @@
+aoc: Environment checks are completed successfully.
+aoc: Cached files in /var/tmp/aocl/ may be used to reduce compilation time
+aoc: Selected target board s5_ref
+aoc: Running OpenCL parser....
+/sim/tarsio/aocl-int16-4mul-lane1-20261008-4VZhoo/conv_pipe_int16_4mul.cl:207:24: error: bank width 64 can not be smaller than data type width 128
+
+            __local intvec    win_buffer[WIN_BUF_SIZE][3] __attribute__((numbanks(4),bankwidth(64))); // working sequence 0->1->0->1 ...
+                              ^
+1 error generated.
+Error: OpenCL parser FAILED.
+Refer to conv_pipe_int16_4mul/conv_pipe_int16_4mul.log for details.
+
+Command exited with non-zero status 1
+	Command being timed: "timeout --signal=TERM --kill-after=10s 180s aoc -v -c -board=s5_ref -I . conv_pipe_int16_4mul.cl"
+	User time (seconds): 1.43
+	System time (seconds): 0.63
+	Percent of CPU this job got: 94%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.18
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 201092
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 54
+	Minor (reclaiming a frame) page faults: 100920
+	Voluntary context switches: 229
+	Involuntary context switches: 61
+	Swaps: 0
+	File system inputs: 351972
+	File system outputs: 335016
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
