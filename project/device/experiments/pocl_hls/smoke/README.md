@@ -14,10 +14,10 @@ is used.
 
 The C++ and RTL expose a four-element memory interface and calculate
 `out[gid] = gid * 3 + 90`. The PoCL harness finalizes a command buffer to
-trigger compilation and does not enqueue it, so functional output values have
-not been checked. The integrated HLS run produced four Verilog files, but the
-PoCL process later aborted in emulator code generation; this fixture is not a
-runtime correctness test.
+trigger compilation and does not enqueue it. Separately, the Vitis HLS C/RTL
+co-simulation testbench checks all four expected values; its log is archived
+under `generated-rtl/`. The original PoCL process still aborts later during
+emulator code generation, so this does not validate PoCL runtime execution.
 
 The generated Verilog and its original integrated-run log are archived in
 [`generated-rtl/`](generated-rtl/README.md), with SHA-256 checksums. The files
@@ -25,6 +25,9 @@ were copied from the Paxos HLS cache after their hashes were checked.
 
 To check the HLS C++ and Verilog behavior, run `vitis_hls -f
 <path-to-this-directory>/vitis_cosim.tcl` from a new, empty working directory
-after sourcing the Vitis HLS 2024.2 settings. The script runs C simulation,
-re-synthesizes the archived HLS C++, and runs Verilog co-simulation with
-`pocl_hls_smoke_tb.cpp`; it refuses to overwrite an existing project.
+after sourcing the Vitis HLS 2024.2 settings. The successful run used this
+script with Vitis HLS 2024.2 and XSIM. It ran C simulation, re-synthesized the
+archived HLS C++, and ran Verilog co-simulation with
+`pocl_hls_smoke_tb.cpp`; all four results passed. The regenerated Verilog
+hashes matched the archived files. The script refuses to overwrite an
+existing project.

@@ -2,8 +2,8 @@
 
 Este diretório arquiva a saída produzida na Paxos em 2026-10-08 pelo smoke
 test descrito em `../README.md`. Os quatro arquivos Verilog, o C++ HLS, o MLIR
-e o log original foram copiados do cache da execução; `SHA256SUMS` registra
-os hashes dos RTL e dos intermediários C++/MLIR.
+e os logs de geração e co-simulação estão aqui. `SHA256SUMS` registra os
+hashes dos RTL, intermediários C++/MLIR e logs.
 
 ## Origem
 
@@ -16,13 +16,17 @@ os hashes dos RTL e dos intermediários C++/MLIR.
 
 ## Limites do resultado
 
-O log registra `csynth_design` e a mensagem `RTL-only mode: generated Verilog`.
-Depois dessa etapa, o processo PoCL continuou para carregar o programa no
-emulador e abortou durante codegen LLVM X86 com `free(): invalid next size`.
-Portanto, estes arquivos comprovam a geração de RTL pelo Vitis HLS, mas não
-comprovam execução funcional do kernel. Os valores calculados não foram
-verificados por execução, e estes arquivos não passaram por simulação
-funcional, fluxo de power ou síntese ASIC.
+`pocl-hls-integrated2.log` registra `csynth_design` e a mensagem `RTL-only
+mode: generated Verilog`. Depois dessa etapa, o processo PoCL continuou para
+carregar o programa no emulador e abortou durante codegen LLVM X86 com
+`free(): invalid next size`.
+
+O log `vitis-cosim-smoke-20261008-run1.log` registra C simulation e C/RTL
+co-simulation com XSIM; ambas verificaram `out[0..3] = {90, 93, 96, 99}`.
+Os quatro Verilog re-sintetizados nessa execução tiveram os mesmos SHA-256
+dos quatro arquivos arquivados aqui. Assim, a RTL deste smoke passou
+co-simulação funcional. Isso não valida a execução do kernel via runtime
+PoCL, o `conv_pipe.cl`, fluxo de power ou síntese ASIC.
 
 Os checksums de `SHA256SUMS` foram comparados com os arquivos na Paxos antes
 do arquivamento.

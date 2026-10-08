@@ -80,6 +80,12 @@ Os quatro Verilog e o log original foram copiados para o repositório em
 [`smoke/generated-rtl/`](smoke/generated-rtl/README.md). O arquivo
 `SHA256SUMS` registra hashes conferidos contra a saída que permanece na Paxos.
 
+Depois, o C++ HLS arquivado foi sintetizado de novo com Vitis HLS 2024.2 e
+passou por C/RTL co-simulation com XSIM. O testbench verificou os quatro
+valores esperados (`90, 93, 96, 99`), e os hashes dos quatro RTL regenerados
+coincidiram com os arquivos arquivados. Isso valida somente o smoke test; não
+resolve o aborto posterior do runtime PoCL nem verifica `conv_pipe.cl`.
+
 Esse resultado valida a geração RTL do smoke, mas o processo PoCL não termina
 limpo em todas as execuções: os passes Affine do clone apresentaram falhas de
 memória. Na execução que gerou os arquivos acima, o HLS terminou e o PoCL
