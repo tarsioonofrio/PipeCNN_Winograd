@@ -1,0 +1,3 @@
+QuestaSim-64 vmap 2023.4 Lib Mapping Utility 2023.10 Oct  9 2023
+vmap -modelsimini /sim/tarsio/questa2023-hdl-validation-int16-4mul-20261008/libs/modelsim.ini work /sim/tarsio/questa2023-hdl-validation-int16-4mul-20261008/work 
+Modifying /sim/tarsio/questa2023-hdl-validation-int16-4mul-20261008/libs/modelsim.ini

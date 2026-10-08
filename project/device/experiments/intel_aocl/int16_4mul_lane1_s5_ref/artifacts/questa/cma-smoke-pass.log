@@ -1,0 +1,395 @@
+Reading pref.tcl
+
+# 2023.4
+
+# vsim -modelsimini /sim/tarsio/questa2023-hdl-validation-int16-4mul-20261008/libs/modelsim.ini -t 1fs -L work -L altera_mf_ver -L lpm_ver -L altera_lnsim_ver -L sgate_ver -L stratixv_ver -L altera_ver -L altera_mf -L altera_lnsim -L lpm -c work.i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582 -do "force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/clock 0 0ns, 1 1ns -repeat 2ns; force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/resetn 0; run 2ns; force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/resetn 1; force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_acl_case_case_stmt1319_memread_q FFFD; force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_acl_case_case_stmt1305_memread_q FFF9; force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_acl_case_case_stmt1326_memread_q 0005; force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_acl_case_case_stmt1312_memread_q FFFE; force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_acl_case_case_stmt1291_memread_q 000A; force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_acl_case_case_stmt_memread_q 0001; force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_acl_case_case_stmt1298_memread_q 0004; force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_acl_case_case_stmt1284_memread_q FFF8; run 6ns; examine -radix hex /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_mul581_memread_i_reduction_memread_1_memread_i_mul606_memread_merged_cma_q; examine -radix hex /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_mul531_memread_i_reduction_memread_0_memread_i_mul556_memread_merged_cma_q; examine -radix hex /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/bgTrunc_i_reduction_memread_2_memread_sel_x_b; quit -f" 
+# Start time: 20:26:31 on Oct 08,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# //  Questa Sim-64
+# //  Version 2023.4 linux_x86_64 Oct  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.dspba_library_package
+# Loading altera_mf.altera_mf_components
+# Loading altera_lnsim.altera_lnsim_components
+# Loading lpm.lpm_components
+# Loading work.i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582(normal)#1
+# Loading work.dspba_delay(delay)#2
+# Loading sv_std.std
+# Loading work.acl_dspba_buffer(fast)
+# Loading work.i_acl_push_i3_fpgaindvars_iv_push250_memread2390(normal)#1
+# Loading work.acl_push(fast)
+# Loading work.i_acl_pop_i3_fpgaindvars_iv_pop250_memread1994(normal)#1
+# Loading work.acl_pop(fast)
+# Loading work.i_acl_push_i1_notexit32_or465_push467_memread2476(normal)#1
+# Loading work.acl_push(fast__1)
+# Loading work.i_acl_pop_i1_notexit32_or465_pop467_memread2474(normal)#1
+# Loading work.i_acl_push_i1_push466_memread2472(normal)#1
+# Loading work.i_acl_pop_i1_pop466_memread2470(normal)#1
+# Loading work.i_acl_push_i1_forked_and463_push464_memread2468(normal)#1
+# Loading work.i_acl_pop_i1_forked_and463_pop464_memread2466(normal)#1
+# Loading work.i_acl_push_i1_cmp1179461_push463_memread2464(normal)#1
+# Loading work.i_acl_pop_i1_cmp1179461_pop463_memread2462(normal)#1
+# Loading work.i_acl_push_i16_line_buf_ptr_0544_pop17459_push462_memread2460(normal)#1
+# Loading work.acl_push(fast__2)
+# Loading work.dspba_delay(delay)#3
+# Loading work.i_acl_pop_i16_line_buf_ptr_0544_pop17459_pop462_memread2458(normal)#1
+# Loading work.acl_pop(fast__1)
+# Loading work.i_acl_push_i1_cmp830_not457_push461_memread2456(normal)#1
+# Loading work.i_acl_pop_i1_cmp830_not457_pop461_memread2454(normal)#1
+# Loading work.i_acl_push_i1_acl_2132455_push460_memread2452(normal)#1
+# Loading work.i_acl_pop_i1_acl_2132455_pop460_memread2450(normal)#1
+# Loading work.i_acl_push_i1_cmp1043_rm453_push459_memread2448(normal)#1
+# Loading work.i_acl_pop_i1_cmp1043_rm453_pop459_memread2446(normal)#1
+# Loading work.i_acl_push_i1_cmp830451_push458_memread2444(normal)#1
+# Loading work.i_acl_pop_i1_cmp830451_pop458_memread2442(normal)#1
+# Loading work.i_acl_push_i1_notexit36449_push457_memread2440(normal)#1
+# Loading work.i_acl_pop_i1_notexit36449_pop457_memread2438(normal)#1
+# Loading work.i_acl_push_i1_push456_memread2436(normal)#1
+# Loading work.i_acl_pop_i1_pop456_memread2434(normal)#1
+# Loading work.i_acl_push_i1_tobool_rm255_push359_memread2432(normal)#1
+# Loading work.i_acl_pop_i1_tobool_rm255_pop359_memread2430(normal)#1
+# Loading work.i_acl_push_i16_acl_1865253_push358_memread2428(normal)#1
+# Loading work.i_acl_pop_i16_acl_1865253_pop358_memread2426(normal)#1
+# Loading work.i_acl_push_i32_acl_1864251_push357_memread2424(normal)#1
+# Loading work.acl_push(fast__3)
+# Loading work.i_acl_pop_i32_acl_1864251_pop357_memread2422(normal)#1
+# Loading work.acl_pop(fast__2)
+# Loading work.i_acl_push_i32_acl_1863249_push356_memread2420(normal)#1
+# Loading work.i_acl_pop_i32_acl_1863249_pop356_memread2418(normal)#1
+# Loading work.i_acl_push_i32_acl_1862247_push355_memread2416(normal)#1
+# Loading work.i_acl_pop_i32_acl_1862247_pop355_memread2414(normal)#1
+# Loading work.i_acl_push_i32_acl_1861245_push354_memread2412(normal)#1
+# Loading work.i_acl_pop_i32_acl_1861245_pop354_memread2410(normal)#1
+# Loading work.i_acl_push_i32_acl_1860243_push353_memread2408(normal)#1
+# Loading work.i_acl_pop_i32_acl_1860243_pop353_memread2406(normal)#1
+# Loading work.i_acl_push_i32_acl_1859241_push352_memread2404(normal)#1
+# Loading work.i_acl_pop_i32_acl_1859241_pop352_memread2402(normal)#1
+# Loading work.i_acl_push_i1_cmp12532_rm47_push255_memread2400(normal)#1
+# Loading work.i_acl_pop_i1_cmp12532_rm47_pop255_memread2398(normal)#1
+# Loading work.i_acl_push_i1_forked4345_push254_memread2396(normal)#1
+# Loading work.i_acl_pop_i1_forked4345_pop254_memread2394(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1273_push268_memread2358(normal)#1
+# Loading work.acl_push(fast__4)
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_1273_pop268_memread1844(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_25144227_push345_memread2204(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_25144227_pop345_memread1890(normal)#1
+# Loading work.i_acl_push_i8_m505_3521_push252_memread2386(normal)#1
+# Loading work.i_acl_pop_i8_m505_3521_pop252_memread1600(normal)#1
+# Loading work.i_acl_push_i32_conv507522_push251_memread2388(normal)#1
+# Loading work.i_acl_pop_i32_conv507522_pop251_memread1698(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1120179_push321_memread2252(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_1120179_pop321_memread1888(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_993131_push297_memread2300(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_993131_pop297_memread1886(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1783_push273_memread2348(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_1783_pop273_memread1854(normal)#1
+# Loading work.i_acl_push_i8_n499_2523_pop39464_push465_memread1998(normal)#1
+# Loading work.i_acl_pop_i8_n499_2523_pop39464_pop465_memread1586(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_24143225_push344_memread2206(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_24143225_pop344_memread1884(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_load_0117_toi1_extractvalue177_push320_memread2254(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_load_0117_toi1_extractvalue177_pop320_memread1882(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_892129_push296_memread2302(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_892129_pop296_memread1880(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1681_push272_memread2350(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_1681_pop272_memread1852(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_23142223_push343_memread2208(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_23142223_pop343_memread1878(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_31115175_push319_memread2256(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_31115175_pop319_memread1876(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_791127_push295_memread2304(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_791127_pop295_memread1874(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1579_push271_memread2352(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_1579_pop271_memread1850(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_22141221_push342_memread2210(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_22141221_pop342_memread1872(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_30114173_push318_memread2258(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_30114173_pop318_memread1870(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_690125_push294_memread2306(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_690125_pop294_memread1868(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1477_push270_memread2354(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_1477_pop270_memread1848(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_21140219_push341_memread2212(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_21140219_pop341_memread1866(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_29113171_push317_memread2260(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_29113171_pop317_memread1864(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_589123_push293_memread2308(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_589123_pop293_memread1862(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1375_push269_memread2356(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_1375_pop269_memread1846(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_20139217_push340_memread2214(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_20139217_pop340_memread1860(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_28112169_push316_memread2262(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_28112169_pop316_memread1858(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_488121_push292_memread2310(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_488121_pop292_memread1856(normal)#1
+# Loading work.i_acl_push_i16_add259_2_281_push372_memread2166(normal)#1
+# Loading work.i_acl_pop_i16_add259_2_281_pop372_memread1796(normal)#1
+# Loading work.i_acl_push_i16_cond_in_5_14435_push449_memread2012(normal)#1
+# Loading work.i_acl_pop_i16_cond_in_5_14435_pop449_memread1842(normal)#1
+# Loading work.i_acl_push_i16_cond_in_5_10387_push425_memread2060(normal)#1
+# Loading work.i_acl_pop_i16_cond_in_5_10387_pop425_memread1840(normal)#1
+# Loading work.i_acl_push_i16_cond_in_5_6339_push401_memread2108(normal)#1
+# Loading work.i_acl_pop_i16_cond_in_5_6339_pop401_memread1838(normal)#1
+# Loading work.i_acl_push_i16_cond_in_5_2291_push377_memread2156(normal)#1
+# Loading work.i_acl_pop_i16_cond_in_5_2291_pop377_memread1806(normal)#1
+# Loading work.i_acl_push_i16_add412_14_433_push448_memread2014(normal)#1
+# Loading work.i_acl_pop_i16_add412_14_433_pop448_memread1836(normal)#1
+# Loading work.i_acl_push_i16_add412_10_385_push424_memread2062(normal)#1
+# Loading work.i_acl_pop_i16_add412_10_385_pop424_memread1834(normal)#1
+# Loading work.i_acl_push_i16_add412_6_337_push400_memread2110(normal)#1
+# Loading work.i_acl_pop_i16_add412_6_337_pop400_memread1832(normal)#1
+# Loading work.i_acl_push_i16_add412_2_289_push376_memread2158(normal)#1
+# Loading work.i_acl_pop_i16_add412_2_289_pop376_memread1804(normal)#1
+# Loading work.i_acl_push_i16_cond_in_3_14431_push447_memread2016(normal)#1
+# Loading work.i_acl_pop_i16_cond_in_3_14431_pop447_memread1830(normal)#1
+# Loading work.i_acl_push_i16_cond_in_3_10383_push423_memread2064(normal)#1
+# Loading work.i_acl_pop_i16_cond_in_3_10383_pop423_memread1828(normal)#1
+# Loading work.i_acl_push_i16_cond_in_3_6335_push399_memread2112(normal)#1
+# Loading work.i_acl_pop_i16_cond_in_3_6335_pop399_memread1826(normal)#1
+# Loading work.i_acl_push_i16_cond_in_3_2287_push375_memread2160(normal)#1
+# Loading work.i_acl_pop_i16_cond_in_3_2287_pop375_memread1802(normal)#1
+# Loading work.i_acl_push_i16_add335_14_429_push446_memread2018(normal)#1
+# Loading work.i_acl_pop_i16_add335_14_429_pop446_memread1824(normal)#1
+# Loading work.i_acl_push_i16_add335_10_381_push422_memread2066(normal)#1
+# Loading work.i_acl_pop_i16_add335_10_381_pop422_memread1822(normal)#1
+# Loading work.i_acl_push_i16_add335_6_333_push398_memread2114(normal)#1
+# Loading work.i_acl_pop_i16_add335_6_333_pop398_memread1820(normal)#1
+# Loading work.i_acl_push_i16_add335_2_285_push374_memread2162(normal)#1
+# Loading work.i_acl_pop_i16_add335_2_285_pop374_memread1800(normal)#1
+# Loading work.i_acl_push_i16_cond_in_1_14427_push445_memread2020(normal)#1
+# Loading work.i_acl_pop_i16_cond_in_1_14427_pop445_memread1818(normal)#1
+# Loading work.i_acl_push_i16_cond_in_1_10379_push421_memread2068(normal)#1
+# Loading work.i_acl_pop_i16_cond_in_1_10379_pop421_memread1816(normal)#1
+# Loading work.i_acl_push_i16_cond_in_1_6331_push397_memread2116(normal)#1
+# Loading work.i_acl_pop_i16_cond_in_1_6331_pop397_memread1814(normal)#1
+# Loading work.i_acl_push_i16_cond_in_1_2283_push373_memread2164(normal)#1
+# Loading work.i_acl_pop_i16_cond_in_1_2283_pop373_memread1798(normal)#1
+# Loading work.i_acl_push_i16_add259_14_425_push444_memread2022(normal)#1
+# Loading work.i_acl_pop_i16_add259_14_425_pop444_memread1812(normal)#1
+# Loading work.i_acl_push_i16_add259_10_377_push420_memread2070(normal)#1
+# Loading work.i_acl_pop_i16_add259_10_377_pop420_memread1810(normal)#1
+# Loading work.i_acl_push_i16_add259_6_329_push396_memread2118(normal)#1
+# Loading work.i_acl_pop_i16_add259_6_329_pop396_memread1808(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1885_push274_memread2346(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_1885_pop274_memread1940(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_31150239_push351_memread2192(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_31150239_pop351_memread1986(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_7126191_push327_memread2240(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_7126191_pop327_memread1984(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1599143_push303_memread2288(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_1599143_pop303_memread1982(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_2395_push279_memread2336(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_2395_pop279_memread1950(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_30149237_push350_memread2194(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_30149237_pop350_memread1980(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_6125189_push326_memread2242(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_6125189_pop326_memread1978(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1498141_push302_memread2290(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_1498141_pop302_memread1976(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_2293_push278_memread2338(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_2293_pop278_memread1948(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_29148235_push349_memread2196(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_29148235_pop349_memread1974(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_5124187_push325_memread2244(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_5124187_pop325_memread1972(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1397139_push301_memread2292(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_1397139_pop301_memread1970(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_2191_push277_memread2340(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_2191_pop277_memread1946(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_28147233_push348_memread2198(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_28147233_pop348_memread1968(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_4123185_push324_memread2246(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_4123185_pop324_memread1966(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1296137_push300_memread2294(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_1296137_pop300_memread1964(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_2089_push276_memread2342(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_2089_pop276_memread1944(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_27146231_push347_memread2200(normal)#1
+# Loading work.i_acl_pop_i16_memcoalesce_null_extrvalue_27146231_pop347_memread1962(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_3122183_push323_memread2248(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1195135_push299_memread2296(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1987_push275_memread2344(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_26145229_push346_memread2202(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_2121181_push322_memread2250(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1094133_push298_memread2298(normal)#1
+# Loading work.i_acl_push_i16_add259_3_293_push378_memread2154(normal)#1
+# Loading work.i_acl_push_i16_cond_in_5_15447_push455_memread2000(normal)#1
+# Loading work.i_acl_push_i16_cond_in_5_11399_push431_memread2048(normal)#1
+# Loading work.i_acl_push_i16_cond_in_5_7351_push407_memread2096(normal)#1
+# Loading work.i_acl_push_i16_cond_in_5_3303_push383_memread2144(normal)#1
+# Loading work.i_acl_push_i16_add412_15_445_push454_memread2002(normal)#1
+# Loading work.i_acl_push_i16_add412_11_397_push430_memread2050(normal)#1
+# Loading work.i_acl_push_i16_add412_7_349_push406_memread2098(normal)#1
+# Loading work.i_acl_push_i16_add412_3_301_push382_memread2146(normal)#1
+# Loading work.i_acl_push_i16_cond_in_3_15443_push453_memread2004(normal)#1
+# Loading work.i_acl_push_i16_cond_in_3_11395_push429_memread2052(normal)#1
+# Loading work.i_acl_push_i16_cond_in_3_7347_push405_memread2100(normal)#1
+# Loading work.i_acl_push_i16_cond_in_3_3299_push381_memread2148(normal)#1
+# Loading work.i_acl_push_i16_add335_15_441_push452_memread2006(normal)#1
+# Loading work.i_acl_push_i16_add335_11_393_push428_memread2054(normal)#1
+# Loading work.i_acl_push_i16_add335_7_345_push404_memread2102(normal)#1
+# Loading work.i_acl_push_i16_add335_3_297_push380_memread2150(normal)#1
+# Loading work.i_acl_push_i16_cond_in_1_15439_push451_memread2008(normal)#1
+# Loading work.i_acl_push_i16_cond_in_1_11391_push427_memread2056(normal)#1
+# Loading work.i_acl_push_i16_cond_in_1_7343_push403_memread2104(normal)#1
+# Loading work.i_acl_push_i16_cond_in_1_3295_push379_memread2152(normal)#1
+# Loading work.i_acl_push_i16_add259_15_437_push450_memread2010(normal)#1
+# Loading work.i_acl_push_i16_add259_11_389_push426_memread2058(normal)#1
+# Loading work.i_acl_push_i16_add259_7_341_push402_memread2106(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_load_0_toi1_extractvalue49_push256_memread2382(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_13132203_push333_memread2228(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_21105155_push309_memread2276(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_29107_push285_memread2324(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_559_push261_memread2372(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_12131201_push332_memread2230(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_20104153_push308_memread2278(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_28105_push284_memread2326(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_457_push260_memread2374(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_11130199_push331_memread2232(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_19103151_push307_memread2280(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_27103_push283_memread2328(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_355_push259_memread2376(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_10129197_push330_memread2234(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_18102149_push306_memread2282(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_26101_push282_memread2330(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_253_push258_memread2378(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_9128195_push329_memread2236(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_17101147_push305_memread2284(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_2599_push281_memread2332(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_151_push257_memread2380(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_8127193_push328_memread2238(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_16100145_push304_memread2286(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_2497_push280_memread2334(normal)#1
+# Loading work.i_acl_push_i16_add259_257_push360_memread2190(normal)#1
+# Loading work.i_acl_push_i16_cond_in_5_12411_push437_memread2036(normal)#1
+# Loading work.i_acl_push_i16_cond_in_5_8363_push413_memread2084(normal)#1
+# Loading work.i_acl_push_i16_cond_in_5_4315_push389_memread2132(normal)#1
+# Loading work.i_acl_push_i16_cond_in_5267_push365_memread2180(normal)#1
+# Loading work.i_acl_push_i16_add412_12_409_push436_memread2038(normal)#1
+# Loading work.i_acl_push_i16_add412_8_361_push412_memread2086(normal)#1
+# Loading work.i_acl_push_i16_add412_4_313_push388_memread2134(normal)#1
+# Loading work.i_acl_push_i16_add412_265_push364_memread2182(normal)#1
+# Loading work.i_acl_push_i16_cond_in_3_12407_push435_memread2040(normal)#1
+# Loading work.i_acl_push_i16_cond_in_3_8359_push411_memread2088(normal)#1
+# Loading work.i_acl_push_i16_cond_in_3_4311_push387_memread2136(normal)#1
+# Loading work.i_acl_push_i16_cond_in_3263_push363_memread2184(normal)#1
+# Loading work.i_acl_push_i16_add335_12_405_push434_memread2042(normal)#1
+# Loading work.i_acl_push_i16_add335_8_357_push410_memread2090(normal)#1
+# Loading work.i_acl_push_i16_add335_4_309_push386_memread2138(normal)#1
+# Loading work.i_acl_push_i16_add335_261_push362_memread2186(normal)#1
+# Loading work.i_acl_push_i16_cond_in_1_12403_push433_memread2044(normal)#1
+# Loading work.i_acl_push_i16_cond_in_1_8355_push409_memread2092(normal)#1
+# Loading work.i_acl_push_i16_cond_in_1_4307_push385_memread2140(normal)#1
+# Loading work.i_acl_push_i16_cond_in_1259_push361_memread2188(normal)#1
+# Loading work.i_acl_push_i16_add259_12_401_push432_memread2046(normal)#1
+# Loading work.i_acl_push_i16_add259_8_353_push408_memread2094(normal)#1
+# Loading work.i_acl_push_i16_add259_4_305_push384_memread2142(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_661_push262_memread2370(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_19138215_push339_memread2216(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_27111167_push315_memread2264(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_387119_push291_memread2312(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1171_push267_memread2360(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_18137213_push338_memread2218(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_26110165_push314_memread2266(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_286117_push290_memread2314(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_1069_push266_memread2362(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_17136211_push337_memread2220(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_25109163_push313_memread2268(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_185115_push289_memread2316(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_967_push265_memread2364(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_16135209_push336_memread2222(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_24108161_push312_memread2270(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_load_082_toi1_extractvalue113_push288_memread2318(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_865_push264_memread2366(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_15134207_push335_memread2224(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_23107159_push311_memread2272(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_31111_push287_memread2320(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_763_push263_memread2368(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_14133205_push334_memread2226(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_22106157_push310_memread2274(normal)#1
+# Loading work.i_acl_push_i16_memcoalesce_null_extrvalue_30109_push286_memread2322(normal)#1
+# Loading work.i_acl_push_i16_add259_1_269_push366_memread2178(normal)#1
+# Loading work.i_acl_push_i16_cond_in_5_13423_push443_memread2024(normal)#1
+# Loading work.i_acl_push_i16_cond_in_5_9375_push419_memread2072(normal)#1
+# Loading work.i_acl_push_i16_cond_in_5_5327_push395_memread2120(normal)#1
+# Loading work.i_acl_push_i16_cond_in_5_1279_push371_memread2168(normal)#1
+# Loading work.i_acl_push_i16_add412_13_421_push442_memread2026(normal)#1
+# Loading work.i_acl_push_i16_add412_9_373_push418_memread2074(normal)#1
+# Loading work.i_acl_push_i16_add412_5_325_push394_memread2122(normal)#1
+# Loading work.i_acl_push_i16_add412_1_277_push370_memread2170(normal)#1
+# Loading work.i_acl_push_i16_cond_in_3_13419_push441_memread2028(normal)#1
+# Loading work.i_acl_push_i16_cond_in_3_9371_push417_memread2076(normal)#1
+# Loading work.i_acl_push_i16_cond_in_3_5323_push393_memread2124(normal)#1
+# Loading work.i_acl_push_i16_cond_in_3_1275_push369_memread2172(normal)#1
+# Loading work.i_acl_push_i16_add335_13_417_push440_memread2030(normal)#1
+# Loading work.i_acl_push_i16_add335_9_369_push416_memread2078(normal)#1
+# Loading work.i_acl_push_i16_add335_5_321_push392_memread2126(normal)#1
+# Loading work.i_acl_push_i16_add335_1_273_push368_memread2174(normal)#1
+# Loading work.i_acl_push_i16_cond_in_1_13415_push439_memread2032(normal)#1
+# Loading work.i_acl_push_i16_cond_in_1_9367_push415_memread2080(normal)#1
+# Loading work.i_acl_push_i16_cond_in_1_5319_push391_memread2128(normal)#1
+# Loading work.i_acl_push_i16_cond_in_1_1271_push367_memread2176(normal)#1
+# Loading work.i_acl_push_i16_add259_13_413_push438_memread2034(normal)#1
+# Loading work.i_acl_push_i16_add259_9_365_push414_memread2082(normal)#1
+# Loading work.i_acl_push_i16_add259_5_317_push390_memread2130(normal)#1
+# Loading work.i_acl_push_i32_mac_acc_3520_push253_memread2384(normal)#1
+# Loading work.i_acl_push_i1_notexitcond_memread2392(normal)#1
+# Loading work.acl_push(fast__5)
+# Loading work.i_acl_pipeline_keep_going_memread1584(normal)#1
+# Loading work.acl_pipeline(fast)
+# Loading work.acl_dspba_buffer(fast__1)
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clocken0').
+#    Time: 0 fs  Iteration: 0  Instance: /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/redist44_sync_in_aunroll_x_in_c0_eni215_211_4_mem_dmem File: /sim/tarsio/aocl-int16-4mul-lane1-20261008-4VZhoo/conv_pipe_int16_4mul/kernel_hdl/memRead/i_sfc_logic_c0_for_body510_memread_c0_enA0Zr725_memread1582.vhd Line: 10063
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clocken0').
+#    Time: 0 fs  Iteration: 0  Instance: /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/redist43_sync_in_aunroll_x_in_c0_eni215_203_4_mem_dmem File: /sim/tarsio/aocl-int16-4mul-lane1-20261008-4VZhoo/conv_pipe_int16_4mul/kernel_hdl/memRead/i_sfc_logic_c0_for_body510_memread_c0_enA0Zr725_memread1582.vhd Line: 10510
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clocken0').
+#    Time: 0 fs  Iteration: 0  Instance: /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/redist42_sync_in_aunroll_x_in_c0_eni215_202_4_mem_dmem File: /sim/tarsio/aocl-int16-4mul-lane1-20261008-4VZhoo/conv_pipe_int16_4mul/kernel_hdl/memRead/i_sfc_logic_c0_for_body510_memread_c0_enA0Zr725_memread1582.vhd Line: 10656
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clocken0').
+#    Time: 0 fs  Iteration: 0  Instance: /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/redist41_sync_in_aunroll_x_in_c0_eni215_201_4_mem_dmem File: /sim/tarsio/aocl-int16-4mul-lane1-20261008-4VZhoo/conv_pipe_int16_4mul/kernel_hdl/memRead/i_sfc_logic_c0_for_body510_memread_c0_enA0Zr725_memread1582.vhd Line: 10802
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clocken0').
+#    Time: 0 fs  Iteration: 0  Instance: /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/redist40_sync_in_aunroll_x_in_c0_eni215_200_4_mem_dmem File: /sim/tarsio/aocl-int16-4mul-lane1-20261008-4VZhoo/conv_pipe_int16_4mul/kernel_hdl/memRead/i_sfc_logic_c0_for_body510_memread_c0_enA0Zr725_memread1582.vhd Line: 10948
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clocken0').
+#    Time: 0 fs  Iteration: 0  Instance: /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/redist39_sync_in_aunroll_x_in_c0_eni215_199_4_mem_dmem File: /sim/tarsio/aocl-int16-4mul-lane1-20261008-4VZhoo/conv_pipe_int16_4mul/kernel_hdl/memRead/i_sfc_logic_c0_for_body510_memread_c0_enA0Zr725_memread1582.vhd Line: 11094
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clocken0').
+#    Time: 0 fs  Iteration: 0  Instance: /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/redist38_sync_in_aunroll_x_in_c0_eni215_198_4_mem_dmem File: /sim/tarsio/aocl-int16-4mul-lane1-20261008-4VZhoo/conv_pipe_int16_4mul/kernel_hdl/memRead/i_sfc_logic_c0_for_body510_memread_c0_enA0Zr725_memread1582.vhd Line: 11240
+# ** Warning: (vsim-3016) Port type 'tri1' is incompatible with connection type 'tri0', coercing to 'tri0' (port 'clocken0').
+#    Time: 0 fs  Iteration: 0  Instance: /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/redist37_sync_in_aunroll_x_in_c0_eni215_197_4_mem_dmem File: /sim/tarsio/aocl-int16-4mul-lane1-20261008-4VZhoo/conv_pipe_int16_4mul/kernel_hdl/memRead/i_sfc_logic_c0_for_body510_memread_c0_enA0Zr725_memread1582.vhd Line: 11386
+# force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/clock 0 0ns, 1 1ns -repeat 2ns
+#  force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/resetn 0
+#  run 2ns
+#  force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/resetn 1
+#  force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_acl_case_case_stmt1319_memread_q FFFD
+#  force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_acl_case_case_stmt1305_memread_q FFF9
+#  force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_acl_case_case_stmt1326_memread_q 0005
+#  force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_acl_case_case_stmt1312_memread_q FFFE
+#  force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_acl_case_case_stmt1291_memread_q 000A
+#  force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_acl_case_case_stmt_memread_q 0001
+#  force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_acl_case_case_stmt1298_memread_q 0004
+#  force -freeze /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_acl_case_case_stmt1284_memread_q FFF8
+#  run 6ns
+#  examine -radix hex /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_mul581_memread_i_reduction_memread_1_memread_i_mul606_memread_merged_cma_q
+# 1FFFFFFFF
+#  examine -radix hex /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/i_mul531_memread_i_reduction_memread_0_memread_i_mul556_memread_merged_cma_q
+# 000000020
+#  examine -radix hex /i_sfc_logic_c0_for_body510_memread_c0_enter725_memread1582/bgTrunc_i_reduction_memread_2_memread_sel_x_b
+# 0000001F
+#  quit -f
+# End time: 20:26:31 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 8

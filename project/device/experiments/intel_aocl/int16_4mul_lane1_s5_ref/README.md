@@ -61,6 +61,40 @@ gerado é intermediário do compilador, não é uma saída standalone validada.
 Os arquivos do sistema BSP não são tratados como RTL do kernel. O processo
 AOCL terminou e não restou `aoc` ativo.
 
+## Validação do VHDL com Questa
+
+Em 2026-10-08, os 1.209 arquivos VHDL gerados para `memRead` e `memWrite`
+foram compilados no QuestaSim 64 2023.4. O log completo da compilação está em
+[`artifacts/questa/vcom.log`](artifacts/questa/vcom.log); terminou com 0 erros
+e 0 avisos. O setup usado está registrado em
+[`artifacts/questa/setup.log`](artifacts/questa/setup.log).
+
+Também foi carregado no simulador o bloco aritmético selecionado dentro do
+kernel `memRead`, aplicando estímulos diretamente aos sinais internos:
+
+- Caso dirigido com produtos assinados `(-3×5) + (-7×-2) + (10×4) + (1×-8)`:
+  os dois resultados parciais observados foram `0x1FFFFFFFF` e `0x000000020`,
+  e o resultado truncado para 32 bits foi `0x0000001F` (31).
+- Caso de overflow com quatro produtos `(-32768)×(-32768)`: o resultado final
+  observado nos 32 bits baixos foi `0x00000000`, conforme wraparound módulo
+  `2^32`.
+
+Os registros desses casos são
+[`cma-smoke-pass.log`](artifacts/questa/cma-smoke-pass.log) e
+[`cma-overflow-pass.log`](artifacts/questa/cma-overflow-pass.log). Os nomes
+“pass” indicam que os valores observados coincidem com os esperados; os
+comandos usam `force`/`examine` e **não têm assertions automáticas**. Portanto,
+isto valida casos aritméticos dirigidos do bloco gerado, não a execução
+funcional de uma convolução completa.
+
+A tentativa de elaborar `memRead_function_wrapper` terminou sem erros fatais,
+mas deixou duas instâncias `st_write` sem binding e avisos de portas `tri1`/
+`tri0`. O log está em [`elab-1fs.log`](artifacts/questa/elab-1fs.log). Sem
+implementar/bindar os canais e executar uma transação de ponta a ponta, o
+wrapper não comprova o comportamento do kernel completo. O VHDL continua sendo
+saída intermediária do AOCL Standard: não foi produzido `.aocr`, e não houve
+síntese ASIC nem execução em FPGA.
+
 O scratch completo permanece em
 `/sim/tarsio/aocl-int16-4mul-lane1-20261008-4VZhoo/`. Este diretório local
 preserva os fontes, o `.aoco`, o relatório, os logs usados para interpretar os
