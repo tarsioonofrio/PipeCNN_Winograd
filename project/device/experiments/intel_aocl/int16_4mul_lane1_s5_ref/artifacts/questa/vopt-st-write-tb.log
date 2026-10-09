@@ -1,0 +1,35 @@
+QuestaSim-64 vopt 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 21:06:58 on Oct 08,2026
+vopt -modelsimini libs/modelsim.ini -L work -L altera_mf_ver -L lpm_ver -L altera_lnsim_ver -L sgate_ver -L stratixv_ver -L altera_ver -L altera_mf -L altera_lnsim -L lpm -work work tb_st_write_adapter -o tb_st_write_adapter_opt 
+
+Top level modules:
+	tb_st_write_adapter
+
+Analyzing design...
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading entity tb_st_write_adapter
+-- Loading architecture test of tb_st_write_adapter
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package dspba_library_package
+-- Loading package altera_mf_components
+-- Loading package altera_lnsim_components
+-- Loading package LPM_COMPONENTS
+-- Loading entity i_iowr_bl_bypass_ch_unnamed_memread8_memread2596
+-- Loading architecture normal of i_iowr_bl_bypass_ch_unnamed_memread8_memread2596
+-- Loading package vl_types
+-- Loading entity st_write
+-- Loading module st_write
+Optimizing 7 design-units (inlining 0/1 module instances, 1/2 architecture instances):
+-- Optimizing module st_write(fast)
+-- Optimizing package altera_lnsim_components
+-- Optimizing package altera_mf_components
+-- Optimizing package LPM_COMPONENTS
+-- Inlining architecture normal of i_iowr_bl_bypass_ch_unnamed_memread8_memread2596
+-- Optimizing architecture test of tb_st_write_adapter
+-- Optimizing package dspba_library_package
+Optimized design name is tb_st_write_adapter_opt
+End time: 21:06:59 on Oct 08,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

@@ -1,0 +1,13 @@
+QuestaSim-64 vlog 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 21:02:58 on Oct 08,2026
+vlog -modelsimini /sim/tarsio/questa2023-hdl-validation-int16-4mul-20261008/libs/modelsim.ini -sv -work work /soft64/altera/ferramentas/quartus/18.1/hld/ip/st_top.v 
+-- Compiling module init_reg
+** Warning: /soft64/altera/ferramentas/quartus/18.1/hld/ip/st_top.v(33): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+-- Compiling module st_read
+-- Compiling module st_write
+
+Top level modules:
+	st_read
+	st_write
+End time: 21:02:58 on Oct 08,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 1
